@@ -14,5 +14,8 @@
     [super awakeFromNib];
     // Initialization code
 }
+- (IBAction)btnClickIndex:(UIButton *)sender{
+    emptyBlock(self.indexBlock,sender.tag);
+}
 
 @end

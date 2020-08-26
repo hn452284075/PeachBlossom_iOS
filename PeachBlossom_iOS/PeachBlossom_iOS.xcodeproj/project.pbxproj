@@ -257,6 +257,9 @@
 		7708DD3924EB5BA400A4DB25 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7708DD3824EB5BA400A4DB25 /* SearchViewController.m */; };
 		7708DD3C24EB5E0300A4DB25 /* SearchListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7708DD3B24EB5E0300A4DB25 /* SearchListVC.m */; };
 		7708DD3E24EB61F600A4DB25 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7708DD3D24EB61F600A4DB25 /* SearchViewController.xib */; };
+		7746F53E24F5FF19000DC145 /* AddressMangerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F53D24F5FF19000DC145 /* AddressMangerController.m */; };
+		7746F54324F6004B000DC145 /* AddressMangerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F54124F6004B000DC145 /* AddressMangerCell.m */; };
+		7746F54424F6004B000DC145 /* AddressMangerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F54224F6004B000DC145 /* AddressMangerCell.xib */; };
 		77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17BB624EB830700CBF0A6 /* UIView+Design.m */; };
 		77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4424F4B0CC00CBF0A6 /* area.plist */; };
 		77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */; };
@@ -797,6 +800,11 @@
 		7708DD3A24EB5E0300A4DB25 /* SearchListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SearchListVC.h; path = PeachBlossom_iOS/Base/SearchListVC.h; sourceTree = SOURCE_ROOT; };
 		7708DD3B24EB5E0300A4DB25 /* SearchListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SearchListVC.m; path = PeachBlossom_iOS/Base/SearchListVC.m; sourceTree = SOURCE_ROOT; };
 		7708DD3D24EB61F600A4DB25 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchViewController.xib; path = PeachBlossom_iOS/Base/SearchViewController.xib; sourceTree = SOURCE_ROOT; };
+		7746F53C24F5FF19000DC145 /* AddressMangerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressMangerController.h; sourceTree = "<group>"; };
+		7746F53D24F5FF19000DC145 /* AddressMangerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressMangerController.m; sourceTree = "<group>"; };
+		7746F54024F6004B000DC145 /* AddressMangerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressMangerCell.h; sourceTree = "<group>"; };
+		7746F54124F6004B000DC145 /* AddressMangerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressMangerCell.m; sourceTree = "<group>"; };
+		7746F54224F6004B000DC145 /* AddressMangerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressMangerCell.xib; sourceTree = "<group>"; };
 		77A17BB524EB830700CBF0A6 /* UIView+Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Design.h"; sourceTree = "<group>"; };
 		77A17BB624EB830700CBF0A6 /* UIView+Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Design.m"; sourceTree = "<group>"; };
 		77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressShowView.h; sourceTree = "<group>"; };
@@ -1447,6 +1455,7 @@
 		7708D9C824E7ACAB00A4DB25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7746F53F24F60027000DC145 /* Address */,
 				77A17C6E24F4F5F600CBF0A6 /* BusinessCircle */,
 				77A17C6C24F4F5DB00CBF0A6 /* Me */,
 				77A17C6824F4F5BA00CBF0A6 /* Store */,
@@ -1459,6 +1468,7 @@
 		7708D9C924E7ACAC00A4DB25 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7746F53B24F5FE30000DC145 /* Address */,
 				77A17C6D24F4F5F200CBF0A6 /* BusinessCircle */,
 				77A17C6724F4F5B400CBF0A6 /* Store */,
 				7708DD3624EB5B9100A4DB25 /* Search */,
@@ -1985,6 +1995,25 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		7746F53B24F5FE30000DC145 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				7746F53C24F5FF19000DC145 /* AddressMangerController.h */,
+				7746F53D24F5FF19000DC145 /* AddressMangerController.m */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		7746F53F24F60027000DC145 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				7746F54024F6004B000DC145 /* AddressMangerCell.h */,
+				7746F54124F6004B000DC145 /* AddressMangerCell.m */,
+				7746F54224F6004B000DC145 /* AddressMangerCell.xib */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
 		77A17C4124F4B0CC00CBF0A6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -2191,6 +2220,7 @@
 				7708D7E424E79BD700A4DB25 /* LaunchScreen.storyboard in Resources */,
 				7708D84724E7A1B200A4DB25 /* GuideViewController.xib in Resources */,
 				7708D99624E7ABA300A4DB25 /* IQKeyboardManager.bundle in Resources */,
+				7746F54424F6004B000DC145 /* AddressMangerCell.xib in Resources */,
 				77A17C7E24F4F8DA00CBF0A6 /* MeHeaderView.xib in Resources */,
 				7708D84C24E7A1B200A4DB25 /* GlobleErrorView.xib in Resources */,
 				77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */,
@@ -2320,6 +2350,7 @@
 				7708DC1524E7DF5C00A4DB25 /* SDImageLoader.m in Sources */,
 				7708DC3824E7DF5D00A4DB25 /* UIView+WebCache.m in Sources */,
 				7708D97A24E7ABA200A4DB25 /* AFNetworkReachabilityManager.m in Sources */,
+				7746F53E24F5FF19000DC145 /* AddressMangerController.m in Sources */,
 				7708D87C24E7AA6800A4DB25 /* BaseLoadingView.m in Sources */,
 				7708DA3024E7B6FA00A4DB25 /* WSPhotosBroseVC.m in Sources */,
 				7708D84324E7A1B200A4DB25 /* MainTabBarController.m in Sources */,
@@ -2348,6 +2379,7 @@
 				7708DC0F24E7DF5C00A4DB25 /* UIImageView+HighlightedWebCache.m in Sources */,
 				7708D9C024E7ABA300A4DB25 /* MJProperty.m in Sources */,
 				7708D99C24E7ABA300A4DB25 /* IQUIView+Hierarchy.m in Sources */,
+				7746F54324F6004B000DC145 /* AddressMangerCell.m in Sources */,
 				7708DC1724E7DF5C00A4DB25 /* SDWebImageIndicator.m in Sources */,
 				7708DC3E24E7DF5D00A4DB25 /* SDWeakProxy.m in Sources */,
 				7708DC7724E7EC7C00A4DB25 /* MASCompositeConstraint.m in Sources */,

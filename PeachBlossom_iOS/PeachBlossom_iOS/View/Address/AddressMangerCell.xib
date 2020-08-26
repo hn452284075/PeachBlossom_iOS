@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="KGk-i7-Jjw" customClass="AddressMangerCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zLi-SD-gB7">
+                        <rect key="frame" x="15" y="21.5" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="eGT-01-Ew8"/>
+                            <constraint firstAttribute="width" constant="36" id="mjj-wZ-SVy"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="18"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="默认" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y31-wc-Yd0">
+                        <rect key="frame" x="60.5" y="14" width="21" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="0.23538747430000001" green="0.74242347480000004" blue="0.44886296990000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="莎莎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVC-Wi-XTR">
+                        <rect key="frame" x="86" y="10" width="29" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18587878899" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3c-7I-UgM">
+                        <rect key="frame" x="121" y="11.5" width="80" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 湖南省 永州市 冷水滩区 永州大道花园小区9号楼9单元99号" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4x-I8-c4l">
+                        <rect key="frame" x="60.5" y="35" width="224" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZv-KL-zmB">
+                        <rect key="frame" x="342" y="28" width="23" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="23" id="HaR-8L-Ekg"/>
+                            <constraint firstAttribute="height" constant="23" id="P2X-Az-NuF"/>
+                        </constraints>
+                        <state key="normal" image="编辑地址"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOF-Vb-KuZ">
+                        <rect key="frame" x="315" y="28" width="23" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="2d8-EO-C7Y"/>
+                            <constraint firstAttribute="width" constant="23" id="83V-OY-0HQ"/>
+                        </constraints>
+                        <state key="normal" image="删除地址"/>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yc4-uF-NNu">
+                        <rect key="frame" x="299.5" y="17" width="0.5" height="45"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="0.5" id="ihK-F8-J4J"/>
+                            <constraint firstAttribute="height" constant="45" id="q0Q-J8-OgT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Y31-wc-Yd0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60.5" id="1Le-5a-3bN"/>
+                    <constraint firstItem="aZv-KL-zmB" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5Zs-3D-jV5"/>
+                    <constraint firstItem="WOF-Vb-KuZ" firstAttribute="leading" secondItem="Yc4-uF-NNu" secondAttribute="trailing" constant="15" id="7Gw-Xw-VqV"/>
+                    <constraint firstItem="X4x-I8-c4l" firstAttribute="leading" secondItem="Y31-wc-Yd0" secondAttribute="leading" id="A9C-F2-Ulx"/>
+                    <constraint firstItem="f3c-7I-UgM" firstAttribute="centerY" secondItem="nVC-Wi-XTR" secondAttribute="centerY" id="EbR-Xu-Ny2"/>
+                    <constraint firstItem="X4x-I8-c4l" firstAttribute="top" secondItem="nVC-Wi-XTR" secondAttribute="bottom" constant="8" id="I0D-JM-D6b"/>
+                    <constraint firstItem="nVC-Wi-XTR" firstAttribute="leading" secondItem="Y31-wc-Yd0" secondAttribute="trailing" constant="4.5" id="IR4-lX-glJ"/>
+                    <constraint firstItem="aZv-KL-zmB" firstAttribute="leading" secondItem="WOF-Vb-KuZ" secondAttribute="trailing" constant="4" id="LSA-Se-1HU"/>
+                    <constraint firstAttribute="trailing" secondItem="aZv-KL-zmB" secondAttribute="trailing" constant="10" id="NFc-4Y-ZRb"/>
+                    <constraint firstItem="nVC-Wi-XTR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="P27-0w-SIJ"/>
+                    <constraint firstItem="Yc4-uF-NNu" firstAttribute="centerY" secondItem="WOF-Vb-KuZ" secondAttribute="centerY" id="QEE-fC-Q8N"/>
+                    <constraint firstItem="zLi-SD-gB7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bTu-Ue-OMS"/>
+                    <constraint firstItem="zLi-SD-gB7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="fJ6-Gj-rrZ"/>
+                    <constraint firstItem="Yc4-uF-NNu" firstAttribute="leading" secondItem="X4x-I8-c4l" secondAttribute="trailing" constant="15" id="iXB-3O-6mK"/>
+                    <constraint firstItem="WOF-Vb-KuZ" firstAttribute="centerY" secondItem="aZv-KL-zmB" secondAttribute="centerY" id="vCh-9G-F7e"/>
+                    <constraint firstItem="Y31-wc-Yd0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="vg9-is-lS6"/>
+                    <constraint firstItem="f3c-7I-UgM" firstAttribute="leading" secondItem="nVC-Wi-XTR" secondAttribute="trailing" constant="6" id="zAP-jo-hHf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="92.028985507246389" y="101.45089285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="删除地址" width="23" height="23"/>
+        <image name="编辑地址" width="23" height="23"/>
+    </resources>
+</document>

@@ -10,6 +10,7 @@
 #import "CustomFlowLayout.h"
 #import "MeCollectionViewCell.h"
 #import "MeHeaderView.h"
+#import "AddressMangerController.h"
 @interface MeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong)UICollectionView *collectionView;
 @property (nonatomic,strong)CustomFlowLayout *flowlayout;
@@ -52,8 +53,10 @@
     
         
     MeCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MeCollectionViewCell" forIndexPath:indexPath];
-   
-    
+    WEAK_SELF
+    cell.indexBlock = ^(NSInteger index) {
+        [weak_self jumoIndexPage:index];
+    };
         
     return cell;
    
@@ -71,14 +74,7 @@
     if (kind == UICollectionElementKindSectionHeader) {
         
         self.headerV  = (MeHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MeHeaderView" forIndexPath:indexPath];
-//        self.headerV.headerView.layer.cornerRadius = 3;
-//        self.headerV.headerView.layer.shadowOffset = CGSizeMake(0, 0);
-//        self.headerV.headerView.layer.shadowColor = [UIColor grayColor].CGColor;
-//        self.headerV.headerView.layer.shadowOpacity = 0.6;//阴影透明度，默认0
-//        self.headerV.headerView.layer.shadowRadius = 6;//阴影半径，默认3
-//        self.headerV.headerView.layer.masksToBounds = NO;
-        
-       
+ 
         
         
         
@@ -88,7 +84,64 @@
     
 }
 
- 
+#pragma mark ------------------------Page Navigate------------------------
+-(void)jumoIndexPage:(NSInteger)index{
+    
+    switch (index) {
+        case 10://全部
+            {
+            
+            }
+            break;
+            
+        case 11://待付款
+            {
+           
+            }
+            break;
+        case 12://待发货
+            {
+           
+            }
+            break;
+        case 13://待收货
+            {
+           
+            }
+            break;
+        case 14://待评价
+            {
+           
+            }
+            break;
+        case 15://退款/售后
+            {
+           
+            }
+            break;
+        case 16://收货地址
+            {
+                AddressMangerController *vc = [[AddressMangerController alloc]init];
+                [self navigatePushViewController:vc animate:YES];
+            }
+            break;
+        case 17://银行卡
+            {
+           
+            }
+            break;
+        case 18://我的桃币
+            {
+           
+            }
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
 #pragma mark ------------------------Notification-------------------------
 
 #pragma mark ------------------------Getter / Setter----------------------

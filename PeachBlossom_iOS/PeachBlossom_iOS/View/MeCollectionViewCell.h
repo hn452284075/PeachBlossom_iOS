@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
+typedef void(^IndexBlock)(NSInteger index);
 @interface MeCollectionViewCell : UICollectionViewCell
+@property (nonatomic,copy)IndexBlock indexBlock;
+
 
 @end
 
-NS_ASSUME_NONNULL_END
