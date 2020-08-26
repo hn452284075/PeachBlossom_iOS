@@ -12,6 +12,8 @@
 #import "AddressCell.h"
 #import "HomeHeaderView.h"
 #import "SearchViewController.h"
+#import "SupplyViewController.h"
+#import "AppDelegate.h"
 @interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong)MyCommonCollectionView *collectionView;
 @property (nonatomic, strong)NSMutableArray *dataSource;
@@ -213,8 +215,14 @@
     SearchViewController *vc = [[SearchViewController alloc]init];
     [self navigatePushViewController:vc animate:YES];
 }
+
 -(void)cartClick{
-    
+  
+    //暂时点击购物车跳转到供应大厅
+    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    [delegate.mainVC showOrHideTabBar:NO];
+    SupplyViewController *supplyCon = [[SupplyViewController alloc] init];
+    [self.navigationController pushViewController:supplyCon animated:YES];
   
 }
 

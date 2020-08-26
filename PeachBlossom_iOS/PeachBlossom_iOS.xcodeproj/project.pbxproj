@@ -279,6 +279,8 @@
 		77A17C7924F4F85D00CBF0A6 /* MeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C7724F4F85D00CBF0A6 /* MeCollectionViewCell.xib */; };
 		77A17C7D24F4F8DA00CBF0A6 /* MeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17C7B24F4F8DA00CBF0A6 /* MeHeaderView.m */; };
 		77A17C7E24F4F8DA00CBF0A6 /* MeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C7C24F4F8DA00CBF0A6 /* MeHeaderView.xib */; };
+		972CC5E324F600C3002DC0F1 /* SupplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 972CC5E124F600C3002DC0F1 /* SupplyViewController.m */; };
+		972CC5E424F600C3002DC0F1 /* SupplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972CC5E224F600C3002DC0F1 /* SupplyViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -831,6 +833,9 @@
 		77A17C7A24F4F8DA00CBF0A6 /* MeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeHeaderView.h; path = PeachBlossom_iOS/View/MeHeaderView.h; sourceTree = SOURCE_ROOT; };
 		77A17C7B24F4F8DA00CBF0A6 /* MeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MeHeaderView.m; path = PeachBlossom_iOS/View/MeHeaderView.m; sourceTree = SOURCE_ROOT; };
 		77A17C7C24F4F8DA00CBF0A6 /* MeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MeHeaderView.xib; path = PeachBlossom_iOS/View/MeHeaderView.xib; sourceTree = SOURCE_ROOT; };
+		972CC5E024F600C3002DC0F1 /* SupplyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupplyViewController.h; sourceTree = "<group>"; };
+		972CC5E124F600C3002DC0F1 /* SupplyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupplyViewController.m; sourceTree = "<group>"; };
+		972CC5E224F600C3002DC0F1 /* SupplyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupplyViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1475,6 +1480,7 @@
 		7708D9CB24E7ACC900A4DB25 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				972CC5DF24F6008E002DC0F1 /* Supply */,
 				77A17C5924F4B3F600CBF0A6 /* HomeViewController.h */,
 				77A17C5A24F4B3F600CBF0A6 /* HomeViewController.m */,
 			);
@@ -2060,6 +2066,16 @@
 			path = BusinessCircle;
 			sourceTree = "<group>";
 		};
+		972CC5DF24F6008E002DC0F1 /* Supply */ = {
+			isa = PBXGroup;
+			children = (
+				972CC5E024F600C3002DC0F1 /* SupplyViewController.h */,
+				972CC5E124F600C3002DC0F1 /* SupplyViewController.m */,
+				972CC5E224F600C3002DC0F1 /* SupplyViewController.xib */,
+			);
+			path = Supply;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2180,6 +2196,7 @@
 				77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */,
 				7708D97E24E7ABA200A4DB25 /* MJRefresh.bundle in Resources */,
 				77A17C6624F4E20F00CBF0A6 /* HomeHeaderView.xib in Resources */,
+				972CC5E424F600C3002DC0F1 /* SupplyViewController.xib in Resources */,
 				77A17C5724F4B0CC00CBF0A6 /* SearchCell.xib in Resources */,
 				77A17C7924F4F85D00CBF0A6 /* MeCollectionViewCell.xib in Resources */,
 				7708DA5524E7B7C700A4DB25 /* README.txt in Resources */,
@@ -2273,6 +2290,7 @@
 				7708D84524E7A1B200A4DB25 /* GuideViewController.m in Sources */,
 				7708D9C624E7ABA300A4DB25 /* MJPropertyKey.m in Sources */,
 				7708D85F24E7A8DD00A4DB25 /* TabbarButton.m in Sources */,
+				972CC5E324F600C3002DC0F1 /* SupplyViewController.m in Sources */,
 				7708DA4524E7B6FA00A4DB25 /* WPFunctionView.m in Sources */,
 				77A17C5224F4B0CC00CBF0A6 /* SearchCell.m in Sources */,
 				7708D99024E7ABA300A4DB25 /* IQTextView.m in Sources */,
