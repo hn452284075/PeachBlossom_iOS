@@ -9,8 +9,9 @@
 #import "SupplyViewController.h"
 #import "ProjectStandardUIDefineConst.h"
 #import "Masonry.h"
+#import "SupplyGoodsCell.h"
 
-@interface SupplyViewController ()
+@interface SupplyViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 //农产品  农资种苗   农机具  三个类别
 @property (nonatomic, strong) UIButton *class_btn1;
@@ -19,6 +20,8 @@
 
 //选中某一个类别后下方的小图标
 @property (nonatomic, strong) UIView   *selectedView;
+
+@property (nonatomic, strong) UITableView *goodsTableview;
 
 @end
 
@@ -230,6 +233,30 @@
         make.centerY.equalTo(placeView.mas_centerY);
     }];
     
+    //最新货源
+    UILabel *newGoodsLab = [[UILabel alloc] init];
+    [self.view addSubview:newGoodsLab];
+    [newGoodsLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(placeView.mas_bottom).offset(22);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.height.mas_equalTo(16);
+    }];
+    newGoodsLab.text = @"最新货源";
+    newGoodsLab.font = [UIFont boldSystemFontOfSize:16];
+    newGoodsLab.textColor = kGetColor(0x22, 0x22, 0x22);
+    
+    
+    //添加下方的uitableview
+    self.goodsTableview = [[UITableView alloc] init];
+    [self.view addSubview:self.goodsTableview];
+    [self.goodsTableview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(newGoodsLab.mas_bottom).offset(19);
+        make.bottom.equalTo(self.view.mas_bottom);
+        make.width.mas_equalTo(kScreenWidth);
+    }];
+    self.goodsTableview.delegate = self;
+    self.goodsTableview.dataSource = self;
+    
 }
 
 #pragma mark ------------------------View Event---------------------------
@@ -331,6 +358,32 @@
 #pragma mark ------------------------Page Navigate------------------------
 
 #pragma mark ------------------------Delegate-----------------------------
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 160;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 5;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellID = @"supplygoodscell";
+    SupplyGoodsCell *cell = (SupplyGoodsCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    if(cell == nil)
+    {
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"SupplyGoodsCell" owner:nil options:nil] firstObject];
+    }
+    return cell;
+}
 
 #pragma mark ------------------------Notification-------------------------
 
