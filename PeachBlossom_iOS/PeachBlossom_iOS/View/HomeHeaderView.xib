@@ -326,7 +326,7 @@
             <connections>
                 <outlet property="headCycleView" destination="rX6-SE-2EK" id="reD-sf-Zxj"/>
             </connections>
-            <point key="canvasLocation" x="136.95652173913044" y="296.65178571428572"/>
+            <point key="canvasLocation" x="-24" y="291"/>
         </collectionReusableView>
     </objects>
     <resources>
