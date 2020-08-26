@@ -15,7 +15,7 @@
 @interface WTShareManager ()
  
 @property (nonatomic, strong)WTShareResultlBlock shareResultlBlock;
-@property (nonatomic,strong)TencentOAuth *tencentOAuth;
+//@property (nonatomic,strong)TencentOAuth *tencentOAuth;
 @end
 
 @implementation WTShareManager
@@ -55,7 +55,7 @@ static WTShareManager * _instence;
 //    [WXApi registerApp:WxAppid];
     
     // 注册QQ
-    _tencentOAuth = [[TencentOAuth alloc]initWithAppId:kTencentAppId andDelegate:self];
+//    _tencentOAuth = [[TencentOAuth alloc]initWithAppId:kTencentAppId andDelegate:self];
 }
 
 
@@ -89,64 +89,64 @@ static WTShareManager * _instence;
 //            [WeiboSDK sendRequest:request];
             break;
         }
-        case WTShareTypeQQ:
-        {
-            NSString * shareTitle = [NSString string];
-            shareTitle = contentObj.qqTitle ? contentObj.qqTitle : contentObj.title;
-            
-            if (!isEmpty(contentObj.urlString)) {
+//        case WTShareTypeQQ:
+//        {
+//            NSString * shareTitle = [NSString string];
+//            shareTitle = contentObj.qqTitle ? contentObj.qqTitle : contentObj.title;
+//
+//            if (!isEmpty(contentObj.urlString)) {
                 //分享跳转URL
-                NSString *urlt = contentObj.urlString;
-                QQApiNewsObject * newsObj ;
-                newsObj   = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:shareTitle description:contentObj.summary previewImageURL:[NSURL URLWithString:contentObj.urlImageString]];
-                
-                
-                SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:newsObj];
-                //将内容分享到qq
-                [QQApiInterface sendReq:req];
-            }else{
-                UIImage *image = [[self class] seletedImage:contentObj.shareImage];
-               
-                NSData * imageData = UIImagePNGRepresentation(image);
-                QQApiImageObject *imgObj =[QQApiImageObject objectWithData:imageData previewImageData:imageData title:@"" description:@""];
-                
-                SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:imgObj];
-                
-                //将内容分享到qq
-               [QQApiInterface sendReq:req];
-                
-              
-                
-            }
+//                NSString *urlt = contentObj.urlString;
+//                QQApiNewsObject * newsObj ;
+//                newsObj   = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:shareTitle description:contentObj.summary previewImageURL:[NSURL URLWithString:contentObj.urlImageString]];
+//
+//
+//                SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:newsObj];
+//                //将内容分享到qq
+//                [QQApiInterface sendReq:req];
+//            }else{
+//                UIImage *image = [[self class] seletedImage:contentObj.shareImage];
+//
+//                NSData * imageData = UIImagePNGRepresentation(image);
+//                QQApiImageObject *imgObj =[QQApiImageObject objectWithData:imageData previewImageData:imageData title:@"" description:@""];
+//
+//                SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:imgObj];
+//
+//                //将内容分享到qq
+//               [QQApiInterface sendReq:req];
+//
+//
+//
+//            }
           
 
         
   
-            break;
-            
-        }
-        case WTShareTypeQQZone://qq空间不支持分享纯图片
-        {
-            //分享跳转URL
-            NSString *urlt = contentObj.urlString;
-              QQApiNewsObject * newsObj ;
-            if (!isEmpty(contentObj.urlString)) {
-              
-                newsObj   = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:contentObj.title description:contentObj.summary previewImageURL:[NSURL URLWithString:contentObj.urlImageString]];
-              
-            }else {
-
-                 newsObj   = [QQApiNewsObject objectWithURL:[NSURL URLWithString:contentObj.urlImageString] title:@"优鲜共享" description:@"" previewImageURL:[NSURL URLWithString:contentObj.urlImageString]];
-            }
-            SendMessageToQQReq *req = [[SendMessageToQQReq alloc]init];
-            req.message = newsObj;
-            req.type = ESENDMESSAGETOQQREQTYPE;
-            
-            [QQApiInterface SendReqToQZone:req];
-            
-            break;
-      
-        }
+//            break;
+//            
+//        }
+//        case WTShareTypeQQZone://qq空间不支持分享纯图片
+//        {
+//            //分享跳转URL
+//            NSString *urlt = contentObj.urlString;
+//              QQApiNewsObject * newsObj ;
+//            if (!isEmpty(contentObj.urlString)) {
+//
+//                newsObj   = [QQApiNewsObject objectWithURL:[NSURL URLWithString:urlt] title:contentObj.title description:contentObj.summary previewImageURL:[NSURL URLWithString:contentObj.urlImageString]];
+//
+//            }else {
+//
+//                 newsObj   = [QQApiNewsObject objectWithURL:[NSURL URLWithString:contentObj.urlImageString] title:@"优鲜共享" description:@"" previewImageURL:[NSURL URLWithString:contentObj.urlImageString]];
+//            }
+//            SendMessageToQQReq *req = [[SendMessageToQQReq alloc]init];
+//            req.message = newsObj;
+//            req.type = ESENDMESSAGETOQQREQTYPE;
+//
+//            [QQApiInterface SendReqToQZone:req];
+//
+//            break;
+//
+//        }
         case WTShareTypeWeiXinTimeline: // 微信朋友圈
         {
             WXMediaMessage * message = [WXMediaMessage message];
@@ -308,28 +308,28 @@ static WTShareManager * _instence;
 //}
 
 #pragma mark - 判断qq是否分享成功
-+ (void)didReceiveTencentUrl:(NSURL *)url
-{
-    NSString * urlStr = url.absoluteString;
-    NSArray * array = [urlStr componentsSeparatedByString:@"error="];
-    if (array.count > 1) {
-        NSString * lastStr = [array lastObject];
-        NSArray * lastStrArray = [lastStr componentsSeparatedByString:@"&"];
-        
-        NSString * resultStr = [lastStrArray firstObject];
-        if ([resultStr isEqualToString:kWTShareQQSuccess]) {
-//            NSLog(@"QQ------分享成功!");
-            [WTShareManager shareWTShareManager].shareResultlBlock(@"分享成功");
-          
-        }else if ([resultStr isEqualToString:kWTShareQQFail]){
-//            NSLog(@"QQ------分享失败!");
-            [WTShareManager shareWTShareManager].shareResultlBlock(@"分享失败");
-            
-        }
-        
-    }
-     
-}
+//+ (void)didReceiveTencentUrl:(NSURL *)url
+//{
+//    NSString * urlStr = url.absoluteString;
+//    NSArray * array = [urlStr componentsSeparatedByString:@"error="];
+//    if (array.count > 1) {
+//        NSString * lastStr = [array lastObject];
+//        NSArray * lastStrArray = [lastStr componentsSeparatedByString:@"&"];
+//
+//        NSString * resultStr = [lastStrArray firstObject];
+//        if ([resultStr isEqualToString:kWTShareQQSuccess]) {
+////            NSLog(@"QQ------分享成功!");
+//            [WTShareManager shareWTShareManager].shareResultlBlock(@"分享成功");
+//
+//        }else if ([resultStr isEqualToString:kWTShareQQFail]){
+////            NSLog(@"QQ------分享失败!");
+//            [WTShareManager shareWTShareManager].shareResultlBlock(@"分享失败");
+//
+//        }
+//
+//    }
+//
+//}
 
 //qq分享图片限制了内容大小
 + (UIImage *)seletedImage:(UIImage *)image {

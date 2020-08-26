@@ -159,8 +159,6 @@
 		7708DA7924E7BBDD00A4DB25 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708DA7824E7BBDD00A4DB25 /* libc++.tbd */; };
 		7708DA7B24E7BBE600A4DB25 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708DA7A24E7BBE600A4DB25 /* libsqlite3.0.tbd */; };
 		7708DA7D24E7BBEE00A4DB25 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708DA7C24E7BBEE00A4DB25 /* libz.tbd */; };
-		7708DA8324E7BDD300A4DB25 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7708DA8124E7BDD300A4DB25 /* TencentOpenApi_IOS_Bundle.bundle */; };
-		7708DA8424E7BDD300A4DB25 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708DA8224E7BDD300A4DB25 /* TencentOpenAPI.framework */; };
 		7708DA8B24E7C4FA00A4DB25 /* libz.1.1.3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708DA8724E7C31600A4DB25 /* libz.1.1.3.tbd */; };
 		7708DA8D24E7C51D00A4DB25 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708DA8C24E7C51D00A4DB25 /* libsqlite3.tbd */; };
 		7708DA8E24E7C54600A4DB25 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7708DA8924E7C33E00A4DB25 /* libiconv.tbd */; };
@@ -597,8 +595,6 @@
 		7708DA7A24E7BBE600A4DB25 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		7708DA7C24E7BBEE00A4DB25 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		7708DA7E24E7BBF700A4DB25 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
-		7708DA8124E7BDD300A4DB25 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
-		7708DA8224E7BDD300A4DB25 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		7708DA8724E7C31600A4DB25 /* libz.1.1.3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.1.3.tbd; path = usr/lib/libz.1.1.3.tbd; sourceTree = SDKROOT; };
 		7708DA8924E7C33E00A4DB25 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		7708DA8C24E7C51D00A4DB25 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -865,7 +861,6 @@
 				7708DA6124E7BB3A00A4DB25 /* UIKit.framework in Frameworks */,
 				7708DA5F24E7BB3400A4DB25 /* Foundation.framework in Frameworks */,
 				7708DA5D24E7BB2700A4DB25 /* CoreMotion.framework in Frameworks */,
-				7708DA8424E7BDD300A4DB25 /* TencentOpenAPI.framework in Frameworks */,
 				7708DA5624E7B7C700A4DB25 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -954,7 +949,6 @@
 				7708DACA24E7DCD900A4DB25 /* SDCycleScrollView */,
 				7708DAAE24E7D79700A4DB25 /* JGpush */,
 				7708DA9424E7C61A00A4DB25 /* Alipay */,
-				7708DA8024E7BDD300A4DB25 /* Tencent */,
 				7708DA4D24E7B7C700A4DB25 /* WeChat */,
 				7708D89924E7ABA100A4DB25 /* AFNetworking */,
 				7708D8ED24E7ABA200A4DB25 /* IQKeyboardManager */,
@@ -1670,15 +1664,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7708DA8024E7BDD300A4DB25 /* Tencent */ = {
-			isa = PBXGroup;
-			children = (
-				7708DA8124E7BDD300A4DB25 /* TencentOpenApi_IOS_Bundle.bundle */,
-				7708DA8224E7BDD300A4DB25 /* TencentOpenAPI.framework */,
-			);
-			path = Tencent;
-			sourceTree = "<group>";
-		};
 		7708DA9424E7C61A00A4DB25 /* Alipay */ = {
 			isa = PBXGroup;
 			children = (
@@ -2185,7 +2170,6 @@
 				7708DA4224E7B6FA00A4DB25 /* wphoto_select_no@2x.png in Resources */,
 				77A17C6024F4B47C00CBF0A6 /* HomeAllCollectionCell.xib in Resources */,
 				7708DA9724E7C61A00A4DB25 /* AlipaySDK.bundle in Resources */,
-				7708DA8324E7BDD300A4DB25 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				7708DA4424E7B6FA00A4DB25 /* wphoto_back@2x.png in Resources */,
 				7708DD3E24EB61F600A4DB25 /* SearchViewController.xib in Resources */,
 				7708D7E424E79BD700A4DB25 /* LaunchScreen.storyboard in Resources */,

@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "WXApi.h"
-#import <TencentOpenAPI/TencentOAuth.h>
-#import <TencentOpenAPI/QQApiInterfaceObject.h>
-#import <TencentOpenAPI/QQApiInterface.h>
+
 
 @class WTShareContentItem;
 

@@ -116,14 +116,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "CB23391F-8C08-4807-9214-02D79E50F05C - 7bf82104e5050a5e"
+                  uuid = "CB23391F-8C08-4807-9214-02D79E50F05C - 245ed9d3f729df78"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[SearchViewController collectionView:didSelectItemAtIndexPath:]"
                   moduleName = "PeachBlossom_iOS"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zengyongbing/Desktop/PeachBlossom_iOS/PeachBlossom_iOS/Base/SearchViewController.m"
+                  urlString = "file:///Users/zengyongbing/Desktop/%E6%A1%83%E8%8A%B1%E6%BA%90/PeachBlossom_iOS/PeachBlossom_iOS/Base/SearchViewController.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "286"
@@ -131,14 +131,14 @@
                   offsetFromSymbolStart = "1348">
                </Location>
                <Location
-                  uuid = "CB23391F-8C08-4807-9214-02D79E50F05C - 7bf82104e5050a5e"
+                  uuid = "CB23391F-8C08-4807-9214-02D79E50F05C - 245ed9d3f729df78"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[SearchViewController collectionView:didSelectItemAtIndexPath:]"
                   moduleName = "PeachBlossom_iOS"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zengyongbing/Desktop/PeachBlossom_iOS/PeachBlossom_iOS/Base/SearchViewController.m"
+                  urlString = "file:///Users/zengyongbing/Desktop/%E6%A1%83%E8%8A%B1%E6%BA%90/PeachBlossom_iOS/PeachBlossom_iOS/Base/SearchViewController.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "286"
