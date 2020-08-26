@@ -11,6 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MeHeaderView : UICollectionReusableView
+@property (weak, nonatomic) IBOutlet UIView *goodsBtn;
+@property (weak, nonatomic) IBOutlet UIView *storeBtn;
+@property (weak, nonatomic) IBOutlet UIView *recordBtn;
+@property (weak, nonatomic) IBOutlet UIButton *certificationBtn;
 
 @end
 

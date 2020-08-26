@@ -1,18 +1,18 @@
 //
-//  AddressMangerCell.m
+//  ProcurementCell.m
 //  PeachBlossom_iOS
 //
 //  Created by 曾勇兵 on 2020/8/26.
 //  Copyright © 2020 zengyongbing. All rights reserved.
 //
 
-#import "AddressMangerCell.h"
+#import "ProcurementCell.h"
 
-@implementation AddressMangerCell
+@implementation ProcurementCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.selectionStyle=UITableViewCellSelectionStyleNone;
+    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

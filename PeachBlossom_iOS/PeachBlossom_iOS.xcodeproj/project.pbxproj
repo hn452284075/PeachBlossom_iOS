@@ -260,6 +260,20 @@
 		7746F53E24F5FF19000DC145 /* AddressMangerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F53D24F5FF19000DC145 /* AddressMangerController.m */; };
 		7746F54324F6004B000DC145 /* AddressMangerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F54124F6004B000DC145 /* AddressMangerCell.m */; };
 		7746F54424F6004B000DC145 /* AddressMangerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F54224F6004B000DC145 /* AddressMangerCell.xib */; };
+		7746F54824F6376E000DC145 /* ZZAddressController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F54524F6376D000DC145 /* ZZAddressController.xib */; };
+		7746F54924F6376E000DC145 /* ZZAddressController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F54724F6376E000DC145 /* ZZAddressController.m */; };
+		7746F54C24F63A37000DC145 /* CityPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F54A24F63A37000DC145 /* CityPickView.m */; };
+		7746F54E24F63D6B000DC145 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7746F54D24F63D6B000DC145 /* city.plist */; };
+		7746F55324F64247000DC145 /* CollectGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F55224F64247000DC145 /* CollectGoodsVC.m */; };
+		7746F55724F6434A000DC145 /* CollectGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F55524F6434A000DC145 /* CollectGoodsCell.m */; };
+		7746F55824F6434A000DC145 /* CollectGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F55624F6434A000DC145 /* CollectGoodsCell.xib */; };
+		7746F55B24F64F23000DC145 /* CollectStoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F55A24F64F23000DC145 /* CollectStoreVC.m */; };
+		7746F55F24F64FF5000DC145 /* CollectStoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F55D24F64FF5000DC145 /* CollectStoreCell.m */; };
+		7746F56024F64FF5000DC145 /* CollectStoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F55E24F64FF5000DC145 /* CollectStoreCell.xib */; };
+		7746F56524F65B19000DC145 /* ProcurementOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F56424F65B19000DC145 /* ProcurementOrderVC.m */; };
+		7746F56824F65B3A000DC145 /* ProcurementDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F56724F65B3A000DC145 /* ProcurementDetailsVC.m */; };
+		7746F56C24F65E36000DC145 /* ProcurementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F56A24F65E36000DC145 /* ProcurementCell.m */; };
+		7746F56D24F65E36000DC145 /* ProcurementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F56B24F65E36000DC145 /* ProcurementCell.xib */; };
 		77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17BB624EB830700CBF0A6 /* UIView+Design.m */; };
 		77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4424F4B0CC00CBF0A6 /* area.plist */; };
 		77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */; };
@@ -805,6 +819,29 @@
 		7746F54024F6004B000DC145 /* AddressMangerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressMangerCell.h; sourceTree = "<group>"; };
 		7746F54124F6004B000DC145 /* AddressMangerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressMangerCell.m; sourceTree = "<group>"; };
 		7746F54224F6004B000DC145 /* AddressMangerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressMangerCell.xib; sourceTree = "<group>"; };
+		7746F54524F6376D000DC145 /* ZZAddressController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZZAddressController.xib; sourceTree = "<group>"; };
+		7746F54624F6376E000DC145 /* ZZAddressController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZAddressController.h; sourceTree = "<group>"; };
+		7746F54724F6376E000DC145 /* ZZAddressController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZAddressController.m; sourceTree = "<group>"; };
+		7746F54A24F63A37000DC145 /* CityPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityPickView.m; sourceTree = "<group>"; };
+		7746F54B24F63A37000DC145 /* CityPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityPickView.h; sourceTree = "<group>"; };
+		7746F54D24F63D6B000DC145 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		7746F55124F64247000DC145 /* CollectGoodsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectGoodsVC.h; sourceTree = "<group>"; };
+		7746F55224F64247000DC145 /* CollectGoodsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectGoodsVC.m; sourceTree = "<group>"; };
+		7746F55424F6434A000DC145 /* CollectGoodsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectGoodsCell.h; sourceTree = "<group>"; };
+		7746F55524F6434A000DC145 /* CollectGoodsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectGoodsCell.m; sourceTree = "<group>"; };
+		7746F55624F6434A000DC145 /* CollectGoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectGoodsCell.xib; sourceTree = "<group>"; };
+		7746F55924F64F23000DC145 /* CollectStoreVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectStoreVC.h; sourceTree = "<group>"; };
+		7746F55A24F64F23000DC145 /* CollectStoreVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectStoreVC.m; sourceTree = "<group>"; };
+		7746F55C24F64FF5000DC145 /* CollectStoreCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectStoreCell.h; sourceTree = "<group>"; };
+		7746F55D24F64FF5000DC145 /* CollectStoreCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectStoreCell.m; sourceTree = "<group>"; };
+		7746F55E24F64FF5000DC145 /* CollectStoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectStoreCell.xib; sourceTree = "<group>"; };
+		7746F56324F65B19000DC145 /* ProcurementOrderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProcurementOrderVC.h; sourceTree = "<group>"; };
+		7746F56424F65B19000DC145 /* ProcurementOrderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProcurementOrderVC.m; sourceTree = "<group>"; };
+		7746F56624F65B3A000DC145 /* ProcurementDetailsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProcurementDetailsVC.h; sourceTree = "<group>"; };
+		7746F56724F65B3A000DC145 /* ProcurementDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProcurementDetailsVC.m; sourceTree = "<group>"; };
+		7746F56924F65E36000DC145 /* ProcurementCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProcurementCell.h; sourceTree = "<group>"; };
+		7746F56A24F65E36000DC145 /* ProcurementCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProcurementCell.m; sourceTree = "<group>"; };
+		7746F56B24F65E36000DC145 /* ProcurementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcurementCell.xib; sourceTree = "<group>"; };
 		77A17BB524EB830700CBF0A6 /* UIView+Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Design.h"; sourceTree = "<group>"; };
 		77A17BB624EB830700CBF0A6 /* UIView+Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Design.m"; sourceTree = "<group>"; };
 		77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressShowView.h; sourceTree = "<group>"; };
@@ -1455,6 +1492,8 @@
 		7708D9C824E7ACAB00A4DB25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7746F56124F65AC8000DC145 /* Procurement */,
+				7746F54F24F64209000DC145 /* CollectGoods */,
 				7746F53F24F60027000DC145 /* Address */,
 				77A17C6E24F4F5F600CBF0A6 /* BusinessCircle */,
 				77A17C6C24F4F5DB00CBF0A6 /* Me */,
@@ -1468,6 +1507,8 @@
 		7708D9C924E7ACAC00A4DB25 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7746F56224F65ACE000DC145 /* Procurement */,
+				7746F55024F64210000DC145 /* CollectGoods */,
 				7746F53B24F5FE30000DC145 /* Address */,
 				77A17C6D24F4F5F200CBF0A6 /* BusinessCircle */,
 				77A17C6724F4F5B400CBF0A6 /* Store */,
@@ -1998,6 +2039,9 @@
 		7746F53B24F5FE30000DC145 /* Address */ = {
 			isa = PBXGroup;
 			children = (
+				7746F54624F6376E000DC145 /* ZZAddressController.h */,
+				7746F54724F6376E000DC145 /* ZZAddressController.m */,
+				7746F54524F6376D000DC145 /* ZZAddressController.xib */,
 				7746F53C24F5FF19000DC145 /* AddressMangerController.h */,
 				7746F53D24F5FF19000DC145 /* AddressMangerController.m */,
 			);
@@ -2007,11 +2051,59 @@
 		7746F53F24F60027000DC145 /* Address */ = {
 			isa = PBXGroup;
 			children = (
+				7746F54D24F63D6B000DC145 /* city.plist */,
+				7746F54B24F63A37000DC145 /* CityPickView.h */,
+				7746F54A24F63A37000DC145 /* CityPickView.m */,
 				7746F54024F6004B000DC145 /* AddressMangerCell.h */,
 				7746F54124F6004B000DC145 /* AddressMangerCell.m */,
 				7746F54224F6004B000DC145 /* AddressMangerCell.xib */,
 			);
 			path = Address;
+			sourceTree = "<group>";
+		};
+		7746F54F24F64209000DC145 /* CollectGoods */ = {
+			isa = PBXGroup;
+			children = (
+				7746F55424F6434A000DC145 /* CollectGoodsCell.h */,
+				7746F55524F6434A000DC145 /* CollectGoodsCell.m */,
+				7746F55624F6434A000DC145 /* CollectGoodsCell.xib */,
+				7746F55C24F64FF5000DC145 /* CollectStoreCell.h */,
+				7746F55D24F64FF5000DC145 /* CollectStoreCell.m */,
+				7746F55E24F64FF5000DC145 /* CollectStoreCell.xib */,
+			);
+			path = CollectGoods;
+			sourceTree = "<group>";
+		};
+		7746F55024F64210000DC145 /* CollectGoods */ = {
+			isa = PBXGroup;
+			children = (
+				7746F55124F64247000DC145 /* CollectGoodsVC.h */,
+				7746F55224F64247000DC145 /* CollectGoodsVC.m */,
+				7746F55924F64F23000DC145 /* CollectStoreVC.h */,
+				7746F55A24F64F23000DC145 /* CollectStoreVC.m */,
+			);
+			path = CollectGoods;
+			sourceTree = "<group>";
+		};
+		7746F56124F65AC8000DC145 /* Procurement */ = {
+			isa = PBXGroup;
+			children = (
+				7746F56924F65E36000DC145 /* ProcurementCell.h */,
+				7746F56A24F65E36000DC145 /* ProcurementCell.m */,
+				7746F56B24F65E36000DC145 /* ProcurementCell.xib */,
+			);
+			path = Procurement;
+			sourceTree = "<group>";
+		};
+		7746F56224F65ACE000DC145 /* Procurement */ = {
+			isa = PBXGroup;
+			children = (
+				7746F56324F65B19000DC145 /* ProcurementOrderVC.h */,
+				7746F56424F65B19000DC145 /* ProcurementOrderVC.m */,
+				7746F56624F65B3A000DC145 /* ProcurementDetailsVC.h */,
+				7746F56724F65B3A000DC145 /* ProcurementDetailsVC.m */,
+			);
+			path = Procurement;
 			sourceTree = "<group>";
 		};
 		77A17C4124F4B0CC00CBF0A6 /* Search */ = {
@@ -2209,11 +2301,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */,
+				7746F56024F64FF5000DC145 /* CollectStoreCell.xib in Resources */,
 				7708DA4324E7B6FA00A4DB25 /* wphoto_select_yes@2x.png in Resources */,
+				7746F54E24F63D6B000DC145 /* city.plist in Resources */,
 				77A17C5324F4B0CC00CBF0A6 /* AddressCell.xib in Resources */,
 				7708D9A324E7ABA300A4DB25 /* SVProgressHUD.bundle in Resources */,
+				7746F55824F6434A000DC145 /* CollectGoodsCell.xib in Resources */,
 				7708DA4224E7B6FA00A4DB25 /* wphoto_select_no@2x.png in Resources */,
+				7746F56D24F65E36000DC145 /* ProcurementCell.xib in Resources */,
 				77A17C6024F4B47C00CBF0A6 /* HomeAllCollectionCell.xib in Resources */,
+				7746F54824F6376E000DC145 /* ZZAddressController.xib in Resources */,
 				7708DA9724E7C61A00A4DB25 /* AlipaySDK.bundle in Resources */,
 				7708DA4424E7B6FA00A4DB25 /* wphoto_back@2x.png in Resources */,
 				7708DD3E24EB61F600A4DB25 /* SearchViewController.xib in Resources */,
@@ -2315,6 +2412,7 @@
 				7708D9C324E7ABA300A4DB25 /* NSObject+MJProperty.m in Sources */,
 				7708DC4224E7DF5D00A4DB25 /* UIColor+HexString.m in Sources */,
 				7708DA4624E7B6FA00A4DB25 /* UIImage+fixOrientation.m in Sources */,
+				7746F54924F6376E000DC145 /* ZZAddressController.m in Sources */,
 				7708D97124E7ABA200A4DB25 /* UIButton+AFNetworking.m in Sources */,
 				7708D9A124E7ABA300A4DB25 /* SVProgressHUD.m in Sources */,
 				7708D84524E7A1B200A4DB25 /* GuideViewController.m in Sources */,
@@ -2325,6 +2423,7 @@
 				77A17C5224F4B0CC00CBF0A6 /* SearchCell.m in Sources */,
 				7708D99024E7ABA300A4DB25 /* IQTextView.m in Sources */,
 				7708D87924E7AA4E00A4DB25 /* AlertViewManager.m in Sources */,
+				7746F56524F65B19000DC145 /* ProcurementOrderVC.m in Sources */,
 				7708DA3C24E7B6FA00A4DB25 /* PayManager.m in Sources */,
 				7708D98024E7ABA200A4DB25 /* NSBundle+MJRefresh.m in Sources */,
 				7708DC8124E7ECF200A4DB25 /* UploadPhotoManager.m in Sources */,
@@ -2359,6 +2458,7 @@
 				7708DA2D24E7B6FA00A4DB25 /* WSImageModel.m in Sources */,
 				7708D83E24E7A1B200A4DB25 /* MycommonTableView.m in Sources */,
 				7708D9D224E7ACF500A4DB25 /* MeViewController.m in Sources */,
+				7746F55324F64247000DC145 /* CollectGoodsVC.m in Sources */,
 				7708DC3624E7DF5D00A4DB25 /* SDWebImageOptionsProcessor.m in Sources */,
 				7708D84A24E7A1B200A4DB25 /* BaseCollectionView+nodata.m in Sources */,
 				7708DC3924E7DF5D00A4DB25 /* UIImage+Metadata.m in Sources */,
@@ -2380,7 +2480,9 @@
 				7708D9C024E7ABA300A4DB25 /* MJProperty.m in Sources */,
 				7708D99C24E7ABA300A4DB25 /* IQUIView+Hierarchy.m in Sources */,
 				7746F54324F6004B000DC145 /* AddressMangerCell.m in Sources */,
+				7746F56824F65B3A000DC145 /* ProcurementDetailsVC.m in Sources */,
 				7708DC1724E7DF5C00A4DB25 /* SDWebImageIndicator.m in Sources */,
+				7746F56C24F65E36000DC145 /* ProcurementCell.m in Sources */,
 				7708DC3E24E7DF5D00A4DB25 /* SDWeakProxy.m in Sources */,
 				7708DC7724E7EC7C00A4DB25 /* MASCompositeConstraint.m in Sources */,
 				7708DA3824E7B6FA00A4DB25 /* PayManager+requestPayNeedInfo.m in Sources */,
@@ -2412,6 +2514,7 @@
 				7708D97D24E7ABA200A4DB25 /* MJRefreshConst.m in Sources */,
 				7708D9A024E7ABA300A4DB25 /* SVProgressAnimatedView.m in Sources */,
 				7708D9DD24E7AFB100A4DB25 /* UIBarButtonItem+BarButtonItem.m in Sources */,
+				7746F55724F6434A000DC145 /* CollectGoodsCell.m in Sources */,
 				7708DC2B24E7DF5C00A4DB25 /* SDImageCachesManager.m in Sources */,
 				7708DC0B24E7DF5C00A4DB25 /* NSImage+Compatibility.m in Sources */,
 				7708D9C124E7ABA300A4DB25 /* NSObject+MJCoding.m in Sources */,
@@ -2424,6 +2527,7 @@
 				7708DC5424E7EA1200A4DB25 /* UploadPhotoImgHandler.m in Sources */,
 				7708D84F24E7A1B200A4DB25 /* TopbarTypeTableDataLogicModule.m in Sources */,
 				7708DC2C24E7DF5C00A4DB25 /* SDWebImageTransition.m in Sources */,
+				7746F55F24F64FF5000DC145 /* CollectStoreCell.m in Sources */,
 				7708DA3D24E7B6FA00A4DB25 /* PayRequestModel.m in Sources */,
 				7708D99924E7ABA300A4DB25 /* IQUIWindow+Hierarchy.m in Sources */,
 				7708DC3224E7DF5D00A4DB25 /* UIImage+MemoryCacheCost.m in Sources */,
@@ -2440,6 +2544,7 @@
 				7708D85024E7A1B200A4DB25 /* CellCalculateModel.m in Sources */,
 				77A17C5524F4B0CC00CBF0A6 /* AddressCell.m in Sources */,
 				7708DA4724E7B6FA00A4DB25 /* TMDiskCache.m in Sources */,
+				7746F55B24F64F23000DC145 /* CollectStoreVC.m in Sources */,
 				7708D7E724E79BD700A4DB25 /* main.m in Sources */,
 				77A17C6124F4B47C00CBF0A6 /* HomeAllCollectionCell.m in Sources */,
 				7708DC1624E7DF5C00A4DB25 /* SDWebImageCacheSerializer.m in Sources */,
@@ -2478,6 +2583,7 @@
 				7708D97824E7ABA200A4DB25 /* AFURLSessionManager.m in Sources */,
 				7708DA3324E7B6FA00A4DB25 /* HMSegmentedControl.m in Sources */,
 				7708DC5724E7EA1200A4DB25 /* PublishEvaluationModel.m in Sources */,
+				7746F54C24F63A37000DC145 /* CityPickView.m in Sources */,
 				7708DC1124E7DF5C00A4DB25 /* SDAnimatedImageView.m in Sources */,
 				7708DC3724E7DF5D00A4DB25 /* UIView+WebCacheOperation.m in Sources */,
 				7708D98924E7ABA300A4DB25 /* MJRefreshStateHeader.m in Sources */,

@@ -183,11 +183,14 @@
                             <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwo-KU-IqT">
-                            <rect key="frame" x="218" y="11" width="122" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwo-KU-IqT">
+                            <rect key="frame" x="159" y="16" width="164" height="18"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="164" id="58c-y8-UO4"/>
+                                <constraint firstAttribute="height" constant="18" id="c6V-3G-agW"/>
+                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <state key="normal" title="去认证     &gt;">
+                            <state key="normal" image="rightArrow">
                                 <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
@@ -196,7 +199,9 @@
                     <constraints>
                         <constraint firstItem="DET-ri-YeU" firstAttribute="leading" secondItem="zdb-jD-zfr" secondAttribute="leading" constant="20" id="Dqw-gL-dPK"/>
                         <constraint firstAttribute="height" constant="50" id="X2O-Fr-AJH"/>
+                        <constraint firstAttribute="trailing" secondItem="hwo-KU-IqT" secondAttribute="trailing" constant="22" id="YKf-fl-HVa"/>
                         <constraint firstItem="EcT-Z9-50j" firstAttribute="centerY" secondItem="DET-ri-YeU" secondAttribute="centerY" id="mQ0-W0-0uv"/>
+                        <constraint firstItem="hwo-KU-IqT" firstAttribute="centerY" secondItem="zdb-jD-zfr" secondAttribute="centerY" id="mS3-Nm-vji"/>
                         <constraint firstItem="EcT-Z9-50j" firstAttribute="leading" secondItem="DET-ri-YeU" secondAttribute="trailing" constant="16" id="og9-yW-BIE"/>
                         <constraint firstItem="DET-ri-YeU" firstAttribute="centerY" secondItem="zdb-jD-zfr" secondAttribute="centerY" id="sqb-yd-Byq"/>
                     </constraints>
@@ -226,12 +231,17 @@
                 <constraint firstItem="02U-cx-h6b" firstAttribute="leading" secondItem="9Gg-ye-v9C" secondAttribute="leading" id="rkA-ch-vIW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
+            <connections>
+                <outlet property="goodsBtn" destination="ds2-yv-gCR" id="9b3-6e-I5w"/>
+                <outlet property="storeBtn" destination="1c1-GX-zAg" id="Iku-GW-tLr"/>
+            </connections>
             <point key="canvasLocation" x="136.95652173913044" y="111.49553571428571"/>
         </collectionReusableView>
     </objects>
     <resources>
         <image name="certification" width="31" height="31"/>
         <image name="my-header" width="46" height="46"/>
+        <image name="rightArrow" width="13" height="13"/>
         <image name="topImage" width="375" height="233.5"/>
     </resources>
 </document>

@@ -1,18 +1,18 @@
 //
-//  AddressMangerCell.m
+//  CollectStoreCell.m
 //  PeachBlossom_iOS
 //
 //  Created by 曾勇兵 on 2020/8/26.
 //  Copyright © 2020 zengyongbing. All rights reserved.
 //
 
-#import "AddressMangerCell.h"
+#import "CollectStoreCell.h"
 
-@implementation AddressMangerCell
+@implementation CollectStoreCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.selectionStyle=UITableViewCellSelectionStyleNone;
+    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
