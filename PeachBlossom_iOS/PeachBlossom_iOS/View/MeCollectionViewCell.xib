@@ -36,7 +36,7 @@
                                         <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNI-eH-RKj">
+                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNI-eH-RKj">
                                         <rect key="frame" x="243" y="5" width="86" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="G9A-SJ-An2"/>
@@ -48,6 +48,9 @@
                                         <state key="normal" title="全部" image="下一级按钮">
                                             <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="btnClickIndex:" destination="gTV-IL-0wX" eventType="touchUpInside" id="7yv-2b-qJY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -74,6 +77,9 @@
                                                     <constraint firstAttribute="height" constant="58" id="Dz4-lh-XYh"/>
                                                 </constraints>
                                                 <state key="normal" image="待付款"/>
+                                                <connections>
+                                                    <action selector="btnClickIndex:" destination="gTV-IL-0wX" eventType="touchUpInside" id="wZ8-nH-e3A"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待付款" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcW-Up-82w">
                                                 <rect key="frame" x="1" y="52" width="65.5" height="13"/>
@@ -104,6 +110,9 @@
                                                     <constraint firstAttribute="height" constant="58" id="EnJ-9d-YHs"/>
                                                 </constraints>
                                                 <state key="normal" image="待收货"/>
+                                                <connections>
+                                                    <action selector="btnClickIndex:" destination="gTV-IL-0wX" eventType="touchUpInside" id="0JJ-XK-8vB"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待收货" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vla-ie-WgP">
                                                 <rect key="frame" x="1" y="53" width="65" height="12"/>
@@ -134,6 +143,9 @@
                                                     <constraint firstAttribute="height" constant="58" id="uY4-zg-rAm"/>
                                                 </constraints>
                                                 <state key="normal" image="待评价"/>
+                                                <connections>
+                                                    <action selector="btnClickIndex:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ZKh-qb-s4B"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待评价" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hre-6S-YJl">
                                                 <rect key="frame" x="1" y="53" width="65.5" height="12"/>
@@ -164,6 +176,9 @@
                                                     <constraint firstAttribute="height" constant="58" id="yW8-x4-jKp"/>
                                                 </constraints>
                                                 <state key="normal" image="my-icon_5"/>
+                                                <connections>
+                                                    <action selector="btnClickIndex:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Pds-ge-33r"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="退款/售后" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyb-M5-a9g">
                                                 <rect key="frame" x="1" y="53" width="65.5" height="12"/>
@@ -194,6 +209,9 @@
                                                     <constraint firstAttribute="height" constant="58" id="Cex-HG-IOB"/>
                                                 </constraints>
                                                 <state key="normal" image="my-icon_2"/>
+                                                <connections>
+                                                    <action selector="btnClickIndex:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Zab-pR-SVK"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待发货" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLj-6g-KHP">
                                                 <rect key="frame" x="1" y="53" width="65.5" height="12"/>
@@ -272,12 +290,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5LI-uO-8AO">
                                 <rect key="frame" x="1" y="1" width="113.5" height="82"/>
                                 <subviews>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smp-ty-eKn">
+                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smp-ty-eKn">
                                         <rect key="frame" x="1" y="1" width="111.5" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="58" id="ymC-As-KiU"/>
                                         </constraints>
                                         <state key="normal" image="address"/>
+                                        <connections>
+                                            <action selector="btnClickIndex:" destination="gTV-IL-0wX" eventType="touchUpInside" id="hkO-Tg-L3k"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收货地址" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJR-F5-PxJ">
                                         <rect key="frame" x="1" y="48" width="111.5" height="13"/>
@@ -302,12 +323,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z6z-e8-OO6">
                                 <rect key="frame" x="230.5" y="1" width="113.5" height="82"/>
                                 <subviews>
-                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUh-XZ-890">
+                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUh-XZ-890">
                                         <rect key="frame" x="1" y="1" width="111.5" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="58" id="e5n-9c-dTS"/>
                                         </constraints>
                                         <state key="normal" image="my-icon_8"/>
+                                        <connections>
+                                            <action selector="btnClickIndex:" destination="gTV-IL-0wX" eventType="touchUpInside" id="uqK-3o-a4u"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的桃币" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnT-uK-KY0">
                                         <rect key="frame" x="1" y="49" width="111.5" height="12"/>
@@ -332,12 +356,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QWh-7I-65c">
                                 <rect key="frame" x="115.5" y="1" width="114" height="82"/>
                                 <subviews>
-                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNT-FB-HEN">
+                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNT-FB-HEN">
                                         <rect key="frame" x="1" y="1" width="112" height="58"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="58" id="qWh-HE-dRN"/>
                                         </constraints>
                                         <state key="normal" image="bank"/>
+                                        <connections>
+                                            <action selector="btnClickIndex:" destination="gTV-IL-0wX" eventType="touchUpInside" id="jGA-nM-h9C"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="银行卡" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4wc-lY-Z52">
                                         <rect key="frame" x="1" y="49" width="112" height="12"/>

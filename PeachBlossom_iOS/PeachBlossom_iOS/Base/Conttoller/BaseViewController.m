@@ -245,15 +245,12 @@ const CGFloat defaulDelayGoBackSeconds = 1.2;
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
-    if (!_isPushPage) {
-        for (UISwipeGestureRecognizer *recognizer in [[self view] gestureRecognizers]) {
-            [[self view] removeGestureRecognizer:recognizer];
-        }
-    }
-    
-   
-    
-    //    [UManager leavePage:NSStringFromClass([self class])];
+//    if (!_isPushPage) {
+//        for (UISwipeGestureRecognizer *recognizer in [[self view] gestureRecognizers]) {
+//            [[self view] removeGestureRecognizer:recognizer];
+//        }
+//    }
+  
     
 }
 
@@ -302,19 +299,11 @@ const CGFloat defaulDelayGoBackSeconds = 1.2;
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[UIView new]];
         return;
     }
-    //    UIBarButtonItem *leftItem = [UIBarButtonItem initWithNormalImage:@"返回" target:self action:@selector(goBack) width:24 height:50];
-    //    self.navigationItem.leftBarButtonItems = @[[UIBarButtonItem barButtonItemSpace:0],leftItem];
+    
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem initDLSalerBackItemWihtAction:@selector(goBack) target:self];
     
-    //    UIButton *leftBtn = [[UIButton alloc] initWithFrame:CGRectMake(10,0, 15,33)];
-    //    leftBtn.contentEdgeInsets =UIEdgeInsetsMake(0, -5,0, 0);
-    //    leftBtn.imageEdgeInsets =UIEdgeInsetsMake(0, -5,0, 0);
-    //    [leftBtn setImage:[UIImage imageNamed:@"nav_Back"]forState:UIControlStateNormal];
-    //    [leftBtn addTarget:self action:@selector(goBack)forControlEvents:UIControlEventTouchUpInside];
-    //    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
-    //
-    //    self.navigationItem.leftBarButtonItems =@[leftItem];
+   
     
     
 }
@@ -322,7 +311,7 @@ const CGFloat defaulDelayGoBackSeconds = 1.2;
 - (void)setNavigationBar {
     UINavigationBar *navBar = self.navigationController.navigationBar;
     navBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-    //    navBar.barTintColor = status_color;
+ 
     
 }
 
