@@ -10,6 +10,7 @@
 #import "ProjectStandardUIDefineConst.h"
 #import "Masonry.h"
 #import "SupplyGoodsCell.h"
+#import "GoodsInfoViewController.h"
 
 @interface SupplyViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -380,7 +381,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    GoodsInfoViewController *infoCon = [[GoodsInfoViewController alloc] init];
+    [self.navigationController pushViewController:infoCon animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
