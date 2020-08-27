@@ -14,7 +14,7 @@
 
  
 #define KSelectedBgColor UIColorFromRGB(0xffc600)
-#define KLineColor UIColorFromRGB(0xdddddd)
+#define KLineColor UIColorFromRGB(0xF2F2F2)
 #define KViewBgColor UIColorFromRGB(0xf7f7f7)
 #define KTextColor UIColorFromRGB(0x999999)
 #define KWeakTextColor UIColorFromRGB(0xa9a9a9)

@@ -30,6 +30,11 @@
     }
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
 #pragma mark ------------------------Init---------------------------------
 - (void)_initSegementControll {
     self.classNames =  @[@"全部",@"待付款",@"待发货",@"待收货",@"待评价"];

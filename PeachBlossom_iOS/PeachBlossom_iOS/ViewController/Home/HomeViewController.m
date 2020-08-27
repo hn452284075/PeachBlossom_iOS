@@ -11,7 +11,7 @@
 #import "HomeAllCollectionCell.h"
 #import "AddressCell.h"
 #import "HomeHeaderView.h"
-#import "SearchViewController.h"
+#import "SearchGoodsVC.h"
 #import "SupplyViewController.h"
 #import "AppDelegate.h"
 @interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -36,6 +36,10 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 #pragma mark ------------------------Init---------------------------------
@@ -65,6 +69,7 @@
     [seachBtn setTitleColor:KTextColor forState:UIControlStateNormal];
     [seachBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 6)];
     seachBtn.titleLabel.font= CUSTOMFONT(12);
+    seachBtn.userInteractionEnabled=NO;
     [seachView addSubview:seachBtn];
     
     
@@ -212,7 +217,7 @@
 
 #pragma mark ------------------------Page Navigate------------------------
 -(void)jumpSeachPage{
-    SearchViewController *vc = [[SearchViewController alloc]init];
+    SearchGoodsVC *vc = [[SearchGoodsVC alloc]init];
     [self navigatePushViewController:vc animate:YES];
 }
 
