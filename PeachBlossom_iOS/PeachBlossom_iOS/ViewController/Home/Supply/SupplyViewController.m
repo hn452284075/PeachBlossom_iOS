@@ -43,7 +43,6 @@
     }];
     topImg.image = IMAGE(@"topImage");
     
-    //标题
     UILabel *titleLab = [[UILabel alloc] init];
     [self.view addSubview:titleLab];
     [titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -68,14 +67,105 @@
     }];
     [backBtn setBackgroundImage:IMAGE(@"supply_back") forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(backFrontController:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    //添加下方的uitableview
+    self.goodsTableview = [[UITableView alloc] init];
+    [self.view addSubview:self.goodsTableview];
+    [self.goodsTableview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(70);
+        make.bottom.equalTo(self.view.mas_bottom);
+        make.width.mas_equalTo(kScreenWidth);
+    }];
+    self.goodsTableview.delegate = self;
+    self.goodsTableview.dataSource = self;
+    self.goodsTableview.tableHeaderView = [self tableHeaderView];
+}
+
+#pragma mark ------------------------View Event---------------------------
+
+#pragma mark ------------------------ 返回上级页面
+- (void)backFrontController:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark ------------------------ 顶部搜索按钮点击事件
+- (void)seachBtnClicked:(id)sender
+{
+    
+}
+
+#pragma mark ------------------------ 中间部分农产品、农资种苗、农机具点击事件
+- (void)classBtnClicked:(id)sender
+{
+    [self.class_btn1 setTitleColor:kGetColor(0x22, 0x22, 0x22) forState:UIControlStateNormal];
+    [self.class_btn2 setTitleColor:kGetColor(0x22, 0x22, 0x22) forState:UIControlStateNormal];
+    [self.class_btn3 setTitleColor:kGetColor(0x22, 0x22, 0x22) forState:UIControlStateNormal];
+    
+    UIButton *btn = (UIButton *)sender;
+    [btn setTitleColor:kGetColor(0x47, 0xc6, 0x7c) forState:UIControlStateNormal];
+    
+    
+    switch (btn.tag) {
+        case 1:
+        {
+            self.selectedView.center = CGPointMake(btn.frame.origin.x+btn.frame.size.width-25, btn.center.y+15);
+        }
+            break;
+        case 2:
+        {
+            self.selectedView.center = CGPointMake(btn.center.x, btn.center.y+15);
+        }
+            break;
+        case 3:
+        {
+            self.selectedView.center = CGPointMake(btn.frame.origin.x+25, btn.center.y+15);
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark ------------------------ 切换产地按钮点击事件
+- (void)placeBtnClicked:(id)sender
+{
+    
+
+}
+
+
+#pragma mark ------------------------ 种类分类按钮点击事件
+- (void)productClassViewClicked:(id)sender
+{
+    
+}
+
+#pragma mark ------------------------Init---------------------------------
+- (UIView *)tableHeaderView
+{
+    //标题
+    UIView *hview = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 510)];
+    hview.backgroundColor = kGetColor(0xf7, 0xf7, 0xf7);
+    
+    UIImageView *topImg = [[UIImageView alloc] init];
+    [hview addSubview:topImg];
+    [topImg mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(hview.mas_top);
+        make.left.equalTo(hview.mas_left);
+        make.right.equalTo(hview.mas_right);
+        make.height.mas_equalTo(198.5);
+    }];
+    topImg.image = IMAGE(@"topImage");
         
     //搜索框
     UIView *seachView = [[UIView alloc] init];
-    [self.view addSubview:seachView];
+    [hview addSubview:seachView];
     [seachView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(titleLab.mas_bottom).offset(11.5);
-        make.left.equalTo(self.view.mas_left).offset(14);
-        make.right.equalTo(self.view.mas_right).offset(-14);
+        make.top.equalTo(hview.mas_top).offset(11.5);
+        make.left.equalTo(hview.mas_left).offset(14);
+        make.right.equalTo(hview.mas_right).offset(-14);
         make.height.mas_equalTo(30);
     }];
     seachView.backgroundColor = [UIColor whiteColor];
@@ -96,22 +186,22 @@
     
     //搜索框下方广告图
     UIButton *adBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.view addSubview:adBtn];
+    [hview addSubview:adBtn];
     [adBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(titleLab.mas_bottom).offset(57);
-        make.left.equalTo(self.view.mas_left).offset(14);
-        make.right.equalTo(self.view.mas_right).offset(-14);
+        make.top.equalTo(seachView.mas_bottom).offset(10);
+        make.left.equalTo(hview.mas_left).offset(14);
+        make.right.equalTo(hview.mas_right).offset(-14);
         make.height.mas_equalTo(120);
     }];
     [adBtn setBackgroundImage:IMAGE(@"supply_banner") forState:UIControlStateNormal];
     
     //中间部分 产品种类view
     UIView *productView = [[UIView alloc] init];
-    [self.view addSubview:productView];
+    [hview addSubview:productView];
     [productView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.view.mas_top).offset(251.5);
-        make.left.equalTo(self.view.mas_left).offset(14);
-        make.right.equalTo(self.view.mas_right).offset(-14);
+        make.top.equalTo(hview.mas_top).offset(251.5-70);
+        make.left.equalTo(hview.mas_left).offset(14);
+        make.right.equalTo(hview.mas_right).offset(-14);
         make.height.mas_equalTo(228);
     }];
     productView.backgroundColor = [UIColor whiteColor];
@@ -130,7 +220,7 @@
     
     [productView addSubview:self.class_btn2];
     [self.class_btn2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view.mas_centerX);
+        make.centerX.equalTo(hview.mas_centerX);
         make.centerY.equalTo(self.class_btn1);
         make.width.mas_equalTo(productView.mas_width).dividedBy(3);
         make.height.mas_equalTo(16);
@@ -195,11 +285,11 @@
     
     //产地
     UIView *placeView = [[UIView alloc] init];
-    [self.view addSubview:placeView];
+    [hview addSubview:placeView];
     [placeView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(productView.mas_bottom).offset(18.5);
-        make.left.equalTo(self.view.mas_left).offset(14);
-        make.right.equalTo(self.view.mas_right).offset(-14);
+        make.left.equalTo(hview.mas_left).offset(14);
+        make.right.equalTo(hview.mas_right).offset(-14);
         make.height.mas_equalTo(36);
     }];
     placeView.backgroundColor = [UIColor whiteColor];
@@ -235,91 +325,18 @@
     
     //最新货源
     UILabel *newGoodsLab = [[UILabel alloc] init];
-    [self.view addSubview:newGoodsLab];
+    [hview addSubview:newGoodsLab];
     [newGoodsLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(placeView.mas_bottom).offset(22);
-        make.centerX.equalTo(self.view.mas_centerX);
+        make.top.equalTo(placeView.mas_bottom).offset(17);
+        make.centerX.equalTo(hview.mas_centerX);
         make.height.mas_equalTo(16);
     }];
     newGoodsLab.text = @"最新货源";
     newGoodsLab.font = [UIFont boldSystemFontOfSize:16];
     newGoodsLab.textColor = kGetColor(0x22, 0x22, 0x22);
     
-    
-    //添加下方的uitableview
-    self.goodsTableview = [[UITableView alloc] init];
-    [self.view addSubview:self.goodsTableview];
-    [self.goodsTableview mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(newGoodsLab.mas_bottom).offset(19);
-        make.bottom.equalTo(self.view.mas_bottom);
-        make.width.mas_equalTo(kScreenWidth);
-    }];
-    self.goodsTableview.delegate = self;
-    self.goodsTableview.dataSource = self;
-    
+    return hview;
 }
-
-#pragma mark ------------------------View Event---------------------------
-
-#pragma mark ------------------------ 返回上级页面
-- (void)backFrontController:(id)sender
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-#pragma mark ------------------------ 顶部搜索按钮点击事件
-- (void)seachBtnClicked:(id)sender
-{
-    
-}
-
-#pragma mark ------------------------ 中间部分农产品、农资种苗、农机具点击事件
-- (void)classBtnClicked:(id)sender
-{
-    [self.class_btn1 setTitleColor:kGetColor(0x22, 0x22, 0x22) forState:UIControlStateNormal];
-    [self.class_btn2 setTitleColor:kGetColor(0x22, 0x22, 0x22) forState:UIControlStateNormal];
-    [self.class_btn3 setTitleColor:kGetColor(0x22, 0x22, 0x22) forState:UIControlStateNormal];
-    
-    UIButton *btn = (UIButton *)sender;
-    [btn setTitleColor:kGetColor(0x47, 0xc6, 0x7c) forState:UIControlStateNormal];
-    
-    
-    switch (btn.tag) {
-        case 1:
-        {
-            self.selectedView.center = CGPointMake(btn.frame.origin.x+btn.frame.size.width-25, btn.center.y+15);
-        }
-            break;
-        case 2:
-        {
-            self.selectedView.center = CGPointMake(btn.center.x, btn.center.y+15);
-        }
-            break;
-        case 3:
-        {
-            self.selectedView.center = CGPointMake(btn.frame.origin.x+25, btn.center.y+15);
-        }
-            break;
-        default:
-            break;
-    }
-}
-
-#pragma mark ------------------------ 切换产地按钮点击事件
-- (void)placeBtnClicked:(id)sender
-{
-    
-
-}
-
-
-#pragma mark ------------------------ 种类分类按钮点击事件
-- (void)productClassViewClicked:(id)sender
-{
-    
-}
-
-#pragma mark ------------------------Init---------------------------------
  
 #pragma mark ------------------------Private------------------------------
 - (UIButton *)getCustomBtn:(UIButton *)btn title:(NSString *)string tag:(int)tag
@@ -358,6 +375,9 @@
 #pragma mark ------------------------Page Navigate------------------------
 
 #pragma mark ------------------------Delegate-----------------------------
+
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -366,6 +386,11 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 160;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
