@@ -32,7 +32,7 @@
 
 #pragma mark ------------------------Init---------------------------------
 - (void)_initSegementControll {
-    self.classNames =  @[@"全部",@"待付款",@"待发货",@"待评价"];
+    self.classNames =  @[@"全部",@"待付款",@"待发货",@"待收货",@"待评价"];
     self.topBarControl = [[HMSegmentedControl alloc] initWithSectionTitles:self.classNames];
     self.topBarControl.frame = CGRectMake(0, 0, kScreenWidth, 40);
     self.topBarControl.backgroundColor = [UIColor whiteColor];
@@ -69,7 +69,7 @@
 }
 
 - (void)_assignClassCodeForChildVcs:(NSArray *)chilVcs {
-    NSArray *array = @[@"0",@"1",@"2",@"3"];
+    NSArray *array = @[@"0",@"1",@"2",@"3",@"4"];
     
     for (NSInteger i=0; i<chilVcs.count; i++) {
         

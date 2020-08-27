@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+typedef void (^ButtonTitleBlock)(NSString *str);
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ProcurementCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *buttonX;
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
+@property (nonatomic,copy)ButtonTitleBlock buttonTitleBlock;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceTotal;
 @property (nonatomic,weak)NSDictionary *dic;

@@ -12,7 +12,7 @@
 #import "GlobleConst.h"
 #import "ProjectStandardUIDefineConst.h"
 #import "ZZRequestUrl.h"
-#import "SDWebImage.h"
+#import "UIImageView+sd_SetImg.h"
 #import "Masonry.h"
 #import "UIView+Nib.h"
 #endif /* PeachBlossom_pch */

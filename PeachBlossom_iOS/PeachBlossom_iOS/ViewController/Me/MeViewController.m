@@ -145,6 +145,7 @@
         case 10://全部
             {
                 ProcurementOrderVC *vc = [[ProcurementOrderVC alloc]init];
+                vc.currentIndex=0;
                 [self navigatePushViewController:vc animate:YES];
 
             }
