@@ -23,12 +23,12 @@
     [_listTableView configureTableAfterRequestPagingData:@[@"",@""]];
     [self _requestOrderData];
 }
-
+#pragma mark ------------------------Api----------------------------------
 -(void)_requestOrderData{
  
     
 }
-
+#pragma mark ------------------------Getter / Setter----------------------
 - (MycommonTableView *)listTableView{
     
     if (!_listTableView) {
@@ -44,6 +44,7 @@
             ProcurementCell *orderCell =(ProcurementCell *)cell;
             orderCell.selectionStyle = UITableViewCellSelectionStyleNone;
             NSLog(@"%@",cellModel);
+            [orderCell setDic:@{@"status":@"1"}];
             
             
             
