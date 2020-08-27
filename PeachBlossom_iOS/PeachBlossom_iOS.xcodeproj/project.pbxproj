@@ -298,6 +298,8 @@
 		77A17C7E24F4F8DA00CBF0A6 /* MeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C7C24F4F8DA00CBF0A6 /* MeHeaderView.xib */; };
 		972CC5E324F600C3002DC0F1 /* SupplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 972CC5E124F600C3002DC0F1 /* SupplyViewController.m */; };
 		972CC5E424F600C3002DC0F1 /* SupplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972CC5E224F600C3002DC0F1 /* SupplyViewController.xib */; };
+		972CC5E924F65A27002DC0F1 /* SupplyGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 972CC5E724F65A27002DC0F1 /* SupplyGoodsCell.m */; };
+		972CC5EA24F65A27002DC0F1 /* SupplyGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972CC5E824F65A27002DC0F1 /* SupplyGoodsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -881,6 +883,9 @@
 		972CC5E024F600C3002DC0F1 /* SupplyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupplyViewController.h; sourceTree = "<group>"; };
 		972CC5E124F600C3002DC0F1 /* SupplyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupplyViewController.m; sourceTree = "<group>"; };
 		972CC5E224F600C3002DC0F1 /* SupplyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupplyViewController.xib; sourceTree = "<group>"; };
+		972CC5E624F65A27002DC0F1 /* SupplyGoodsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupplyGoodsCell.h; sourceTree = "<group>"; };
+		972CC5E724F65A27002DC0F1 /* SupplyGoodsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupplyGoodsCell.m; sourceTree = "<group>"; };
+		972CC5E824F65A27002DC0F1 /* SupplyGoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupplyGoodsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2130,6 +2135,7 @@
 		77A17C5C24F4B47C00CBF0A6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				972CC5E524F659E5002DC0F1 /* Supply */,
 				77A17C5D24F4B47C00CBF0A6 /* HomeAllCollectionCell.h */,
 				77A17C5E24F4B47C00CBF0A6 /* HomeAllCollectionCell.xib */,
 				77A17C5F24F4B47C00CBF0A6 /* HomeAllCollectionCell.m */,
@@ -2193,6 +2199,16 @@
 				972CC5E024F600C3002DC0F1 /* SupplyViewController.h */,
 				972CC5E124F600C3002DC0F1 /* SupplyViewController.m */,
 				972CC5E224F600C3002DC0F1 /* SupplyViewController.xib */,
+			);
+			path = Supply;
+			sourceTree = "<group>";
+		};
+		972CC5E524F659E5002DC0F1 /* Supply */ = {
+			isa = PBXGroup;
+			children = (
+				972CC5E624F65A27002DC0F1 /* SupplyGoodsCell.h */,
+				972CC5E724F65A27002DC0F1 /* SupplyGoodsCell.m */,
+				972CC5E824F65A27002DC0F1 /* SupplyGoodsCell.xib */,
 			);
 			path = Supply;
 			sourceTree = "<group>";
@@ -2308,7 +2324,11 @@
 				7708D9A324E7ABA300A4DB25 /* SVProgressHUD.bundle in Resources */,
 				7746F55824F6434A000DC145 /* CollectGoodsCell.xib in Resources */,
 				7708DA4224E7B6FA00A4DB25 /* wphoto_select_no@2x.png in Resources */,
+
+				972CC5EA24F65A27002DC0F1 /* SupplyGoodsCell.xib in Resources */,
+
 				7746F56D24F65E36000DC145 /* ProcurementCell.xib in Resources */,
+
 				77A17C6024F4B47C00CBF0A6 /* HomeAllCollectionCell.xib in Resources */,
 				7746F54824F6376E000DC145 /* ZZAddressController.xib in Resources */,
 				7708DA9724E7C61A00A4DB25 /* AlipaySDK.bundle in Resources */,
@@ -2386,6 +2406,7 @@
 				7708DA4124E7B6FA00A4DB25 /* NavView.m in Sources */,
 				7708DC5624E7EA1200A4DB25 /* PublishImageCollectionCell.m in Sources */,
 				7708DA3E24E7B6FA00A4DB25 /* WXPayRequestModel.m in Sources */,
+				972CC5E924F65A27002DC0F1 /* SupplyGoodsCell.m in Sources */,
 				7708D97224E7ABA200A4DB25 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				7708DC2F24E7DF5C00A4DB25 /* UIImageView+WebCache.m in Sources */,
 				7708D99F24E7ABA300A4DB25 /* SVRadialGradientLayer.m in Sources */,
