@@ -37,7 +37,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNI-eH-RKj">
-                                        <rect key="frame" x="243" y="5" width="86" height="30"/>
+                                        <rect key="frame" x="259" y="5" width="86" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="G9A-SJ-An2"/>
                                             <constraint firstAttribute="width" constant="86" id="UZL-8V-jNn"/>
@@ -45,7 +45,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="全部" image="下一级按钮">
+                                        <state key="normal" title="全部" image="rightArrow">
                                             <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -58,7 +58,7 @@
                                     <constraint firstAttribute="trailing" secondItem="tYW-e7-Ba2" secondAttribute="trailing" id="0n3-hf-Jb7"/>
                                     <constraint firstAttribute="bottom" secondItem="tYW-e7-Ba2" secondAttribute="bottom" id="25T-lX-amh"/>
                                     <constraint firstItem="tYW-e7-Ba2" firstAttribute="leading" secondItem="wWb-5r-isk" secondAttribute="leading" id="80c-VX-vha"/>
-                                    <constraint firstAttribute="trailing" secondItem="KNI-eH-RKj" secondAttribute="trailing" constant="16" id="JBJ-uw-kfU"/>
+                                    <constraint firstAttribute="trailing" secondItem="KNI-eH-RKj" secondAttribute="trailing" id="JBJ-uw-kfU"/>
                                     <constraint firstItem="KNI-eH-RKj" firstAttribute="centerY" secondItem="WpY-cU-jsV" secondAttribute="centerY" id="eXe-bQ-lTJ"/>
                                     <constraint firstAttribute="height" constant="35" id="iLJ-Tz-Yv8"/>
                                     <constraint firstItem="WpY-cU-jsV" firstAttribute="leading" secondItem="wWb-5r-isk" secondAttribute="leading" constant="18.5" id="tI4-Ph-uff"/>
@@ -428,7 +428,7 @@
         <image name="my-icon_2" width="30" height="30"/>
         <image name="my-icon_5" width="30" height="30"/>
         <image name="my-icon_8" width="26" height="26"/>
-        <image name="下一级按钮" width="7.5" height="17.5"/>
+        <image name="rightArrow" width="13" height="13"/>
         <image name="待付款" width="26" height="26"/>
         <image name="待收货" width="26" height="26"/>
         <image name="待评价" width="26" height="26"/>

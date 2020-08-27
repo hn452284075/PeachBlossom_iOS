@@ -11,6 +11,9 @@
 #import "MeCollectionViewCell.h"
 #import "MeHeaderView.h"
 #import "AddressMangerController.h"
+#import "CollectGoodsVC.h"
+#import "CollectStoreVC.h"
+#import "ProcurementOrderVC.h"
 @interface MeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong)UICollectionView *collectionView;
 @property (nonatomic,strong)CustomFlowLayout *flowlayout;
@@ -28,6 +31,11 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
 - (void)_init{
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.collectionView];
@@ -74,8 +82,23 @@
     if (kind == UICollectionElementKindSectionHeader) {
         
         self.headerV  = (MeHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MeHeaderView" forIndexPath:indexPath];
- 
-        
+        WEAK_SELF
+        //收藏产品
+        [self.headerV.goodsBtn addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+            [weak_self jumoIndexPage:6];
+        }];
+        //收藏店铺
+        [self.headerV.storeBtn addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+            [weak_self jumoIndexPage:7];
+        }];
+        //浏览记录
+        [self.headerV.recordBtn addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+           [weak_self jumoIndexPage:8];
+        }];
+        //认证
+        [self.headerV.certificationBtn addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+           [weak_self jumoIndexPage:9];
+        }];
         
         
     }
@@ -88,30 +111,72 @@
 -(void)jumoIndexPage:(NSInteger)index{
     
     switch (index) {
-        case 10://全部
+        case 6://收藏产品
+            {
+                CollectGoodsVC *vc = [[CollectGoodsVC alloc]init];
+                vc.pageTitle=@"关注商品";
+                [self navigatePushViewController:vc animate:YES];
+
+            }
+            break;
+            
+        case 7://收藏店铺
+            {
+                CollectStoreVC *vc = [[CollectStoreVC alloc]init];
+                [self navigatePushViewController:vc animate:YES];
+
+            }
+            break;
+            
+        case 8://浏览记录
+            {
+                CollectGoodsVC *vc = [[CollectGoodsVC alloc]init];
+                vc.pageTitle=@"浏览记录";
+                [self navigatePushViewController:vc animate:YES];
+            }
+            break;
+            
+        case 9://认证
             {
             
+            }
+            break;
+                
+        case 10://全部
+            {
+                ProcurementOrderVC *vc = [[ProcurementOrderVC alloc]init];
+                [self navigatePushViewController:vc animate:YES];
+
             }
             break;
             
         case 11://待付款
             {
-           
+                ProcurementOrderVC *vc = [[ProcurementOrderVC alloc]init];
+                vc.currentIndex=1;
+                [self navigatePushViewController:vc animate:YES];
             }
             break;
         case 12://待发货
             {
-           
+                ProcurementOrderVC *vc = [[ProcurementOrderVC alloc]init];
+                vc.currentIndex=2;
+                [self navigatePushViewController:vc animate:YES];
             }
             break;
         case 13://待收货
             {
+                ProcurementOrderVC *vc = [[ProcurementOrderVC alloc]init];
+                vc.currentIndex=3;
+                [self navigatePushViewController:vc animate:YES];
            
             }
             break;
         case 14://待评价
             {
-           
+                ProcurementOrderVC *vc = [[ProcurementOrderVC alloc]init];
+                vc.currentIndex=4;
+                [self navigatePushViewController:vc animate:YES];
             }
             break;
         case 15://退款/售后
