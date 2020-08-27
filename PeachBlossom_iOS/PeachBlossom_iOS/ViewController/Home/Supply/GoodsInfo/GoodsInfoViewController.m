@@ -10,8 +10,9 @@
 #import "Masonry.h"
 #import "SDCycleScrollView.h"
 #import "SupplyGoodsInfoView.h"
+#import "ExpressInfoView.h"
 
-@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate>
+@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate>
 
 //返回按钮
 @property (nonatomic, strong) UIButton *backBtn;
@@ -27,6 +28,11 @@
 
 //商品规格view
 @property (nonatomic, strong) UIView *specView;
+
+//物流view
+@property (nonatomic, strong) UIView *expressView;
+//弹出的物流详情view
+@property (nonatomic, strong) ExpressInfoView *expressInfoView;
 
 
 @end
@@ -74,6 +80,7 @@
     
     [self initGoodsInfo_TitleView];
     [self initGoodsInfo_SpecView];
+    [self initGoodsInfo_expressView];
 }
 
 #pragma mark ------------------------Init---------------------------------
@@ -150,6 +157,53 @@
     }
 }
 
+//物流栏
+- (void)initGoodsInfo_expressView
+{
+    self.expressView = [[UIView alloc] init];
+    [self.mainScrollerView addSubview:self.expressView];
+    [self.expressView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.specView.mas_bottom).offset(15);
+        make.right.equalTo(self.infoImgScrollView.mas_right);
+        make.left.equalTo(self.infoImgScrollView.mas_left);
+        make.height.mas_equalTo(45);
+    }];
+    self.expressView.backgroundColor = [UIColor whiteColor];
+    
+    UILabel *lab = [[UILabel alloc] init];
+    [self.expressView addSubview:lab];
+    [lab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(14);
+        make.centerY.equalTo(self.expressView.mas_centerY);
+    }];
+    lab.textAlignment = NSTextAlignmentCenter;
+    lab.text = @"物流";
+    lab.font = [UIFont systemFontOfSize:14];
+    lab.textColor = kGetColor(0x99, 0x99, 0x99);
+    
+    UILabel *infolab = [[UILabel alloc] init];
+    [self.expressView addSubview:infolab];
+    [infolab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left).offset(83);
+        make.centerY.equalTo(self.expressView.mas_centerY);
+    }];
+    infolab.textAlignment = NSTextAlignmentCenter;
+    infolab.text = @"整车快递，费用待协商";
+    infolab.font = [UIFont systemFontOfSize:14];
+    infolab.textColor = kGetColor(0x11, 0x11, 0x11);
+    
+    UIButton *showinfobtn = [[UIButton alloc] init];
+    [self.expressView addSubview:showinfobtn];
+    [showinfobtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(self.view.mas_right).offset(-14);
+        make.centerY.equalTo(self.expressView.mas_centerY);
+        make.width.mas_equalTo(22);
+        make.height.mas_equalTo(22);
+    }];
+    [showinfobtn setBackgroundImage:IMAGE(@"rightArrow") forState:UIControlStateNormal];
+    [showinfobtn addTarget:self action:@selector(showExpressInfoView:) forControlEvents:UIControlEventTouchUpInside];
+}
+
 
 #pragma mark ------------------------View Event---------------------------
 - (void)backBtnClicked:(id)sender
@@ -157,6 +211,27 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+//展示物流详情弹出view
+- (void)showExpressInfoView:(id)sender
+{
+    UIView *bv = [[UIView alloc] initWithFrame:self.view.frame];
+    bv.alpha = 0.5;
+    bv.tag = 100;
+    bv.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:bv];
+    
+    self.expressInfoView = [[[NSBundle mainBundle] loadNibNamed:@"ExpressInfoView" owner:self options:nil] lastObject];
+    [self.view addSubview:self.expressInfoView];
+    self.expressInfoView.delegate = self;
+    [self.expressInfoView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(self.view.mas_bottom);
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.height.mas_equalTo(335);
+    }];
+    self.expressInfoView.backgroundColor = [UIColor whiteColor];
+    
+}
 
 #pragma mark ------------------------Delegate-----------------------------
 - (void)supply_share_Action
@@ -167,6 +242,14 @@
 - (void)supply_love_Action
 {
     NSLog(@"供应大厅--商品收藏按钮");
+}
+
+- (void)expressInfoViewDismiss
+{
+    self.expressInfoView.delegate = nil;
+    [self.expressInfoView removeFromSuperview];
+    UIView *bv = [self.view viewWithTag:100];
+    [bv removeFromSuperview];
 }
 
 @end

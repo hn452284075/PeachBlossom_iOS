@@ -302,9 +302,10 @@
 		972CC5EA24F65A27002DC0F1 /* SupplyGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972CC5E824F65A27002DC0F1 /* SupplyGoodsCell.xib */; };
 		977466B024F784720078313C /* SupplyGoodsInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466AF24F784720078313C /* SupplyGoodsInfoView.xib */; };
 		977466B324F7869C0078313C /* SupplyGoodsInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466B224F7869C0078313C /* SupplyGoodsInfoView.m */; };
-		977466B724F79C2D0078313C /* SupplyGoodsSpecView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466B624F79C2D0078313C /* SupplyGoodsSpecView.m */; };
 		977466BF24F79D070078313C /* GoodsInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466BB24F79D070078313C /* GoodsInfoViewController.xib */; };
 		977466C024F79D070078313C /* GoodsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466BC24F79D070078313C /* GoodsInfoViewController.m */; };
+		977466C424F7A0E00078313C /* ExpressInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466C324F7A0E00078313C /* ExpressInfoView.m */; };
+		977466C624F7A0F20078313C /* ExpressInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466C524F7A0F20078313C /* ExpressInfoView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -894,11 +895,12 @@
 		977466AF24F784720078313C /* SupplyGoodsInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupplyGoodsInfoView.xib; sourceTree = "<group>"; };
 		977466B124F7869C0078313C /* SupplyGoodsInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupplyGoodsInfoView.h; sourceTree = "<group>"; };
 		977466B224F7869C0078313C /* SupplyGoodsInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupplyGoodsInfoView.m; sourceTree = "<group>"; };
-		977466B524F79C2D0078313C /* SupplyGoodsSpecView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupplyGoodsSpecView.h; sourceTree = "<group>"; };
-		977466B624F79C2D0078313C /* SupplyGoodsSpecView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupplyGoodsSpecView.m; sourceTree = "<group>"; };
 		977466BB24F79D070078313C /* GoodsInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsInfoViewController.xib; sourceTree = "<group>"; };
 		977466BC24F79D070078313C /* GoodsInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsInfoViewController.m; sourceTree = "<group>"; };
 		977466BD24F79D070078313C /* GoodsInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsInfoViewController.h; sourceTree = "<group>"; };
+		977466C224F7A0E00078313C /* ExpressInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpressInfoView.h; sourceTree = "<group>"; };
+		977466C324F7A0E00078313C /* ExpressInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpressInfoView.m; sourceTree = "<group>"; };
+		977466C524F7A0F20078313C /* ExpressInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpressInfoView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2220,7 +2222,7 @@
 		972CC5E524F659E5002DC0F1 /* Supply */ = {
 			isa = PBXGroup;
 			children = (
-				977466B424F79BFD0078313C /* SupplyGoodsSpec */,
+				977466C124F7A0B50078313C /* ExpressInfoView */,
 				977466AB24F783FC0078313C /* SupplyGoodsInfo */,
 				972CC5E624F65A27002DC0F1 /* SupplyGoodsCell.h */,
 				972CC5E724F65A27002DC0F1 /* SupplyGoodsCell.m */,
@@ -2239,15 +2241,6 @@
 			path = SupplyGoodsInfo;
 			sourceTree = "<group>";
 		};
-		977466B424F79BFD0078313C /* SupplyGoodsSpec */ = {
-			isa = PBXGroup;
-			children = (
-				977466B524F79C2D0078313C /* SupplyGoodsSpecView.h */,
-				977466B624F79C2D0078313C /* SupplyGoodsSpecView.m */,
-			);
-			path = SupplyGoodsSpec;
-			sourceTree = "<group>";
-		};
 		977466B824F79CE30078313C /* GoodsInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -2256,6 +2249,16 @@
 				977466BB24F79D070078313C /* GoodsInfoViewController.xib */,
 			);
 			path = GoodsInfo;
+			sourceTree = "<group>";
+		};
+		977466C124F7A0B50078313C /* ExpressInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				977466C224F7A0E00078313C /* ExpressInfoView.h */,
+				977466C324F7A0E00078313C /* ExpressInfoView.m */,
+				977466C524F7A0F20078313C /* ExpressInfoView.xib */,
+			);
+			path = ExpressInfoView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2382,6 +2385,7 @@
 				977466BF24F79D070078313C /* GoodsInfoViewController.xib in Resources */,
 				7708D99624E7ABA300A4DB25 /* IQKeyboardManager.bundle in Resources */,
 				7746F54424F6004B000DC145 /* AddressMangerCell.xib in Resources */,
+				977466C624F7A0F20078313C /* ExpressInfoView.xib in Resources */,
 				77A17C7E24F4F8DA00CBF0A6 /* MeHeaderView.xib in Resources */,
 				7708D84C24E7A1B200A4DB25 /* GlobleErrorView.xib in Resources */,
 				77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */,
@@ -2518,7 +2522,6 @@
 				7746F53E24F5FF19000DC145 /* AddressMangerController.m in Sources */,
 				7708D87C24E7AA6800A4DB25 /* BaseLoadingView.m in Sources */,
 				7708DA3024E7B6FA00A4DB25 /* WSPhotosBroseVC.m in Sources */,
-				977466B724F79C2D0078313C /* SupplyGoodsSpecView.m in Sources */,
 				7708D84324E7A1B200A4DB25 /* MainTabBarController.m in Sources */,
 				7708D97524E7ABA200A4DB25 /* AFImageDownloader.m in Sources */,
 				7708DC1424E7DF5C00A4DB25 /* SDWebImageDownloader.m in Sources */,
@@ -2651,6 +2654,7 @@
 				7708D97824E7ABA200A4DB25 /* AFURLSessionManager.m in Sources */,
 				7708DA3324E7B6FA00A4DB25 /* HMSegmentedControl.m in Sources */,
 				7708DC5724E7EA1200A4DB25 /* PublishEvaluationModel.m in Sources */,
+				977466C424F7A0E00078313C /* ExpressInfoView.m in Sources */,
 				7746F54C24F63A37000DC145 /* CityPickView.m in Sources */,
 				7708DC1124E7DF5C00A4DB25 /* SDAnimatedImageView.m in Sources */,
 				7708DC3724E7DF5D00A4DB25 /* UIView+WebCacheOperation.m in Sources */,

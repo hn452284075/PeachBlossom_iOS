@@ -1,24 +1,15 @@
 //
-//  SupplyGoodsSpecView.m
+//  ExpressInfoView.m
 //  PeachBlossom_iOS
 //
 //  Created by rover on 2020/8/27.
 //  Copyright © 2020 zengyongbing. All rights reserved.
 //
 
-#import "SupplyGoodsSpecView.h"
+#import "ExpressInfoView.h"
 
-@implementation SupplyGoodsSpecView
-
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        
-    }
-    return self;
-}
-
+@implementation ExpressInfoView
+@synthesize delegate;
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -27,4 +18,9 @@
 }
 */
 
+- (IBAction)dismissInfoView:(id)sender
+{
+    [self.delegate expressInfoViewDismiss];
+    
+}
 @end
