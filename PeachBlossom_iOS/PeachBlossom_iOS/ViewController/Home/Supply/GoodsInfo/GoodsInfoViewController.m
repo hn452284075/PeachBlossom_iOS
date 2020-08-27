@@ -11,6 +11,9 @@
 #import "SDCycleScrollView.h"
 #import "SupplyGoodsInfoView.h"
 #import "ExpressInfoView.h"
+#import "CommentHeaderView.h"
+#import "CommentOneView.h"
+#import "CommentTowView.h"
 
 @interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate>
 
@@ -33,6 +36,9 @@
 @property (nonatomic, strong) UIView *expressView;
 //弹出的物流详情view
 @property (nonatomic, strong) ExpressInfoView *expressInfoView;
+
+//评论的头部View
+@property (nonatomic, strong) CommentHeaderView *commentheaderview;
 
 
 @end
@@ -81,6 +87,7 @@
     [self initGoodsInfo_TitleView];
     [self initGoodsInfo_SpecView];
     [self initGoodsInfo_expressView];
+    [self initGoodsInfo_commentHeaderView];
 }
 
 #pragma mark ------------------------Init---------------------------------
@@ -195,13 +202,26 @@
     UIButton *showinfobtn = [[UIButton alloc] init];
     [self.expressView addSubview:showinfobtn];
     [showinfobtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.view.mas_right).offset(-14);
+        make.right.equalTo(self.view.mas_right).offset(-10);
         make.centerY.equalTo(self.expressView.mas_centerY);
-        make.width.mas_equalTo(22);
-        make.height.mas_equalTo(22);
+        make.width.mas_equalTo(18);
+        make.height.mas_equalTo(18);
     }];
     [showinfobtn setBackgroundImage:IMAGE(@"rightArrow") forState:UIControlStateNormal];
     [showinfobtn addTarget:self action:@selector(showExpressInfoView:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+//评论
+- (void)initGoodsInfo_commentHeaderView
+{
+    self.commentheaderview = [[[NSBundle mainBundle] loadNibNamed:@"CommentHeaderView" owner:self options:nil] lastObject];
+    [self.mainScrollerView addSubview:self.commentheaderview];
+    [self.commentheaderview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.expressView.mas_bottom).offset(15);
+        make.right.equalTo(self.infoImgScrollView.mas_right);
+        make.left.equalTo(self.infoImgScrollView.mas_left);
+        make.height.mas_equalTo(80);
+    }];
 }
 
 

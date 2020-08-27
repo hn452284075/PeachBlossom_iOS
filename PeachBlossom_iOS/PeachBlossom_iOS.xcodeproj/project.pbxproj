@@ -306,6 +306,10 @@
 		977466C024F79D070078313C /* GoodsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466BC24F79D070078313C /* GoodsInfoViewController.m */; };
 		977466C424F7A0E00078313C /* ExpressInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466C324F7A0E00078313C /* ExpressInfoView.m */; };
 		977466C624F7A0F20078313C /* ExpressInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466C524F7A0F20078313C /* ExpressInfoView.xib */; };
+		977466CA24F7AA540078313C /* CommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466C924F7AA540078313C /* CommentHeaderView.m */; };
+		977466CC24F7AA6D0078313C /* CommentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466CB24F7AA6D0078313C /* CommentHeaderView.xib */; };
+		977466CF24F7AAA90078313C /* CommentOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466CE24F7AAA90078313C /* CommentOneView.m */; };
+		977466D424F7AACF0078313C /* CommentOneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466D324F7AACF0078313C /* CommentOneView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -901,6 +905,12 @@
 		977466C224F7A0E00078313C /* ExpressInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpressInfoView.h; sourceTree = "<group>"; };
 		977466C324F7A0E00078313C /* ExpressInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpressInfoView.m; sourceTree = "<group>"; };
 		977466C524F7A0F20078313C /* ExpressInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpressInfoView.xib; sourceTree = "<group>"; };
+		977466C824F7AA540078313C /* CommentHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentHeaderView.h; sourceTree = "<group>"; };
+		977466C924F7AA540078313C /* CommentHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentHeaderView.m; sourceTree = "<group>"; };
+		977466CB24F7AA6D0078313C /* CommentHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentHeaderView.xib; sourceTree = "<group>"; };
+		977466CD24F7AAA90078313C /* CommentOneView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentOneView.h; sourceTree = "<group>"; };
+		977466CE24F7AAA90078313C /* CommentOneView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentOneView.m; sourceTree = "<group>"; };
+		977466D324F7AACF0078313C /* CommentOneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentOneView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2222,6 +2232,7 @@
 		972CC5E524F659E5002DC0F1 /* Supply */ = {
 			isa = PBXGroup;
 			children = (
+				977466C724F7AA1F0078313C /* CommentView */,
 				977466C124F7A0B50078313C /* ExpressInfoView */,
 				977466AB24F783FC0078313C /* SupplyGoodsInfo */,
 				972CC5E624F65A27002DC0F1 /* SupplyGoodsCell.h */,
@@ -2259,6 +2270,19 @@
 				977466C524F7A0F20078313C /* ExpressInfoView.xib */,
 			);
 			path = ExpressInfoView;
+			sourceTree = "<group>";
+		};
+		977466C724F7AA1F0078313C /* CommentView */ = {
+			isa = PBXGroup;
+			children = (
+				977466C824F7AA540078313C /* CommentHeaderView.h */,
+				977466C924F7AA540078313C /* CommentHeaderView.m */,
+				977466CB24F7AA6D0078313C /* CommentHeaderView.xib */,
+				977466CD24F7AAA90078313C /* CommentOneView.h */,
+				977466CE24F7AAA90078313C /* CommentOneView.m */,
+				977466D324F7AACF0078313C /* CommentOneView.xib */,
+			);
+			path = CommentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2375,6 +2399,7 @@
 				977466B024F784720078313C /* SupplyGoodsInfoView.xib in Resources */,
 				972CC5EA24F65A27002DC0F1 /* SupplyGoodsCell.xib in Resources */,
 				7746F56D24F65E36000DC145 /* ProcurementCell.xib in Resources */,
+				977466D424F7AACF0078313C /* CommentOneView.xib in Resources */,
 				77A17C6024F4B47C00CBF0A6 /* HomeAllCollectionCell.xib in Resources */,
 				7746F54824F6376E000DC145 /* ZZAddressController.xib in Resources */,
 				7708DA9724E7C61A00A4DB25 /* AlipaySDK.bundle in Resources */,
@@ -2391,6 +2416,7 @@
 				77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */,
 				7708D97E24E7ABA200A4DB25 /* MJRefresh.bundle in Resources */,
 				77A17C6624F4E20F00CBF0A6 /* HomeHeaderView.xib in Resources */,
+				977466CC24F7AA6D0078313C /* CommentHeaderView.xib in Resources */,
 				972CC5E424F600C3002DC0F1 /* SupplyViewController.xib in Resources */,
 				77A17C5724F4B0CC00CBF0A6 /* SearchCell.xib in Resources */,
 				77A17C7924F4F85D00CBF0A6 /* MeCollectionViewCell.xib in Resources */,
@@ -2617,6 +2643,7 @@
 				7746F55B24F64F23000DC145 /* CollectStoreVC.m in Sources */,
 				7708D7E724E79BD700A4DB25 /* main.m in Sources */,
 				77A17C6124F4B47C00CBF0A6 /* HomeAllCollectionCell.m in Sources */,
+				977466CA24F7AA540078313C /* CommentHeaderView.m in Sources */,
 				7708DC1624E7DF5C00A4DB25 /* SDWebImageCacheSerializer.m in Sources */,
 				7708D98624E7ABA300A4DB25 /* MJRefreshAutoGifFooter.m in Sources */,
 				7708DC3424E7DF5D00A4DB25 /* SDWebImageCacheKeyFilter.m in Sources */,
@@ -2636,6 +2663,7 @@
 				7708DAC124E7D90000A4DB25 /* Util.m in Sources */,
 				7708DA3F24E7B6FA00A4DB25 /* myPhotoCell.m in Sources */,
 				77A17C7424F4F7B300CBF0A6 /* CustomFlowLayout.m in Sources */,
+				977466CF24F7AAA90078313C /* CommentOneView.m in Sources */,
 				7708DC3C24E7DF5D00A4DB25 /* SDImageCachesManagerOperation.m in Sources */,
 				77A17C7824F4F85D00CBF0A6 /* MeCollectionViewCell.m in Sources */,
 				7708D98E24E7ABA300A4DB25 /* MJRefreshAutoFooter.m in Sources */,
