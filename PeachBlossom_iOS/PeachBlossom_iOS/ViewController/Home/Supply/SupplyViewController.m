@@ -281,6 +281,8 @@
         {
             UIView *v = [classView_arr1 objectAtIndex:j];
             v.frame = CGRectMake(x+w*temp++, y+h*i, w, h);
+            if(temp > 5)
+                break;
         }
     }
     

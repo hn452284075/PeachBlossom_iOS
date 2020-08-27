@@ -309,7 +309,6 @@
 		977466CA24F7AA540078313C /* CommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466C924F7AA540078313C /* CommentHeaderView.m */; };
 		977466CC24F7AA6D0078313C /* CommentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466CB24F7AA6D0078313C /* CommentHeaderView.xib */; };
 		977466CF24F7AAA90078313C /* CommentOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466CE24F7AAA90078313C /* CommentOneView.m */; };
-		977466D424F7AACF0078313C /* CommentOneView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466D324F7AACF0078313C /* CommentOneView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -910,7 +909,6 @@
 		977466CB24F7AA6D0078313C /* CommentHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentHeaderView.xib; sourceTree = "<group>"; };
 		977466CD24F7AAA90078313C /* CommentOneView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentOneView.h; sourceTree = "<group>"; };
 		977466CE24F7AAA90078313C /* CommentOneView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentOneView.m; sourceTree = "<group>"; };
-		977466D324F7AACF0078313C /* CommentOneView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentOneView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2280,7 +2278,6 @@
 				977466CB24F7AA6D0078313C /* CommentHeaderView.xib */,
 				977466CD24F7AAA90078313C /* CommentOneView.h */,
 				977466CE24F7AAA90078313C /* CommentOneView.m */,
-				977466D324F7AACF0078313C /* CommentOneView.xib */,
 			);
 			path = CommentView;
 			sourceTree = "<group>";
@@ -2399,7 +2396,6 @@
 				977466B024F784720078313C /* SupplyGoodsInfoView.xib in Resources */,
 				972CC5EA24F65A27002DC0F1 /* SupplyGoodsCell.xib in Resources */,
 				7746F56D24F65E36000DC145 /* ProcurementCell.xib in Resources */,
-				977466D424F7AACF0078313C /* CommentOneView.xib in Resources */,
 				77A17C6024F4B47C00CBF0A6 /* HomeAllCollectionCell.xib in Resources */,
 				7746F54824F6376E000DC145 /* ZZAddressController.xib in Resources */,
 				7708DA9724E7C61A00A4DB25 /* AlipaySDK.bundle in Resources */,
