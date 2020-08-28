@@ -30,7 +30,7 @@
 
 
 
-#define HistoriesArray  @"HistoriesArray" // 搜索历史key
+
 #pragma mark - ------------系统相关宏定义---------------
 
 #define PYMargin 10 // 默认边距
