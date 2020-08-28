@@ -15,8 +15,9 @@
 #import "CommentOneView.h"
 #import "ShopInfoView.h"
 #import "BottumBuyView.h"
+#import "AddToCartView.h"
 
-@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate,ShopInfoViewDelegate,UIWebViewDelegate,BottumBuyViewDelegate>
+@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate,ShopInfoViewDelegate,UIWebViewDelegate,BottumBuyViewDelegate,AddToCartDelegate>
 
 //返回按钮
 @property (nonatomic, strong) UIButton *backBtn;
@@ -52,6 +53,9 @@
 
 //最下方的聊一聊 、 加购物车的view
 @property (nonatomic, strong) BottumBuyView *buyView;
+
+//加入购物车弹出框
+@property (nonatomic, strong) AddToCartView *addCartView;
 
 @end
 
@@ -331,8 +335,11 @@
         tempheight = 20;
     self.buyView = [[BottumBuyView alloc] initWithFrame:CGRectMake(0, kScreenHeight-60-tempheight, kScreenWidth, 60+tempheight)];
     self.buyView.delegate = self;
+    self.buyView.delegate = self;
     [self.view addSubview:self.buyView];
 }
+
+
 
 
 #pragma mark ------------------------View Event---------------------------
@@ -409,13 +416,49 @@
 #pragma mark --------- 加入购物车
 - (void)addToCart_action
 {
+    UIView *bv = [[UIView alloc] initWithFrame:self.view.frame];
+    bv.alpha = 0.5;
+    bv.tag = 100;
+    bv.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:bv];
     
+    NSArray *specarr = [[NSArray alloc] initWithObjects:@"大狗",@"大大大大大大狗",@"大hjhjjjjj狗",@"大狗",@"大狗",@"大大大狗", nil];
+    
+    self.addCartView = [[[NSBundle mainBundle] loadNibNamed:@"AddToCartView" owner:self options:nil] lastObject];
+    [self.addCartView _initCartViewInfo:IMAGE(@"supply_goodsimg") price:@"123.45" msg:@"发到你开那几款和接口很快就回家抗洪晶科科技很快就发商方开始发" specArr:specarr];
+    self.addCartView.delegate = self;
+    [self.view addSubview:self.addCartView];
+    [self.addCartView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.bottom.equalTo(self.view.mas_bottom);
+        make.height.mas_equalTo(385);
+    }];
+    self.addCartView.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark --------- 立即购买
 - (void)buy_action
 {
     
+}
+
+#pragma mark --------- 确定 加入购物车
+- (void)addToCart_Ok
+{
+    self.addCartView.delegate = nil;
+    [self.addCartView removeFromSuperview];
+    UIView *bv = [self.view viewWithTag:100];
+    [bv removeFromSuperview];
+}
+
+#pragma mark --------- 取消 加入购物车
+- (void)addToCart_Cancel
+{
+    self.addCartView.delegate = nil;
+    [self.addCartView removeFromSuperview];
+    UIView *bv = [self.view viewWithTag:100];
+    [bv removeFromSuperview];
 }
 
 

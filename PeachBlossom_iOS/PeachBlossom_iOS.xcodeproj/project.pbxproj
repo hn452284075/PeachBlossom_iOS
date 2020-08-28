@@ -330,6 +330,7 @@
 		9795BE2F24F894E300F23D48 /* ShopInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9795BE2E24F894E300F23D48 /* ShopInfoView.xib */; };
 		9795BE3324F8B4E300F23D48 /* BottumBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE3224F8B4E200F23D48 /* BottumBuyView.m */; };
 		9795BE3A24F8EE4B00F23D48 /* AddToCartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE3924F8EE4B00F23D48 /* AddToCartView.m */; };
+		9795BE3C24F8F64F00F23D48 /* AddToCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9795BE3B24F8F64F00F23D48 /* AddToCartView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -966,6 +967,7 @@
 		9795BE3224F8B4E200F23D48 /* BottumBuyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottumBuyView.m; sourceTree = "<group>"; };
 		9795BE3824F8EE4B00F23D48 /* AddToCartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddToCartView.h; sourceTree = "<group>"; };
 		9795BE3924F8EE4B00F23D48 /* AddToCartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddToCartView.m; sourceTree = "<group>"; };
+		9795BE3B24F8F64F00F23D48 /* AddToCartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddToCartView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2419,6 +2421,7 @@
 			children = (
 				9795BE3824F8EE4B00F23D48 /* AddToCartView.h */,
 				9795BE3924F8EE4B00F23D48 /* AddToCartView.m */,
+				9795BE3B24F8F64F00F23D48 /* AddToCartView.xib */,
 			);
 			path = AddToCartView;
 			sourceTree = "<group>";
@@ -2553,6 +2556,7 @@
 				7746F54424F6004B000DC145 /* AddressMangerCell.xib in Resources */,
 				977466C624F7A0F20078313C /* ExpressInfoView.xib in Resources */,
 				77A17C7E24F4F8DA00CBF0A6 /* MeHeaderView.xib in Resources */,
+				9795BE3C24F8F64F00F23D48 /* AddToCartView.xib in Resources */,
 				7708D84C24E7A1B200A4DB25 /* GlobleErrorView.xib in Resources */,
 				77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */,
 				7708D97E24E7ABA200A4DB25 /* MJRefresh.bundle in Resources */,

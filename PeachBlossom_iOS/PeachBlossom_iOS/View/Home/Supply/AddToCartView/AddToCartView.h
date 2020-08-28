@@ -10,7 +10,26 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AddToCartView : UIView
+@protocol AddToCartDelegate <NSObject>
+
+- (void)addToCart_Ok;
+- (void)addToCart_Cancel;
+
+@end
+
+
+@interface AddToCartView : UIView<AddToCartDelegate>
+
+@property (nonatomic, weak) id<AddToCartDelegate> delegate;
+
+- (void)_initCartViewInfo:(UIImage *)image price:(NSString *)price msg:(NSString *)msg specArr:(NSArray *)specarr;
+
+
+- (IBAction)closeCartView:(id)sender;
+
+- (IBAction)addToCart:(id)sender;
+
+
 
 @end
 
