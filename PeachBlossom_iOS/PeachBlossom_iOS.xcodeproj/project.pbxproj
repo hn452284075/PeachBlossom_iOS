@@ -288,6 +288,9 @@
 		7746F59824F7B4B7000DC145 /* CancelPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F59524F7B4B7000DC145 /* CancelPopView.m */; };
 		7746F59B24F7C831000DC145 /* SearchGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F59A24F7C831000DC145 /* SearchGoodsVC.m */; };
 		7746F59E24F7C8CE000DC145 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F59D24F7C8CE000DC145 /* UIView+Frame.m */; };
+		7753A33C24F8D84800F66734 /* SearchGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A33B24F8D84800F66734 /* SearchGoodsCell.m */; };
+		7753A36D24F8E74D00F66734 /* SearchFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A36C24F8E74D00F66734 /* SearchFlowLayout.m */; };
+		7753A37024F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A36F24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17BB624EB830700CBF0A6 /* UIView+Design.m */; };
 		77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4424F4B0CC00CBF0A6 /* area.plist */; };
 		77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */; };
@@ -894,6 +897,12 @@
 		7746F59A24F7C831000DC145 /* SearchGoodsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchGoodsVC.m; sourceTree = "<group>"; };
 		7746F59C24F7C8CE000DC145 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		7746F59D24F7C8CE000DC145 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		7753A33A24F8D84800F66734 /* SearchGoodsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchGoodsCell.h; sourceTree = "<group>"; };
+		7753A33B24F8D84800F66734 /* SearchGoodsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchGoodsCell.m; sourceTree = "<group>"; };
+		7753A36B24F8E74D00F66734 /* SearchFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchFlowLayout.h; sourceTree = "<group>"; };
+		7753A36C24F8E74D00F66734 /* SearchFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchFlowLayout.m; sourceTree = "<group>"; };
+		7753A36E24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		7753A36F24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		77A17BB524EB830700CBF0A6 /* UIView+Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Design.h"; sourceTree = "<group>"; };
 		77A17BB624EB830700CBF0A6 /* UIView+Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Design.m"; sourceTree = "<group>"; };
 		77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressShowView.h; sourceTree = "<group>"; };
@@ -1123,6 +1132,8 @@
 		7708D81824E7A1B100A4DB25 /* Conttoller */ = {
 			isa = PBXGroup;
 			children = (
+				7753A36E24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.h */,
+				7753A36F24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m */,
 				7708D81B24E7A1B100A4DB25 /* UIViewController+hub.h */,
 				7708D82224E7A1B100A4DB25 /* UIViewController+hub.m */,
 				7708D82924E7A1B100A4DB25 /* BaseViewController.h */,
@@ -2105,13 +2116,13 @@
 		7708DD3624EB5B9100A4DB25 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				7746F59924F7C831000DC145 /* SearchGoodsVC.h */,
+				7746F59A24F7C831000DC145 /* SearchGoodsVC.m */,
 				7708DD3724EB5BA400A4DB25 /* SearchViewController.h */,
 				7708DD3824EB5BA400A4DB25 /* SearchViewController.m */,
 				7708DD3D24EB61F600A4DB25 /* SearchViewController.xib */,
 				7708DD3A24EB5E0300A4DB25 /* SearchListVC.h */,
 				7708DD3B24EB5E0300A4DB25 /* SearchListVC.m */,
-				7746F59924F7C831000DC145 /* SearchGoodsVC.h */,
-				7746F59A24F7C831000DC145 /* SearchGoodsVC.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -2233,6 +2244,7 @@
 			isa = PBXGroup;
 			children = (
 				77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */,
+				77A17C4B24F4B0CC00CBF0A6 /* AddressShowView.m */,
 				77A17C4324F4B0CC00CBF0A6 /* AddressCell.h */,
 				77A17C4424F4B0CC00CBF0A6 /* area.plist */,
 				77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */,
@@ -2241,11 +2253,14 @@
 				77A17C4824F4B0CC00CBF0A6 /* EWAddressModel.h */,
 				77A17C4924F4B0CC00CBF0A6 /* AddressHeaderView.m */,
 				77A17C4A24F4B0CC00CBF0A6 /* AddressCell.m */,
-				77A17C4B24F4B0CC00CBF0A6 /* AddressShowView.m */,
 				77A17C4C24F4B0CC00CBF0A6 /* SearchCell.xib */,
 				77A17C4D24F4B0CC00CBF0A6 /* SearchCell.h */,
 				77A17C4E24F4B0CC00CBF0A6 /* EWAddressModel.m */,
 				77A17C4F24F4B0CC00CBF0A6 /* AddressHeaderView.h */,
+				7753A33A24F8D84800F66734 /* SearchGoodsCell.h */,
+				7753A33B24F8D84800F66734 /* SearchGoodsCell.m */,
+				7753A36B24F8E74D00F66734 /* SearchFlowLayout.h */,
+				7753A36C24F8E74D00F66734 /* SearchFlowLayout.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -2591,12 +2606,14 @@
 				7708D9C524E7ABA300A4DB25 /* NSString+MJExtension.m in Sources */,
 				7708D84E24E7A1B200A4DB25 /* NodataLogicModule.m in Sources */,
 				7708DC2124E7DF5C00A4DB25 /* NSButton+WebCache.m in Sources */,
+				7753A37024F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				7708DAAD24E7D60600A4DB25 /* UIView+Nib.m in Sources */,
 				7708D85E24E7A8DD00A4DB25 /* BadgeValueButton.m in Sources */,
 				7708DA4824E7B6FA00A4DB25 /* TMMemoryCache.m in Sources */,
 				7708DC4024E7DF5D00A4DB25 /* SDAsyncBlockOperation.m in Sources */,
 				77A17C6524F4E20F00CBF0A6 /* HomeHeaderView.m in Sources */,
 				7708D99524E7ABA300A4DB25 /* IQPreviousNextView.m in Sources */,
+				7753A33C24F8D84800F66734 /* SearchGoodsCell.m in Sources */,
 				7708D84D24E7A1B200A4DB25 /* BaseCollectionView.m in Sources */,
 				77A17C6B24F4F5D000CBF0A6 /* StoreViewController.m in Sources */,
 				7708DD3C24EB5E0300A4DB25 /* SearchListVC.m in Sources */,
@@ -2674,6 +2691,7 @@
 				7708DC1524E7DF5C00A4DB25 /* SDImageLoader.m in Sources */,
 				7708DC3824E7DF5D00A4DB25 /* UIView+WebCache.m in Sources */,
 				7708D97A24E7ABA200A4DB25 /* AFNetworkReachabilityManager.m in Sources */,
+				7753A36D24F8E74D00F66734 /* SearchFlowLayout.m in Sources */,
 				7746F53E24F5FF19000DC145 /* AddressMangerController.m in Sources */,
 				7708D87C24E7AA6800A4DB25 /* BaseLoadingView.m in Sources */,
 				7708DA3024E7B6FA00A4DB25 /* WSPhotosBroseVC.m in Sources */,

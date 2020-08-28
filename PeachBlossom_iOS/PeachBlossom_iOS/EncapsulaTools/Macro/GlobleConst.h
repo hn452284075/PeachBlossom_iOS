@@ -26,6 +26,7 @@
 #define EaseMobKefu_Appkey  @"1178170303178477#uxianshare"
 #define Youmeng_Appkey  @"58f4306d45297d72e5001439"
 
+#define HistoriesArray  @"HistoriesArray" // 搜索历史key
 
 #define KNotificationWXPayResult            @"KNotificationWXPayResult"
 #define KNotificationAliPayResult           @"KNotificationAliPayResult"

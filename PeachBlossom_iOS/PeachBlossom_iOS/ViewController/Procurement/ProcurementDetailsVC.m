@@ -23,6 +23,15 @@
     
     [_listTableView configureTableAfterRequestPagingData:@[@"",@""]];
     [self _requestOrderData];
+    if ([self.orderType isEqualToString:@"0"]) {
+        
+        [self setIsPushPage:YES];
+    }else{
+        
+        for (UISwipeGestureRecognizer *recognizer in [[self view] gestureRecognizers]) {
+            [[self view] removeGestureRecognizer:recognizer];
+        }
+    }
 }
 #pragma mark ------------------------Api----------------------------------
 -(void)_requestOrderData{

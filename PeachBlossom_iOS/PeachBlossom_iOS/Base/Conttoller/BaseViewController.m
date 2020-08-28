@@ -10,7 +10,6 @@
 #import "ZZBaseNavController.h"
 #import "AppDelegate.h"
 #import "PlaceholderView.h"
-//#import "UINavigationController+FDFullscreenPopGesture.h"
 #import "AFNHttpRequestOPManager+checkNetworkStatus.h"
 #import "CNotificationManager.h"
 #import "UIBarButtonItem+BarButtonItem.h"
@@ -175,7 +174,7 @@ const CGFloat defaulDelayGoBackSeconds = 1.2;
     [self _configureNavbar];
     //    View controller-based status bar appearance 为NO 设置白色状态栏
     //手势滑动返回的边距
-//    [self setFd_interactivePopMaxAllowedInitialDistanceToLeftEdge:120];
+    [self setFd_interactivePopMaxAllowedInitialDistanceToLeftEdge:120];
     
     
     
@@ -302,8 +301,6 @@ const CGFloat defaulDelayGoBackSeconds = 1.2;
     
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem initDLSalerBackItemWihtAction:@selector(goBack) target:self];
-    
-   
     
     
 }

@@ -12,6 +12,7 @@
 #import "NSDictionary+null.h"
 #import "AlertViewManager.h"
 #import "UIView+BlockGesture.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 typedef void (^ReloadDataBlock)(BOOL isNetwork);
 typedef void (^HXLoginBlock)(BOOL isLogin);
 @interface BaseViewController : UIViewController<UIGestureRecognizerDelegate>

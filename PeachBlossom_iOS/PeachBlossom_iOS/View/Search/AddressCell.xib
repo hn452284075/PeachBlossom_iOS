@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="全部" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAH-Dq-zIp">
-                        <rect key="frame" x="1" y="0.0" width="74" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="76" height="50"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -46,9 +46,9 @@
             </view>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="tAH-Dq-zIp" secondAttribute="bottom" id="7MW-x1-N4w"/>
-                <constraint firstAttribute="trailing" secondItem="tAH-Dq-zIp" secondAttribute="trailing" constant="1" id="8No-ty-27m"/>
+                <constraint firstAttribute="trailing" secondItem="tAH-Dq-zIp" secondAttribute="trailing" id="8No-ty-27m"/>
                 <constraint firstItem="tAH-Dq-zIp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hov-EO-SRC"/>
-                <constraint firstItem="tAH-Dq-zIp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="pxk-gW-Sad"/>
+                <constraint firstItem="tAH-Dq-zIp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pxk-gW-Sad"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
             <size key="customSize" width="76" height="50"/>
