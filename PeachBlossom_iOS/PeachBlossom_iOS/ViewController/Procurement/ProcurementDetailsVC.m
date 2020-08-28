@@ -9,6 +9,7 @@
 #import "ProcurementDetailsVC.h"
 #import "ProcurementCell.h"
 #import "MycommonTableView.h"
+#import "WaitingPayDetailsVC.h"
 @interface ProcurementDetailsVC ()
 @property (nonatomic,strong)MycommonTableView *listTableView;
 @end
@@ -28,6 +29,15 @@
  
     
 }
+
+
+#pragma mark ------------------------Page Navigate------------------------
+-(void)jumpWaitingPayDetailsVC{//待付款
+    WaitingPayDetailsVC *vc = [[WaitingPayDetailsVC alloc]init];
+    [self navigatePushViewController:vc animate:YES];
+
+}
+
 #pragma mark ------------------------Getter / Setter----------------------
 - (MycommonTableView *)listTableView{
     
@@ -50,7 +60,7 @@
             
         } clickCell:^(UITableView *tableView, id cellModel, UITableViewCell *cell, NSIndexPath *clickIndexPath) {
             
-            
+            [weak_self jumpWaitingPayDetailsVC];
         }];
         
         

@@ -274,6 +274,20 @@
 		7746F56824F65B3A000DC145 /* ProcurementDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F56724F65B3A000DC145 /* ProcurementDetailsVC.m */; };
 		7746F56C24F65E36000DC145 /* ProcurementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F56A24F65E36000DC145 /* ProcurementCell.m */; };
 		7746F56D24F65E36000DC145 /* ProcurementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F56B24F65E36000DC145 /* ProcurementCell.xib */; };
+		7746F57424F74977000DC145 /* WaitingPayDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F57224F74977000DC145 /* WaitingPayDetailsVC.m */; };
+		7746F57924F74BDE000DC145 /* WaitingPayTabCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F57724F74BDE000DC145 /* WaitingPayTabCell.m */; };
+		7746F57A24F74BDE000DC145 /* WaitingPayTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F57824F74BDE000DC145 /* WaitingPayTabCell.xib */; };
+		7746F57E24F74DC1000DC145 /* WaitingPayAddressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F57C24F74DC1000DC145 /* WaitingPayAddressView.m */; };
+		7746F57F24F74DC1000DC145 /* WaitingPayAddressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F57D24F74DC1000DC145 /* WaitingPayAddressView.xib */; };
+		7746F58324F7657A000DC145 /* WaitingPayTotalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F58124F7657A000DC145 /* WaitingPayTotalView.m */; };
+		7746F58424F7657A000DC145 /* WaitingPayTotalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F58224F7657A000DC145 /* WaitingPayTotalView.xib */; };
+		7746F58824F7891E000DC145 /* WaitingPayInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F58624F7891D000DC145 /* WaitingPayInfoView.m */; };
+		7746F58924F7891E000DC145 /* WaitingPayInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F58724F7891D000DC145 /* WaitingPayInfoView.xib */; };
+		7746F58B24F7A23D000DC145 /* WaitingPayDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F58A24F7A23D000DC145 /* WaitingPayDetailsVC.xib */; };
+		7746F59724F7B4B7000DC145 /* CancelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F59424F7B4B7000DC145 /* CancelTableViewCell.m */; };
+		7746F59824F7B4B7000DC145 /* CancelPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F59524F7B4B7000DC145 /* CancelPopView.m */; };
+		7746F59B24F7C831000DC145 /* SearchGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F59A24F7C831000DC145 /* SearchGoodsVC.m */; };
+		7746F59E24F7C8CE000DC145 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F59D24F7C8CE000DC145 /* UIView+Frame.m */; };
 		77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17BB624EB830700CBF0A6 /* UIView+Design.m */; };
 		77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4424F4B0CC00CBF0A6 /* area.plist */; };
 		77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */; };
@@ -856,6 +870,29 @@
 		7746F56924F65E36000DC145 /* ProcurementCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProcurementCell.h; sourceTree = "<group>"; };
 		7746F56A24F65E36000DC145 /* ProcurementCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProcurementCell.m; sourceTree = "<group>"; };
 		7746F56B24F65E36000DC145 /* ProcurementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProcurementCell.xib; sourceTree = "<group>"; };
+		7746F57224F74977000DC145 /* WaitingPayDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitingPayDetailsVC.m; sourceTree = "<group>"; };
+		7746F57324F74977000DC145 /* WaitingPayDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitingPayDetailsVC.h; sourceTree = "<group>"; };
+		7746F57624F74BDE000DC145 /* WaitingPayTabCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitingPayTabCell.h; sourceTree = "<group>"; };
+		7746F57724F74BDE000DC145 /* WaitingPayTabCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaitingPayTabCell.m; sourceTree = "<group>"; };
+		7746F57824F74BDE000DC145 /* WaitingPayTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaitingPayTabCell.xib; sourceTree = "<group>"; };
+		7746F57B24F74DC1000DC145 /* WaitingPayAddressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitingPayAddressView.h; sourceTree = "<group>"; };
+		7746F57C24F74DC1000DC145 /* WaitingPayAddressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaitingPayAddressView.m; sourceTree = "<group>"; };
+		7746F57D24F74DC1000DC145 /* WaitingPayAddressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaitingPayAddressView.xib; sourceTree = "<group>"; };
+		7746F58024F7657A000DC145 /* WaitingPayTotalView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitingPayTotalView.h; sourceTree = "<group>"; };
+		7746F58124F7657A000DC145 /* WaitingPayTotalView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaitingPayTotalView.m; sourceTree = "<group>"; };
+		7746F58224F7657A000DC145 /* WaitingPayTotalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaitingPayTotalView.xib; sourceTree = "<group>"; };
+		7746F58524F7891D000DC145 /* WaitingPayInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitingPayInfoView.h; sourceTree = "<group>"; };
+		7746F58624F7891D000DC145 /* WaitingPayInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaitingPayInfoView.m; sourceTree = "<group>"; };
+		7746F58724F7891D000DC145 /* WaitingPayInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaitingPayInfoView.xib; sourceTree = "<group>"; };
+		7746F58A24F7A23D000DC145 /* WaitingPayDetailsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WaitingPayDetailsVC.xib; sourceTree = "<group>"; };
+		7746F59324F7B4B7000DC145 /* CancelPopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancelPopView.h; sourceTree = "<group>"; };
+		7746F59424F7B4B7000DC145 /* CancelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelTableViewCell.m; sourceTree = "<group>"; };
+		7746F59524F7B4B7000DC145 /* CancelPopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelPopView.m; sourceTree = "<group>"; };
+		7746F59624F7B4B7000DC145 /* CancelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancelTableViewCell.h; sourceTree = "<group>"; };
+		7746F59924F7C831000DC145 /* SearchGoodsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchGoodsVC.h; sourceTree = "<group>"; };
+		7746F59A24F7C831000DC145 /* SearchGoodsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchGoodsVC.m; sourceTree = "<group>"; };
+		7746F59C24F7C8CE000DC145 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		7746F59D24F7C8CE000DC145 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		77A17BB524EB830700CBF0A6 /* UIView+Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Design.h"; sourceTree = "<group>"; };
 		77A17BB624EB830700CBF0A6 /* UIView+Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Design.m"; sourceTree = "<group>"; };
 		77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressShowView.h; sourceTree = "<group>"; };
@@ -1178,6 +1215,8 @@
 		7708D87E24E7AAAD00A4DB25 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				7746F59C24F7C8CE000DC145 /* UIView+Frame.h */,
+				7746F59D24F7C8CE000DC145 /* UIView+Frame.m */,
 				77A17BB524EB830700CBF0A6 /* UIView+Design.h */,
 				77A17BB624EB830700CBF0A6 /* UIView+Design.m */,
 				7708DAAB24E7D60500A4DB25 /* UIView+Nib.h */,
@@ -2068,6 +2107,8 @@
 				7708DD3D24EB61F600A4DB25 /* SearchViewController.xib */,
 				7708DD3A24EB5E0300A4DB25 /* SearchListVC.h */,
 				7708DD3B24EB5E0300A4DB25 /* SearchListVC.m */,
+				7746F59924F7C831000DC145 /* SearchGoodsVC.h */,
+				7746F59A24F7C831000DC145 /* SearchGoodsVC.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -2124,6 +2165,8 @@
 		7746F56124F65AC8000DC145 /* Procurement */ = {
 			isa = PBXGroup;
 			children = (
+				7746F59224F7B4B7000DC145 /* Cancel */,
+				7746F57524F74B93000DC145 /* WaitingPay */,
 				7746F56924F65E36000DC145 /* ProcurementCell.h */,
 				7746F56A24F65E36000DC145 /* ProcurementCell.m */,
 				7746F56B24F65E36000DC145 /* ProcurementCell.xib */,
@@ -2134,12 +2177,53 @@
 		7746F56224F65ACE000DC145 /* Procurement */ = {
 			isa = PBXGroup;
 			children = (
+				7746F57124F74977000DC145 /* WaitingPay */,
 				7746F56324F65B19000DC145 /* ProcurementOrderVC.h */,
 				7746F56424F65B19000DC145 /* ProcurementOrderVC.m */,
 				7746F56624F65B3A000DC145 /* ProcurementDetailsVC.h */,
 				7746F56724F65B3A000DC145 /* ProcurementDetailsVC.m */,
 			);
 			path = Procurement;
+			sourceTree = "<group>";
+		};
+		7746F57124F74977000DC145 /* WaitingPay */ = {
+			isa = PBXGroup;
+			children = (
+				7746F57324F74977000DC145 /* WaitingPayDetailsVC.h */,
+				7746F57224F74977000DC145 /* WaitingPayDetailsVC.m */,
+				7746F58A24F7A23D000DC145 /* WaitingPayDetailsVC.xib */,
+			);
+			path = WaitingPay;
+			sourceTree = "<group>";
+		};
+		7746F57524F74B93000DC145 /* WaitingPay */ = {
+			isa = PBXGroup;
+			children = (
+				7746F57B24F74DC1000DC145 /* WaitingPayAddressView.h */,
+				7746F57C24F74DC1000DC145 /* WaitingPayAddressView.m */,
+				7746F57D24F74DC1000DC145 /* WaitingPayAddressView.xib */,
+				7746F58024F7657A000DC145 /* WaitingPayTotalView.h */,
+				7746F58124F7657A000DC145 /* WaitingPayTotalView.m */,
+				7746F58224F7657A000DC145 /* WaitingPayTotalView.xib */,
+				7746F57624F74BDE000DC145 /* WaitingPayTabCell.h */,
+				7746F57724F74BDE000DC145 /* WaitingPayTabCell.m */,
+				7746F57824F74BDE000DC145 /* WaitingPayTabCell.xib */,
+				7746F58524F7891D000DC145 /* WaitingPayInfoView.h */,
+				7746F58624F7891D000DC145 /* WaitingPayInfoView.m */,
+				7746F58724F7891D000DC145 /* WaitingPayInfoView.xib */,
+			);
+			path = WaitingPay;
+			sourceTree = "<group>";
+		};
+		7746F59224F7B4B7000DC145 /* Cancel */ = {
+			isa = PBXGroup;
+			children = (
+				7746F59324F7B4B7000DC145 /* CancelPopView.h */,
+				7746F59524F7B4B7000DC145 /* CancelPopView.m */,
+				7746F59624F7B4B7000DC145 /* CancelTableViewCell.h */,
+				7746F59424F7B4B7000DC145 /* CancelTableViewCell.m */,
+			);
+			path = Cancel;
 			sourceTree = "<group>";
 		};
 		77A17C4124F4B0CC00CBF0A6 /* Search */ = {
@@ -2416,13 +2500,18 @@
 			files = (
 				77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */,
 				7746F56024F64FF5000DC145 /* CollectStoreCell.xib in Resources */,
+				7746F58B24F7A23D000DC145 /* WaitingPayDetailsVC.xib in Resources */,
 				7708DA4324E7B6FA00A4DB25 /* wphoto_select_yes@2x.png in Resources */,
 				7746F54E24F63D6B000DC145 /* city.plist in Resources */,
+				7746F58424F7657A000DC145 /* WaitingPayTotalView.xib in Resources */,
 				77A17C5324F4B0CC00CBF0A6 /* AddressCell.xib in Resources */,
 				7708D9A324E7ABA300A4DB25 /* SVProgressHUD.bundle in Resources */,
+				7746F57A24F74BDE000DC145 /* WaitingPayTabCell.xib in Resources */,
 				7746F55824F6434A000DC145 /* CollectGoodsCell.xib in Resources */,
 				7708DA4224E7B6FA00A4DB25 /* wphoto_select_no@2x.png in Resources */,
+
 				977466B024F784720078313C /* SupplyGoodsInfoView.xib in Resources */,
+
 				972CC5EA24F65A27002DC0F1 /* SupplyGoodsCell.xib in Resources */,
 				7746F56D24F65E36000DC145 /* ProcurementCell.xib in Resources */,
 				77A17C6024F4B47C00CBF0A6 /* HomeAllCollectionCell.xib in Resources */,
@@ -2442,10 +2531,15 @@
 				77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */,
 				7708D97E24E7ABA200A4DB25 /* MJRefresh.bundle in Resources */,
 				77A17C6624F4E20F00CBF0A6 /* HomeHeaderView.xib in Resources */,
+
 				977466CC24F7AA6D0078313C /* CommentHeaderView.xib in Resources */,
+
+				7746F57F24F74DC1000DC145 /* WaitingPayAddressView.xib in Resources */,
+
 				972CC5E424F600C3002DC0F1 /* SupplyViewController.xib in Resources */,
 				77A17C5724F4B0CC00CBF0A6 /* SearchCell.xib in Resources */,
 				77A17C7924F4F85D00CBF0A6 /* MeCollectionViewCell.xib in Resources */,
+				7746F58924F7891E000DC145 /* WaitingPayInfoView.xib in Resources */,
 				7708DA5524E7B7C700A4DB25 /* README.txt in Resources */,
 				7708D7E124E79BD700A4DB25 /* Assets.xcassets in Resources */,
 			);
@@ -2579,6 +2673,7 @@
 				7708D97524E7ABA200A4DB25 /* AFImageDownloader.m in Sources */,
 				7708DC1424E7DF5C00A4DB25 /* SDWebImageDownloader.m in Sources */,
 				7708DA2D24E7B6FA00A4DB25 /* WSImageModel.m in Sources */,
+				7746F59824F7B4B7000DC145 /* CancelPopView.m in Sources */,
 				7708D83E24E7A1B200A4DB25 /* MycommonTableView.m in Sources */,
 				7708D9D224E7ACF500A4DB25 /* MeViewController.m in Sources */,
 				7746F55324F64247000DC145 /* CollectGoodsVC.m in Sources */,
@@ -2604,6 +2699,7 @@
 				7708D99C24E7ABA300A4DB25 /* IQUIView+Hierarchy.m in Sources */,
 				7746F54324F6004B000DC145 /* AddressMangerCell.m in Sources */,
 				7746F56824F65B3A000DC145 /* ProcurementDetailsVC.m in Sources */,
+				7746F57924F74BDE000DC145 /* WaitingPayTabCell.m in Sources */,
 				7708DC1724E7DF5C00A4DB25 /* SDWebImageIndicator.m in Sources */,
 				7746F56C24F65E36000DC145 /* ProcurementCell.m in Sources */,
 				7708DC3E24E7DF5D00A4DB25 /* SDWeakProxy.m in Sources */,
@@ -2615,11 +2711,15 @@
 				7708D83D24E7A1B200A4DB25 /* BaseTableView+nodataShow.m in Sources */,
 				7708D84924E7A1B200A4DB25 /* ZZBaseNavController.m in Sources */,
 				7708DA9F24E7C91900A4DB25 /* WTShareManager.m in Sources */,
+				7746F59B24F7C831000DC145 /* SearchGoodsVC.m in Sources */,
+				7746F58324F7657A000DC145 /* WaitingPayTotalView.m in Sources */,
 				7708DADF24E7DCD900A4DB25 /* TAAnimatedDotView.m in Sources */,
 				7708D97924E7ABA200A4DB25 /* AFURLRequestSerialization.m in Sources */,
 				7708DC3524E7DF5D00A4DB25 /* SDWebImageDefine.m in Sources */,
 				7708D84424E7A1B200A4DB25 /* UIViewController+hub.m in Sources */,
 				7708DADD24E7DCD900A4DB25 /* TADotView.m in Sources */,
+				7746F58824F7891E000DC145 /* WaitingPayInfoView.m in Sources */,
+				7746F59724F7B4B7000DC145 /* CancelTableViewCell.m in Sources */,
 				7708D87524E7AA0900A4DB25 /* NSDictionary+null.m in Sources */,
 				7708D98224E7ABA200A4DB25 /* MJRefreshBackGifFooter.m in Sources */,
 				7708DC1324E7DF5C00A4DB25 /* UIImage+Transform.m in Sources */,
@@ -2647,6 +2747,7 @@
 				7708DC1824E7DF5C00A4DB25 /* UIImage+GIF.m in Sources */,
 				7708D89824E7AB4300A4DB25 /* AFNHttpRequestOPManager+DLUnNomalApi.m in Sources */,
 				7708DADE24E7DCD900A4DB25 /* TAPageControl.m in Sources */,
+				7746F57424F74977000DC145 /* WaitingPayDetailsVC.m in Sources */,
 				7708D97424E7ABA200A4DB25 /* AFAutoPurgingImageCache.m in Sources */,
 				7708DC5424E7EA1200A4DB25 /* UploadPhotoImgHandler.m in Sources */,
 				7708D84F24E7A1B200A4DB25 /* TopbarTypeTableDataLogicModule.m in Sources */,
@@ -2668,8 +2769,10 @@
 				7708D85024E7A1B200A4DB25 /* CellCalculateModel.m in Sources */,
 				77A17C5524F4B0CC00CBF0A6 /* AddressCell.m in Sources */,
 				7708DA4724E7B6FA00A4DB25 /* TMDiskCache.m in Sources */,
+				7746F59E24F7C8CE000DC145 /* UIView+Frame.m in Sources */,
 				7746F55B24F64F23000DC145 /* CollectStoreVC.m in Sources */,
 				7708D7E724E79BD700A4DB25 /* main.m in Sources */,
+				7746F57E24F74DC1000DC145 /* WaitingPayAddressView.m in Sources */,
 				77A17C6124F4B47C00CBF0A6 /* HomeAllCollectionCell.m in Sources */,
 				977466CA24F7AA540078313C /* CommentHeaderView.m in Sources */,
 				7708DC1624E7DF5C00A4DB25 /* SDWebImageCacheSerializer.m in Sources */,
