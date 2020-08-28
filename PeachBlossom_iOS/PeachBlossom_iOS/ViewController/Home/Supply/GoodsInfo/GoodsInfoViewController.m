@@ -15,7 +15,7 @@
 #import "CommentOneView.h"
 #import "ShopInfoView.h"
 
-@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate,ShopInfoViewDelegate>
+@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate,ShopInfoViewDelegate,UIWebViewDelegate>
 
 //返回按钮
 @property (nonatomic, strong) UIButton *backBtn;
@@ -46,6 +46,9 @@
 //商店信息
 @property (nonatomic, strong) ShopInfoView *shopInfoView;
 
+//底部webview
+@property (nonatomic, strong) UIWebView *detailInfoWebview;
+
 @end
 
 @implementation GoodsInfoViewController
@@ -62,7 +65,7 @@
         make.width.mas_equalTo(kScreenWidth);
         make.height.mas_equalTo(kScreenHeight);
     }];
-    self.mainScrollerView.contentSize = CGSizeMake(kScreenWidth, kScreenHeight*3);
+    self.mainScrollerView.contentSize = CGSizeMake(kScreenWidth, 1339);
     self.mainScrollerView.backgroundColor = kGetColor(0xf7, 0xf7, 0xf7);
     
     self.backBtn = [[UIButton alloc] init];
@@ -95,6 +98,10 @@
     [self initGoodsInfo_commentHeaderView];
     [self initGoodsInfo_commentView];
     [self initGoodsInfo_shopInfoView];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self initGoodsInfo_webView];
+    });
+    
 }
 
 #pragma mark ------------------------Init---------------------------------
@@ -281,6 +288,35 @@
         make.left.equalTo(self.infoImgScrollView.mas_left);
         make.height.mas_equalTo(152);
     }];
+}
+
+- (void)initGoodsInfo_webView
+{
+    self.detailInfoWebview = [[UIWebView alloc] initWithFrame:CGRectMake(0, self.shopInfoView.frame.origin.y+self.shopInfoView.frame.size.height+15, kScreenWidth, 300)];
+        
+    self.detailInfoWebview.userInteractionEnabled = NO;
+    self.detailInfoWebview.delegate = self;
+    [self.mainScrollerView addSubview:self.detailInfoWebview];
+    NSURL *remoteURL = [NSURL URLWithString:@"https://www.jb51.net/article/78989.htm"];
+    NSURLRequest *request =[NSURLRequest requestWithURL:remoteURL];
+    [self.detailInfoWebview loadRequest:request];
+    
+    //添加监听
+    [self.detailInfoWebview.scrollView addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:@"WejinWuLiuViewController"];
+}
+
+//监听回调
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    
+    if ([keyPath isEqualToString:@"contentSize"]) {
+        
+        float webViewHeight = [self.detailInfoWebview.scrollView contentSize].height;
+        CGRect newFrame = self.detailInfoWebview.frame;
+        newFrame.size.height = webViewHeight;
+       self.detailInfoWebview.frame = newFrame;
+        
+        self.mainScrollerView.contentSize = CGSizeMake(kScreenWidth, 1339+webViewHeight+660);
+    }
 }
 
 
