@@ -19,7 +19,7 @@
         
         self.backgroundColor = [UIColor whiteColor];
         
-        int size = 20;
+        int size = 23;
         int x = 25;
         int gap = (kScreenWidth/2-x*2-size*3)/2;
         
@@ -97,7 +97,7 @@
         [addBtn setTitle:@"加入购物车" forState:UIControlStateNormal];
         addBtn.titleLabel.font = CUSTOMFONT(16);
         [addBtn setTitleColor:kGetColor(0xff, 0xff, 0xff) forState:UIControlStateNormal];
-        addBtn.backgroundColor = [UIColor orangeColor];
+        addBtn.backgroundColor = kGetColor(254, 165, 10);
         [addBtn addTarget:self action:@selector(addBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
         
         UIButton *buyBtn = [[UIButton alloc] init];
@@ -111,8 +111,25 @@
         [buyBtn setTitle:@"立即购买" forState:UIControlStateNormal];
         buyBtn.titleLabel.font = CUSTOMFONT(16);
         [buyBtn setTitleColor:kGetColor(0xff, 0xff, 0xff) forState:UIControlStateNormal];
-        buyBtn.backgroundColor = [UIColor greenColor];
+        buyBtn.backgroundColor = kGetColor(61, 190, 104);
         [buyBtn addTarget:self action:@selector(buyBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            UIBezierPath *maskPath=[UIBezierPath bezierPathWithRoundedRect:buyBtn.bounds byRoundingCorners:UIRectCornerTopRight|UIRectCornerBottomRight cornerRadii:CGSizeMake(15, 15)];
+            CAShapeLayer *maskLayer=[[CAShapeLayer alloc]init];
+            maskLayer.frame=buyBtn.bounds;
+            maskLayer.path=maskPath.CGPath;
+            buyBtn.layer.mask=maskLayer;
+        });
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            UIBezierPath *maskPath=[UIBezierPath bezierPathWithRoundedRect:addBtn.bounds byRoundingCorners:UIRectCornerTopLeft|UIRectCornerBottomLeft cornerRadii:CGSizeMake(15, 15)];
+            CAShapeLayer *maskLayer=[[CAShapeLayer alloc]init];
+            maskLayer.frame=addBtn.bounds;
+            maskLayer.path=maskPath.CGPath;
+            addBtn.layer.mask=maskLayer;
+        });
+        
         
     }
     return self;

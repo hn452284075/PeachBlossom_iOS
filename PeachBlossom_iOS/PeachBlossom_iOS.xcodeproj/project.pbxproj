@@ -326,6 +326,7 @@
 		9795BE2D24F894D600F23D48 /* ShopInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE2C24F894D600F23D48 /* ShopInfoView.m */; };
 		9795BE2F24F894E300F23D48 /* ShopInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9795BE2E24F894E300F23D48 /* ShopInfoView.xib */; };
 		9795BE3324F8B4E300F23D48 /* BottumBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE3224F8B4E200F23D48 /* BottumBuyView.m */; };
+		9795BE3A24F8EE4B00F23D48 /* AddToCartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE3924F8EE4B00F23D48 /* AddToCartView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -954,6 +955,8 @@
 		9795BE2E24F894E300F23D48 /* ShopInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopInfoView.xib; sourceTree = "<group>"; };
 		9795BE3124F8B4E200F23D48 /* BottumBuyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottumBuyView.h; sourceTree = "<group>"; };
 		9795BE3224F8B4E200F23D48 /* BottumBuyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottumBuyView.m; sourceTree = "<group>"; };
+		9795BE3824F8EE4B00F23D48 /* AddToCartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddToCartView.h; sourceTree = "<group>"; };
+		9795BE3924F8EE4B00F23D48 /* AddToCartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddToCartView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2322,6 +2325,7 @@
 		972CC5E524F659E5002DC0F1 /* Supply */ = {
 			isa = PBXGroup;
 			children = (
+				9795BE3624F8ED5B00F23D48 /* AddToCartView */,
 				9795BE3024F8B45F00F23D48 /* BottomBuyView */,
 				9795BE2A24F894AF00F23D48 /* ShopInfoView */,
 				977466C724F7AA1F0078313C /* CommentView */,
@@ -2393,6 +2397,15 @@
 				9795BE3224F8B4E200F23D48 /* BottumBuyView.m */,
 			);
 			path = BottomBuyView;
+			sourceTree = "<group>";
+		};
+		9795BE3624F8ED5B00F23D48 /* AddToCartView */ = {
+			isa = PBXGroup;
+			children = (
+				9795BE3824F8EE4B00F23D48 /* AddToCartView.h */,
+				9795BE3924F8EE4B00F23D48 /* AddToCartView.m */,
+			);
+			path = AddToCartView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2509,9 +2522,7 @@
 				7746F57A24F74BDE000DC145 /* WaitingPayTabCell.xib in Resources */,
 				7746F55824F6434A000DC145 /* CollectGoodsCell.xib in Resources */,
 				7708DA4224E7B6FA00A4DB25 /* wphoto_select_no@2x.png in Resources */,
-
 				977466B024F784720078313C /* SupplyGoodsInfoView.xib in Resources */,
-
 				972CC5EA24F65A27002DC0F1 /* SupplyGoodsCell.xib in Resources */,
 				7746F56D24F65E36000DC145 /* ProcurementCell.xib in Resources */,
 				77A17C6024F4B47C00CBF0A6 /* HomeAllCollectionCell.xib in Resources */,
@@ -2531,11 +2542,8 @@
 				77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */,
 				7708D97E24E7ABA200A4DB25 /* MJRefresh.bundle in Resources */,
 				77A17C6624F4E20F00CBF0A6 /* HomeHeaderView.xib in Resources */,
-
 				977466CC24F7AA6D0078313C /* CommentHeaderView.xib in Resources */,
-
 				7746F57F24F74DC1000DC145 /* WaitingPayAddressView.xib in Resources */,
-
 				972CC5E424F600C3002DC0F1 /* SupplyViewController.xib in Resources */,
 				77A17C5724F4B0CC00CBF0A6 /* SearchCell.xib in Resources */,
 				77A17C7924F4F85D00CBF0A6 /* MeCollectionViewCell.xib in Resources */,
@@ -2691,6 +2699,7 @@
 				7708DC0D24E7DF5C00A4DB25 /* SDImageCoder.m in Sources */,
 				7708DC1E24E7DF5C00A4DB25 /* SDWebImageError.m in Sources */,
 				7708D98D24E7ABA300A4DB25 /* MJRefreshBackFooter.m in Sources */,
+				9795BE3A24F8EE4B00F23D48 /* AddToCartView.m in Sources */,
 				7708DC1024E7DF5C00A4DB25 /* SDAnimatedImage.m in Sources */,
 				7708DA3B24E7B6FA00A4DB25 /* WXinPayResponseModel.m in Sources */,
 				7708D99A24E7ABA300A4DB25 /* IQUITextFieldView+Additions.m in Sources */,

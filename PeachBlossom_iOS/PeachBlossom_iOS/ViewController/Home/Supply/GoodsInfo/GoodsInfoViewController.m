@@ -326,7 +326,10 @@
 
 - (void)initGoodsInfo_buyview
 {
-    self.buyView = [[BottumBuyView alloc] initWithFrame:CGRectMake(0, kScreenHeight-57, kScreenWidth, 57)];
+    int tempheight = 0;
+    if(iPhoneX || IS_IPHONE_Xr || IS_IPHONE_Xs || IS_IPHONE_Xs_Max)
+        tempheight = 20;
+    self.buyView = [[BottumBuyView alloc] initWithFrame:CGRectMake(0, kScreenHeight-60-tempheight, kScreenWidth, 60+tempheight)];
     self.buyView.delegate = self;
     [self.view addSubview:self.buyView];
 }

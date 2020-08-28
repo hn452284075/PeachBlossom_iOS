@@ -28,6 +28,11 @@
 
 @implementation SupplyViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -385,8 +390,8 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    GoodsInfoViewController *infoCon = [[GoodsInfoViewController alloc] init];
-    [self.navigationController pushViewController:infoCon animated:YES];
+    GoodsInfoViewController *infoCon = [[GoodsInfoViewController alloc] init];    
+    [self navigatePushViewController:infoCon animate:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

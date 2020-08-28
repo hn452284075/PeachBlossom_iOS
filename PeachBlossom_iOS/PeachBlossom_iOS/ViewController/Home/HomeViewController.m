@@ -226,8 +226,8 @@
     //暂时点击购物车跳转到供应大厅
     AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [delegate.mainVC showOrHideTabBar:NO];
-    SupplyViewController *supplyCon = [[SupplyViewController alloc] init];
-    [self.navigationController pushViewController:supplyCon animated:YES];
+    SupplyViewController *supplyCon = [[SupplyViewController alloc] init];   
+    [self navigatePushViewController:supplyCon animate:YES];
   
 }
 
