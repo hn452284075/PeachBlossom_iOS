@@ -14,8 +14,9 @@
 #import "CommentHeaderView.h"
 #import "CommentOneView.h"
 #import "ShopInfoView.h"
+#import "BottumBuyView.h"
 
-@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate,ShopInfoViewDelegate,UIWebViewDelegate>
+@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate,ShopInfoViewDelegate,UIWebViewDelegate,BottumBuyViewDelegate>
 
 //返回按钮
 @property (nonatomic, strong) UIButton *backBtn;
@@ -49,6 +50,9 @@
 //底部webview
 @property (nonatomic, strong) UIWebView *detailInfoWebview;
 
+//最下方的聊一聊 、 加购物车的view
+@property (nonatomic, strong) BottumBuyView *buyView;
+
 @end
 
 @implementation GoodsInfoViewController
@@ -63,7 +67,7 @@
         make.top.equalTo(self.view.mas_top).offset(0);
         make.left.equalTo(self.view.mas_left).offset(0);
         make.width.mas_equalTo(kScreenWidth);
-        make.height.mas_equalTo(kScreenHeight);
+        make.height.mas_equalTo(kScreenHeight-57);
     }];
     self.mainScrollerView.contentSize = CGSizeMake(kScreenWidth, 1339);
     self.mainScrollerView.backgroundColor = kGetColor(0xf7, 0xf7, 0xf7);
@@ -101,6 +105,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self initGoodsInfo_webView];
     });
+    [self initGoodsInfo_buyview];
     
 }
 
@@ -319,6 +324,13 @@
     }
 }
 
+- (void)initGoodsInfo_buyview
+{
+    self.buyView = [[BottumBuyView alloc] initWithFrame:CGRectMake(0, kScreenHeight-57, kScreenWidth, 57)];
+    self.buyView.delegate = self;
+    [self.view addSubview:self.buyView];
+}
+
 
 #pragma mark ------------------------View Event---------------------------
 - (void)backBtnClicked:(id)sender
@@ -372,5 +384,37 @@
 {
     NSLog(@"供应大厅--进店看看");
 }
+
+#pragma mark --------- 聊一聊
+- (void)chat_action
+{
+    
+}
+
+#pragma mark --------- 打电话
+- (void)call_action
+{
+    
+}
+
+#pragma mark --------- 购物车
+- (void)cart_action
+{
+    
+}
+
+#pragma mark --------- 加入购物车
+- (void)addToCart_action
+{
+    
+}
+
+#pragma mark --------- 立即购买
+- (void)buy_action
+{
+    
+}
+
+
 
 @end

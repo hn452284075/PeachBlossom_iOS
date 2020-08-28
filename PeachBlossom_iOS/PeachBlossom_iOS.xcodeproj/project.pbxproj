@@ -311,6 +311,7 @@
 		977466CF24F7AAA90078313C /* CommentOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466CE24F7AAA90078313C /* CommentOneView.m */; };
 		9795BE2D24F894D600F23D48 /* ShopInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE2C24F894D600F23D48 /* ShopInfoView.m */; };
 		9795BE2F24F894E300F23D48 /* ShopInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9795BE2E24F894E300F23D48 /* ShopInfoView.xib */; };
+		9795BE3324F8B4E300F23D48 /* BottumBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE3224F8B4E200F23D48 /* BottumBuyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -914,6 +915,8 @@
 		9795BE2B24F894D600F23D48 /* ShopInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopInfoView.h; sourceTree = "<group>"; };
 		9795BE2C24F894D600F23D48 /* ShopInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopInfoView.m; sourceTree = "<group>"; };
 		9795BE2E24F894E300F23D48 /* ShopInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopInfoView.xib; sourceTree = "<group>"; };
+		9795BE3124F8B4E200F23D48 /* BottumBuyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottumBuyView.h; sourceTree = "<group>"; };
+		9795BE3224F8B4E200F23D48 /* BottumBuyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottumBuyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2235,6 +2238,7 @@
 		972CC5E524F659E5002DC0F1 /* Supply */ = {
 			isa = PBXGroup;
 			children = (
+				9795BE3024F8B45F00F23D48 /* BottomBuyView */,
 				9795BE2A24F894AF00F23D48 /* ShopInfoView */,
 				977466C724F7AA1F0078313C /* CommentView */,
 				977466C124F7A0B50078313C /* ExpressInfoView */,
@@ -2296,6 +2300,15 @@
 				9795BE2E24F894E300F23D48 /* ShopInfoView.xib */,
 			);
 			path = ShopInfoView;
+			sourceTree = "<group>";
+		};
+		9795BE3024F8B45F00F23D48 /* BottomBuyView */ = {
+			isa = PBXGroup;
+			children = (
+				9795BE3124F8B4E200F23D48 /* BottumBuyView.h */,
+				9795BE3224F8B4E200F23D48 /* BottumBuyView.m */,
+			);
+			path = BottomBuyView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2503,6 +2516,7 @@
 				77A17C5424F4B0CC00CBF0A6 /* AddressHeaderView.m in Sources */,
 				7708DC2024E7DF5C00A4DB25 /* SDImageCoderHelper.m in Sources */,
 				7708DC4A24E7E95200A4DB25 /* NSString+Add.m in Sources */,
+				9795BE3324F8B4E300F23D48 /* BottumBuyView.m in Sources */,
 				7708DC2A24E7DF5C00A4DB25 /* SDImageLoadersManager.m in Sources */,
 				7708DC2324E7DF5C00A4DB25 /* SDDiskCache.m in Sources */,
 				77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */,
