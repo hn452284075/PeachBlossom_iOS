@@ -13,14 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CommentOneView : UIView
 
 //头像 评论用户名 评论内容 评论图片数组  时间 类别  重量  目的地
-//- (void)_initWithData:(UIImage *)headImage
-//                 name:(NSString *)name
-//              comment:(NSString *)comment
-//               images:(NSArray *)imgArr
-//                 time:(NSString *)time
-//                 spec:(NSString *)spec
-//               weight:(NSString *)weight
-//                place:(NSString *)place;
 
 - (instancetype)initWithFrame:(CGRect)frame
                     headImage:(UIImage *)headImage

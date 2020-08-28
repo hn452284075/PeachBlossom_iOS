@@ -56,7 +56,7 @@
             row +=1;
         int x = 12;
         int y = commentLab.frame.origin.x+size.height+12+50;
-        int w = size.width/4;
+        int w = (kScreenWidth-24)/4-1;
         int h = w;
         int endY = y;
         for(int i=0;i<row;i++)
@@ -65,7 +65,7 @@
             for(int j=4*i;j<imgArr.count;j++)
             {
                 UIImageView *imgv = [[UIImageView alloc] init];
-                imgv.frame = CGRectMake(x+w*temp++, y+h*i, w, h);
+                imgv.frame = CGRectMake(x+(w+2)*temp++, y+h*i, w, h);
                 imgv.image = [imgArr objectAtIndex:i];
                 [self addSubview:imgv];
                 endY = y+h*i + h;

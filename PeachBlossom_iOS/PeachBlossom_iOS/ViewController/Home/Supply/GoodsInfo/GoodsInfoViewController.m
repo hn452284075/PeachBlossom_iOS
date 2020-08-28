@@ -39,7 +39,8 @@
 //评论的头部View
 @property (nonatomic, strong) CommentHeaderView *commentheaderview;
 //具体的评论
-@property (nonatomic, strong) CommentOneView *commnetView;
+@property (nonatomic, strong) CommentOneView *commnetView_1;
+@property (nonatomic, strong) CommentOneView *commnetView_2;
 
 @end
 
@@ -227,7 +228,7 @@
 
 - (void)initGoodsInfo_commentView
 {
-    NSString *comment = @"当数据很多列表过长的时候优化就势在必行了可以往以下几个方面考虑当数据很多列表过长的时候优化就势在必行了可以往以下几个方面考虑当数据很多列表过长的时候优化就势在必行了可以往以下几个方面考虑过长的时候优化就势在必行了可以往以下几个方面考虑当数据很多列表过长的时候优化就势在必行了可以往以下几个方面考虑当数据很多列表过长的时候优化就势在必行了可以往以下几个方";
+    NSString *comment = @"当数据很多列表过，长的时候必行了可以往以下几个方面考虑当，数据很多列表过长的时候优化就势在必行了可以往以下几个方，表过，长的时候必行了可以往以下几个方面考虑当，数据很多列表过长的时候优化就势在必行了可以往以下几个方，表过，长的时候必行了可以往以下几个方面考虑当，数据很多列表过长的时候优化就势在必行了可以往以下几个方面考虑当数据很，多列大暗示法";
     NSArray *imageArr = [[NSArray alloc] initWithObjects:IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"), nil];
     
     NSDictionary * dict = @{
@@ -235,17 +236,29 @@
     };
     CGSize size = [comment boundingRectWithSize:CGSizeMake(kScreenWidth-24, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size;
     
-    int cvheight = size.height+((kScreenWidth-28)/2)*(imageArr.count/4)+80;
+    int count = (int)imageArr.count%4==0?(int)imageArr.count/4:((int)imageArr.count/4)+1;
+    int cvheight = size.height+50+(kScreenWidth-24)/4*count+60;
     
-    self.commnetView = [[CommentOneView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100) headImage:IMAGE(@"supply_goodsimg") name:@"Rover" comment:comment images:imageArr time:@"2020-08-28" spec:@"特级果" weight:@"100顿" place:@"发往澳大利亚"];
-    [self.mainScrollerView addSubview:self.commnetView];
-    [self.commnetView mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.commnetView_1 = [[CommentOneView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100) headImage:IMAGE(@"supply_goodsimg") name:@"Rover" comment:comment images:imageArr time:@"2020-08-28" spec:@"特级果" weight:@"100顿" place:@"发往澳大利亚"];
+    [self.mainScrollerView addSubview:self.commnetView_1];
+    [self.commnetView_1 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.commentheaderview.mas_bottom).offset(0);
         make.right.equalTo(self.infoImgScrollView.mas_right);
         make.left.equalTo(self.infoImgScrollView.mas_left);
         make.height.mas_equalTo(cvheight);
     }];
-    self.commnetView.backgroundColor = [UIColor whiteColor];
+    self.commnetView_1.backgroundColor = [UIColor whiteColor];
+    
+    
+    self.commnetView_2 = [[CommentOneView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 100) headImage:IMAGE(@"supply_goodsimg") name:@"Rover" comment:comment images:imageArr time:@"2020-08-28" spec:@"特级果" weight:@"100顿" place:@"发往澳大利亚"];
+    [self.mainScrollerView addSubview:self.commnetView_2];
+    [self.commnetView_2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.commnetView_1.mas_bottom).offset(0);
+        make.right.equalTo(self.infoImgScrollView.mas_right);
+        make.left.equalTo(self.infoImgScrollView.mas_left);
+        make.height.mas_equalTo(cvheight);
+    }];
+    self.commnetView_2.backgroundColor = [UIColor whiteColor];
     
 }
 
