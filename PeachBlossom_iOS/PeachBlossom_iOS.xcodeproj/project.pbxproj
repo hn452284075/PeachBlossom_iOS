@@ -316,6 +316,18 @@
 		972CC5E424F600C3002DC0F1 /* SupplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972CC5E224F600C3002DC0F1 /* SupplyViewController.xib */; };
 		972CC5E924F65A27002DC0F1 /* SupplyGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 972CC5E724F65A27002DC0F1 /* SupplyGoodsCell.m */; };
 		972CC5EA24F65A27002DC0F1 /* SupplyGoodsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972CC5E824F65A27002DC0F1 /* SupplyGoodsCell.xib */; };
+		977466B024F784720078313C /* SupplyGoodsInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466AF24F784720078313C /* SupplyGoodsInfoView.xib */; };
+		977466B324F7869C0078313C /* SupplyGoodsInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466B224F7869C0078313C /* SupplyGoodsInfoView.m */; };
+		977466BF24F79D070078313C /* GoodsInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466BB24F79D070078313C /* GoodsInfoViewController.xib */; };
+		977466C024F79D070078313C /* GoodsInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466BC24F79D070078313C /* GoodsInfoViewController.m */; };
+		977466C424F7A0E00078313C /* ExpressInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466C324F7A0E00078313C /* ExpressInfoView.m */; };
+		977466C624F7A0F20078313C /* ExpressInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466C524F7A0F20078313C /* ExpressInfoView.xib */; };
+		977466CA24F7AA540078313C /* CommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466C924F7AA540078313C /* CommentHeaderView.m */; };
+		977466CC24F7AA6D0078313C /* CommentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466CB24F7AA6D0078313C /* CommentHeaderView.xib */; };
+		977466CF24F7AAA90078313C /* CommentOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466CE24F7AAA90078313C /* CommentOneView.m */; };
+		9795BE2D24F894D600F23D48 /* ShopInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE2C24F894D600F23D48 /* ShopInfoView.m */; };
+		9795BE2F24F894E300F23D48 /* ShopInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9795BE2E24F894E300F23D48 /* ShopInfoView.xib */; };
+		9795BE3324F8B4E300F23D48 /* BottumBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE3224F8B4E200F23D48 /* BottumBuyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -929,6 +941,25 @@
 		972CC5E624F65A27002DC0F1 /* SupplyGoodsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupplyGoodsCell.h; sourceTree = "<group>"; };
 		972CC5E724F65A27002DC0F1 /* SupplyGoodsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupplyGoodsCell.m; sourceTree = "<group>"; };
 		972CC5E824F65A27002DC0F1 /* SupplyGoodsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupplyGoodsCell.xib; sourceTree = "<group>"; };
+		977466AF24F784720078313C /* SupplyGoodsInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupplyGoodsInfoView.xib; sourceTree = "<group>"; };
+		977466B124F7869C0078313C /* SupplyGoodsInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupplyGoodsInfoView.h; sourceTree = "<group>"; };
+		977466B224F7869C0078313C /* SupplyGoodsInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupplyGoodsInfoView.m; sourceTree = "<group>"; };
+		977466BB24F79D070078313C /* GoodsInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsInfoViewController.xib; sourceTree = "<group>"; };
+		977466BC24F79D070078313C /* GoodsInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsInfoViewController.m; sourceTree = "<group>"; };
+		977466BD24F79D070078313C /* GoodsInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsInfoViewController.h; sourceTree = "<group>"; };
+		977466C224F7A0E00078313C /* ExpressInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpressInfoView.h; sourceTree = "<group>"; };
+		977466C324F7A0E00078313C /* ExpressInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpressInfoView.m; sourceTree = "<group>"; };
+		977466C524F7A0F20078313C /* ExpressInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExpressInfoView.xib; sourceTree = "<group>"; };
+		977466C824F7AA540078313C /* CommentHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentHeaderView.h; sourceTree = "<group>"; };
+		977466C924F7AA540078313C /* CommentHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentHeaderView.m; sourceTree = "<group>"; };
+		977466CB24F7AA6D0078313C /* CommentHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentHeaderView.xib; sourceTree = "<group>"; };
+		977466CD24F7AAA90078313C /* CommentOneView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentOneView.h; sourceTree = "<group>"; };
+		977466CE24F7AAA90078313C /* CommentOneView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentOneView.m; sourceTree = "<group>"; };
+		9795BE2B24F894D600F23D48 /* ShopInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopInfoView.h; sourceTree = "<group>"; };
+		9795BE2C24F894D600F23D48 /* ShopInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopInfoView.m; sourceTree = "<group>"; };
+		9795BE2E24F894E300F23D48 /* ShopInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopInfoView.xib; sourceTree = "<group>"; };
+		9795BE3124F8B4E200F23D48 /* BottumBuyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottumBuyView.h; sourceTree = "<group>"; };
+		9795BE3224F8B4E200F23D48 /* BottumBuyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottumBuyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2290,6 +2321,7 @@
 		972CC5DF24F6008E002DC0F1 /* Supply */ = {
 			isa = PBXGroup;
 			children = (
+				977466B824F79CE30078313C /* GoodsInfo */,
 				972CC5E024F600C3002DC0F1 /* SupplyViewController.h */,
 				972CC5E124F600C3002DC0F1 /* SupplyViewController.m */,
 				972CC5E224F600C3002DC0F1 /* SupplyViewController.xib */,
@@ -2300,11 +2332,77 @@
 		972CC5E524F659E5002DC0F1 /* Supply */ = {
 			isa = PBXGroup;
 			children = (
+				9795BE3024F8B45F00F23D48 /* BottomBuyView */,
+				9795BE2A24F894AF00F23D48 /* ShopInfoView */,
+				977466C724F7AA1F0078313C /* CommentView */,
+				977466C124F7A0B50078313C /* ExpressInfoView */,
+				977466AB24F783FC0078313C /* SupplyGoodsInfo */,
 				972CC5E624F65A27002DC0F1 /* SupplyGoodsCell.h */,
 				972CC5E724F65A27002DC0F1 /* SupplyGoodsCell.m */,
 				972CC5E824F65A27002DC0F1 /* SupplyGoodsCell.xib */,
 			);
 			path = Supply;
+			sourceTree = "<group>";
+		};
+		977466AB24F783FC0078313C /* SupplyGoodsInfo */ = {
+			isa = PBXGroup;
+			children = (
+				977466B124F7869C0078313C /* SupplyGoodsInfoView.h */,
+				977466B224F7869C0078313C /* SupplyGoodsInfoView.m */,
+				977466AF24F784720078313C /* SupplyGoodsInfoView.xib */,
+			);
+			path = SupplyGoodsInfo;
+			sourceTree = "<group>";
+		};
+		977466B824F79CE30078313C /* GoodsInfo */ = {
+			isa = PBXGroup;
+			children = (
+				977466BD24F79D070078313C /* GoodsInfoViewController.h */,
+				977466BC24F79D070078313C /* GoodsInfoViewController.m */,
+				977466BB24F79D070078313C /* GoodsInfoViewController.xib */,
+			);
+			path = GoodsInfo;
+			sourceTree = "<group>";
+		};
+		977466C124F7A0B50078313C /* ExpressInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				977466C224F7A0E00078313C /* ExpressInfoView.h */,
+				977466C324F7A0E00078313C /* ExpressInfoView.m */,
+				977466C524F7A0F20078313C /* ExpressInfoView.xib */,
+			);
+			path = ExpressInfoView;
+			sourceTree = "<group>";
+		};
+		977466C724F7AA1F0078313C /* CommentView */ = {
+			isa = PBXGroup;
+			children = (
+				977466C824F7AA540078313C /* CommentHeaderView.h */,
+				977466C924F7AA540078313C /* CommentHeaderView.m */,
+				977466CB24F7AA6D0078313C /* CommentHeaderView.xib */,
+				977466CD24F7AAA90078313C /* CommentOneView.h */,
+				977466CE24F7AAA90078313C /* CommentOneView.m */,
+			);
+			path = CommentView;
+			sourceTree = "<group>";
+		};
+		9795BE2A24F894AF00F23D48 /* ShopInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				9795BE2B24F894D600F23D48 /* ShopInfoView.h */,
+				9795BE2C24F894D600F23D48 /* ShopInfoView.m */,
+				9795BE2E24F894E300F23D48 /* ShopInfoView.xib */,
+			);
+			path = ShopInfoView;
+			sourceTree = "<group>";
+		};
+		9795BE3024F8B45F00F23D48 /* BottomBuyView */ = {
+			isa = PBXGroup;
+			children = (
+				9795BE3124F8B4E200F23D48 /* BottumBuyView.h */,
+				9795BE3224F8B4E200F23D48 /* BottumBuyView.m */,
+			);
+			path = BottomBuyView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2421,23 +2519,33 @@
 				7746F57A24F74BDE000DC145 /* WaitingPayTabCell.xib in Resources */,
 				7746F55824F6434A000DC145 /* CollectGoodsCell.xib in Resources */,
 				7708DA4224E7B6FA00A4DB25 /* wphoto_select_no@2x.png in Resources */,
+
+				977466B024F784720078313C /* SupplyGoodsInfoView.xib in Resources */,
+
 				972CC5EA24F65A27002DC0F1 /* SupplyGoodsCell.xib in Resources */,
 				7746F56D24F65E36000DC145 /* ProcurementCell.xib in Resources */,
 				77A17C6024F4B47C00CBF0A6 /* HomeAllCollectionCell.xib in Resources */,
+				9795BE2F24F894E300F23D48 /* ShopInfoView.xib in Resources */,
 				7746F54824F6376E000DC145 /* ZZAddressController.xib in Resources */,
 				7708DA9724E7C61A00A4DB25 /* AlipaySDK.bundle in Resources */,
 				7708DA4424E7B6FA00A4DB25 /* wphoto_back@2x.png in Resources */,
 				7708DD3E24EB61F600A4DB25 /* SearchViewController.xib in Resources */,
 				7708D7E424E79BD700A4DB25 /* LaunchScreen.storyboard in Resources */,
 				7708D84724E7A1B200A4DB25 /* GuideViewController.xib in Resources */,
+				977466BF24F79D070078313C /* GoodsInfoViewController.xib in Resources */,
 				7708D99624E7ABA300A4DB25 /* IQKeyboardManager.bundle in Resources */,
 				7746F54424F6004B000DC145 /* AddressMangerCell.xib in Resources */,
+				977466C624F7A0F20078313C /* ExpressInfoView.xib in Resources */,
 				77A17C7E24F4F8DA00CBF0A6 /* MeHeaderView.xib in Resources */,
 				7708D84C24E7A1B200A4DB25 /* GlobleErrorView.xib in Resources */,
 				77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */,
 				7708D97E24E7ABA200A4DB25 /* MJRefresh.bundle in Resources */,
 				77A17C6624F4E20F00CBF0A6 /* HomeHeaderView.xib in Resources */,
+
+				977466CC24F7AA6D0078313C /* CommentHeaderView.xib in Resources */,
+
 				7746F57F24F74DC1000DC145 /* WaitingPayAddressView.xib in Resources */,
+
 				972CC5E424F600C3002DC0F1 /* SupplyViewController.xib in Resources */,
 				77A17C5724F4B0CC00CBF0A6 /* SearchCell.xib in Resources */,
 				77A17C7924F4F85D00CBF0A6 /* MeCollectionViewCell.xib in Resources */,
@@ -2513,6 +2621,7 @@
 				77A17C5424F4B0CC00CBF0A6 /* AddressHeaderView.m in Sources */,
 				7708DC2024E7DF5C00A4DB25 /* SDImageCoderHelper.m in Sources */,
 				7708DC4A24E7E95200A4DB25 /* NSString+Add.m in Sources */,
+				9795BE3324F8B4E300F23D48 /* BottumBuyView.m in Sources */,
 				7708DC2A24E7DF5C00A4DB25 /* SDImageLoadersManager.m in Sources */,
 				7708DC2324E7DF5C00A4DB25 /* SDDiskCache.m in Sources */,
 				77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */,
@@ -2549,6 +2658,7 @@
 				7708D96E24E7ABA200A4DB25 /* UIRefreshControl+AFNetworking.m in Sources */,
 				7708D9C424E7ABA300A4DB25 /* NSObject+MJClass.m in Sources */,
 				7708DC3D24E7DF5D00A4DB25 /* SDImageAssetManager.m in Sources */,
+				977466B324F7869C0078313C /* SupplyGoodsInfoView.m in Sources */,
 				7708DC2624E7DF5C00A4DB25 /* SDImageCache.m in Sources */,
 				7708D98324E7ABA300A4DB25 /* MJRefreshBackStateFooter.m in Sources */,
 				7708DAC824E7DA8900A4DB25 /* ALActionSheetView.m in Sources */,
@@ -2641,6 +2751,7 @@
 				7708D9DD24E7AFB100A4DB25 /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				7746F55724F6434A000DC145 /* CollectGoodsCell.m in Sources */,
 				7708DC2B24E7DF5C00A4DB25 /* SDImageCachesManager.m in Sources */,
+				9795BE2D24F894D600F23D48 /* ShopInfoView.m in Sources */,
 				7708DC0B24E7DF5C00A4DB25 /* NSImage+Compatibility.m in Sources */,
 				7708D9C124E7ABA300A4DB25 /* NSObject+MJCoding.m in Sources */,
 				7708D97C24E7ABA200A4DB25 /* UIScrollView+MJRefresh.m in Sources */,
@@ -2675,6 +2786,7 @@
 				7708D7E724E79BD700A4DB25 /* main.m in Sources */,
 				7746F57E24F74DC1000DC145 /* WaitingPayAddressView.m in Sources */,
 				77A17C6124F4B47C00CBF0A6 /* HomeAllCollectionCell.m in Sources */,
+				977466CA24F7AA540078313C /* CommentHeaderView.m in Sources */,
 				7708DC1624E7DF5C00A4DB25 /* SDWebImageCacheSerializer.m in Sources */,
 				7708D98624E7ABA300A4DB25 /* MJRefreshAutoGifFooter.m in Sources */,
 				7708DC3424E7DF5D00A4DB25 /* SDWebImageCacheKeyFilter.m in Sources */,
@@ -2689,10 +2801,12 @@
 				7708DADC24E7DCD900A4DB25 /* SDCollectionViewCell.m in Sources */,
 				7708DA4024E7B6FA00A4DB25 /* WPhotoViewController.m in Sources */,
 				7708D9E124E7B02600A4DB25 /* NSObject+SUIAdditions.m in Sources */,
+				977466C024F79D070078313C /* GoodsInfoViewController.m in Sources */,
 				7708DC0E24E7DF5C00A4DB25 /* SDWebImageManager.m in Sources */,
 				7708DAC124E7D90000A4DB25 /* Util.m in Sources */,
 				7708DA3F24E7B6FA00A4DB25 /* myPhotoCell.m in Sources */,
 				77A17C7424F4F7B300CBF0A6 /* CustomFlowLayout.m in Sources */,
+				977466CF24F7AAA90078313C /* CommentOneView.m in Sources */,
 				7708DC3C24E7DF5D00A4DB25 /* SDImageCachesManagerOperation.m in Sources */,
 				77A17C7824F4F85D00CBF0A6 /* MeCollectionViewCell.m in Sources */,
 				7708D98E24E7ABA300A4DB25 /* MJRefreshAutoFooter.m in Sources */,
@@ -2711,6 +2825,7 @@
 				7708D97824E7ABA200A4DB25 /* AFURLSessionManager.m in Sources */,
 				7708DA3324E7B6FA00A4DB25 /* HMSegmentedControl.m in Sources */,
 				7708DC5724E7EA1200A4DB25 /* PublishEvaluationModel.m in Sources */,
+				977466C424F7A0E00078313C /* ExpressInfoView.m in Sources */,
 				7746F54C24F63A37000DC145 /* CityPickView.m in Sources */,
 				7708DC1124E7DF5C00A4DB25 /* SDAnimatedImageView.m in Sources */,
 				7708DC3724E7DF5D00A4DB25 /* UIView+WebCacheOperation.m in Sources */,
