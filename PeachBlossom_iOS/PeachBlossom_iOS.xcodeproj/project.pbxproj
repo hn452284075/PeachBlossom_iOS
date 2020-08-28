@@ -290,6 +290,7 @@
 		7746F59E24F7C8CE000DC145 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F59D24F7C8CE000DC145 /* UIView+Frame.m */; };
 		7753A33C24F8D84800F66734 /* SearchGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A33B24F8D84800F66734 /* SearchGoodsCell.m */; };
 		7753A36D24F8E74D00F66734 /* SearchFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A36C24F8E74D00F66734 /* SearchFlowLayout.m */; };
+		7753A37024F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A36F24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17BB624EB830700CBF0A6 /* UIView+Design.m */; };
 		77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4424F4B0CC00CBF0A6 /* area.plist */; };
 		77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */; };
@@ -899,6 +900,8 @@
 		7753A33B24F8D84800F66734 /* SearchGoodsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchGoodsCell.m; sourceTree = "<group>"; };
 		7753A36B24F8E74D00F66734 /* SearchFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchFlowLayout.h; sourceTree = "<group>"; };
 		7753A36C24F8E74D00F66734 /* SearchFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchFlowLayout.m; sourceTree = "<group>"; };
+		7753A36E24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		7753A36F24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		77A17BB524EB830700CBF0A6 /* UIView+Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Design.h"; sourceTree = "<group>"; };
 		77A17BB624EB830700CBF0A6 /* UIView+Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Design.m"; sourceTree = "<group>"; };
 		77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressShowView.h; sourceTree = "<group>"; };
@@ -1126,6 +1129,8 @@
 		7708D81824E7A1B100A4DB25 /* Conttoller */ = {
 			isa = PBXGroup;
 			children = (
+				7753A36E24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.h */,
+				7753A36F24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m */,
 				7708D81B24E7A1B100A4DB25 /* UIViewController+hub.h */,
 				7708D82224E7A1B100A4DB25 /* UIViewController+hub.m */,
 				7708D82924E7A1B100A4DB25 /* BaseViewController.h */,
@@ -2519,9 +2524,7 @@
 				7746F57A24F74BDE000DC145 /* WaitingPayTabCell.xib in Resources */,
 				7746F55824F6434A000DC145 /* CollectGoodsCell.xib in Resources */,
 				7708DA4224E7B6FA00A4DB25 /* wphoto_select_no@2x.png in Resources */,
-
 				977466B024F784720078313C /* SupplyGoodsInfoView.xib in Resources */,
-
 				972CC5EA24F65A27002DC0F1 /* SupplyGoodsCell.xib in Resources */,
 				7746F56D24F65E36000DC145 /* ProcurementCell.xib in Resources */,
 				77A17C6024F4B47C00CBF0A6 /* HomeAllCollectionCell.xib in Resources */,
@@ -2541,11 +2544,8 @@
 				77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */,
 				7708D97E24E7ABA200A4DB25 /* MJRefresh.bundle in Resources */,
 				77A17C6624F4E20F00CBF0A6 /* HomeHeaderView.xib in Resources */,
-
 				977466CC24F7AA6D0078313C /* CommentHeaderView.xib in Resources */,
-
 				7746F57F24F74DC1000DC145 /* WaitingPayAddressView.xib in Resources */,
-
 				972CC5E424F600C3002DC0F1 /* SupplyViewController.xib in Resources */,
 				77A17C5724F4B0CC00CBF0A6 /* SearchCell.xib in Resources */,
 				77A17C7924F4F85D00CBF0A6 /* MeCollectionViewCell.xib in Resources */,
@@ -2593,6 +2593,7 @@
 				7708D9C524E7ABA300A4DB25 /* NSString+MJExtension.m in Sources */,
 				7708D84E24E7A1B200A4DB25 /* NodataLogicModule.m in Sources */,
 				7708DC2124E7DF5C00A4DB25 /* NSButton+WebCache.m in Sources */,
+				7753A37024F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				7708DAAD24E7D60600A4DB25 /* UIView+Nib.m in Sources */,
 				7708D85E24E7A8DD00A4DB25 /* BadgeValueButton.m in Sources */,
 				7708DA4824E7B6FA00A4DB25 /* TMMemoryCache.m in Sources */,

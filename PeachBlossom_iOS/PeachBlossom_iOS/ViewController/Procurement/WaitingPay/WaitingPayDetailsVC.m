@@ -34,6 +34,7 @@
  
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.fd_prefersNavigationBarHidden = YES;
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
