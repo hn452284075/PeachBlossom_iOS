@@ -309,6 +309,8 @@
 		977466CA24F7AA540078313C /* CommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466C924F7AA540078313C /* CommentHeaderView.m */; };
 		977466CC24F7AA6D0078313C /* CommentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466CB24F7AA6D0078313C /* CommentHeaderView.xib */; };
 		977466CF24F7AAA90078313C /* CommentOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466CE24F7AAA90078313C /* CommentOneView.m */; };
+		9795BE2D24F894D600F23D48 /* ShopInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE2C24F894D600F23D48 /* ShopInfoView.m */; };
+		9795BE2F24F894E300F23D48 /* ShopInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9795BE2E24F894E300F23D48 /* ShopInfoView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -909,6 +911,9 @@
 		977466CB24F7AA6D0078313C /* CommentHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentHeaderView.xib; sourceTree = "<group>"; };
 		977466CD24F7AAA90078313C /* CommentOneView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentOneView.h; sourceTree = "<group>"; };
 		977466CE24F7AAA90078313C /* CommentOneView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentOneView.m; sourceTree = "<group>"; };
+		9795BE2B24F894D600F23D48 /* ShopInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopInfoView.h; sourceTree = "<group>"; };
+		9795BE2C24F894D600F23D48 /* ShopInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopInfoView.m; sourceTree = "<group>"; };
+		9795BE2E24F894E300F23D48 /* ShopInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopInfoView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2230,6 +2235,7 @@
 		972CC5E524F659E5002DC0F1 /* Supply */ = {
 			isa = PBXGroup;
 			children = (
+				9795BE2A24F894AF00F23D48 /* ShopInfoView */,
 				977466C724F7AA1F0078313C /* CommentView */,
 				977466C124F7A0B50078313C /* ExpressInfoView */,
 				977466AB24F783FC0078313C /* SupplyGoodsInfo */,
@@ -2280,6 +2286,16 @@
 				977466CE24F7AAA90078313C /* CommentOneView.m */,
 			);
 			path = CommentView;
+			sourceTree = "<group>";
+		};
+		9795BE2A24F894AF00F23D48 /* ShopInfoView */ = {
+			isa = PBXGroup;
+			children = (
+				9795BE2B24F894D600F23D48 /* ShopInfoView.h */,
+				9795BE2C24F894D600F23D48 /* ShopInfoView.m */,
+				9795BE2E24F894E300F23D48 /* ShopInfoView.xib */,
+			);
+			path = ShopInfoView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2397,6 +2413,7 @@
 				972CC5EA24F65A27002DC0F1 /* SupplyGoodsCell.xib in Resources */,
 				7746F56D24F65E36000DC145 /* ProcurementCell.xib in Resources */,
 				77A17C6024F4B47C00CBF0A6 /* HomeAllCollectionCell.xib in Resources */,
+				9795BE2F24F894E300F23D48 /* ShopInfoView.xib in Resources */,
 				7746F54824F6376E000DC145 /* ZZAddressController.xib in Resources */,
 				7708DA9724E7C61A00A4DB25 /* AlipaySDK.bundle in Resources */,
 				7708DA4424E7B6FA00A4DB25 /* wphoto_back@2x.png in Resources */,
@@ -2608,6 +2625,7 @@
 				7708D9DD24E7AFB100A4DB25 /* UIBarButtonItem+BarButtonItem.m in Sources */,
 				7746F55724F6434A000DC145 /* CollectGoodsCell.m in Sources */,
 				7708DC2B24E7DF5C00A4DB25 /* SDImageCachesManager.m in Sources */,
+				9795BE2D24F894D600F23D48 /* ShopInfoView.m in Sources */,
 				7708DC0B24E7DF5C00A4DB25 /* NSImage+Compatibility.m in Sources */,
 				7708D9C124E7ABA300A4DB25 /* NSObject+MJCoding.m in Sources */,
 				7708D97C24E7ABA200A4DB25 /* UIScrollView+MJRefresh.m in Sources */,

@@ -13,8 +13,9 @@
 #import "ExpressInfoView.h"
 #import "CommentHeaderView.h"
 #import "CommentOneView.h"
+#import "ShopInfoView.h"
 
-@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate>
+@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate,ShopInfoViewDelegate>
 
 //返回按钮
 @property (nonatomic, strong) UIButton *backBtn;
@@ -41,6 +42,9 @@
 //具体的评论
 @property (nonatomic, strong) CommentOneView *commnetView_1;
 @property (nonatomic, strong) CommentOneView *commnetView_2;
+
+//商店信息
+@property (nonatomic, strong) ShopInfoView *shopInfoView;
 
 @end
 
@@ -90,6 +94,7 @@
     [self initGoodsInfo_expressView];
     [self initGoodsInfo_commentHeaderView];
     [self initGoodsInfo_commentView];
+    [self initGoodsInfo_shopInfoView];
 }
 
 #pragma mark ------------------------Init---------------------------------
@@ -262,6 +267,22 @@
     
 }
 
+- (void)initGoodsInfo_shopInfoView
+{
+    NSArray *tagarr = [[NSArray alloc] initWithObjects:@"牛牛牛商",@"靠实力",@"企",nil];
+    
+    self.shopInfoView = [[[NSBundle mainBundle] loadNibNamed:@"ShopInfoView" owner:self options:nil] lastObject];
+    self.shopInfoView.delegate = self;
+    [self.shopInfoView _initShopInfoWithInfo:IMAGE(@"supply_goodsimg") shopname:@"澳大利亚水果店" shopgrade:@"店铺等级:100" grade_1:@"货品达标:5.0" grade_2:@"卖家服务:2.9" grade_3:@"物流服务:4.8" tagArr:tagarr];
+    [self.mainScrollerView addSubview:self.shopInfoView];
+    [self.shopInfoView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.commnetView_2.mas_bottom).offset(15);
+        make.right.equalTo(self.infoImgScrollView.mas_right);
+        make.left.equalTo(self.infoImgScrollView.mas_left);
+        make.height.mas_equalTo(152);
+    }];
+}
+
 
 #pragma mark ------------------------View Event---------------------------
 - (void)backBtnClicked:(id)sender
@@ -309,6 +330,11 @@
     [self.expressInfoView removeFromSuperview];
     UIView *bv = [self.view viewWithTag:100];
     [bv removeFromSuperview];
+}
+
+- (void)enterShopController
+{
+    NSLog(@"供应大厅--进店看看");
 }
 
 @end
