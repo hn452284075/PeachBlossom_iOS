@@ -2561,10 +2561,7 @@
 				7746F54824F6376E000DC145 /* ZZAddressController.xib in Resources */,
 				7708DA9724E7C61A00A4DB25 /* AlipaySDK.bundle in Resources */,
 				7708DA4424E7B6FA00A4DB25 /* wphoto_back@2x.png in Resources */,
-
 				97AD0B7124F9E4CB007083B6 /* GoodsCommentController.xib in Resources */,
-				7708DD3E24EB61F600A4DB25 /* SearchViewController.xib in Resources */,
-
 				7708D7E424E79BD700A4DB25 /* LaunchScreen.storyboard in Resources */,
 				7708D84724E7A1B200A4DB25 /* GuideViewController.xib in Resources */,
 				977466BF24F79D070078313C /* GoodsInfoViewController.xib in Resources */,

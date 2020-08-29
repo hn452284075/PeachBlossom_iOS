@@ -14,6 +14,8 @@
 #import "CollectGoodsVC.h"
 #import "CollectStoreVC.h"
 #import "ProcurementOrderVC.h"
+#import "LoginViewController.h"
+
 @interface MeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong)UICollectionView *collectionView;
 @property (nonatomic,strong)CustomFlowLayout *flowlayout;
@@ -83,6 +85,11 @@
         
         self.headerV  = (MeHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"MeHeaderView" forIndexPath:indexPath];
         WEAK_SELF
+        //登录
+        [self.headerV.loginBtn addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+            [weak_self jumoIndexPage:5];
+        }];
+        
         //收藏产品
         [self.headerV.goodsBtn addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
             [weak_self jumoIndexPage:6];
@@ -111,6 +118,16 @@
 -(void)jumoIndexPage:(NSInteger)index{
     
     switch (index) {
+        case 5://登录
+        {
+            LoginViewController *vc = [[LoginViewController alloc]init];
+            vc.pageTitle = nil;
+            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:vc animated:YES completion:nil];
+//            [self navigatePushViewController:vc animate:YES];
+
+        }
+            break;
         case 6://收藏产品
             {
                 CollectGoodsVC *vc = [[CollectGoodsVC alloc]init];

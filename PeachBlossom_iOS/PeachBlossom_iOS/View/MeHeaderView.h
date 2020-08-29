@@ -16,6 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIView *recordBtn;
 @property (weak, nonatomic) IBOutlet UIButton *certificationBtn;
 
+@property (weak, nonatomic) IBOutlet UIButton *loginBtn;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
