@@ -33,9 +33,9 @@
     
     self.navigationBar.barTintColor = [UIColor whiteColor];
     
-    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.navigationBar.frame.size.height-0.5, kScreenWidth, 0.5)];
-    lineView.backgroundColor = UIColorFromRGB(0xf2f2f2);
-    [self.navigationBar addSubview:lineView];
+//    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.navigationBar.frame.size.height-0.5, kScreenWidth, 0.5)];
+//    lineView.backgroundColor = UIColorFromRGB(0xf2f2f2);
+//    [self.navigationBar addSubview:lineView];
 //    NSMutableDictionary *attribute = [NSMutableDictionary dictionaryWithCapacity:0];
 //    attribute[NSFontAttributeName] = [UIFont systemFontOfSize:11];
 //    [self.tabBarItem setTitleTextAttributes:attribute forState:UIControlStateNormal];

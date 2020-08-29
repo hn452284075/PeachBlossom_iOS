@@ -48,7 +48,7 @@ typedef void (^HXLoginBlock)(BOOL isLogin);
 - (void)goBack;
 - (void)goBackAfter:(NSInteger)seconds;
 - (void)delayGoBack;
- 
+- (void)removeLine;
 
  
 

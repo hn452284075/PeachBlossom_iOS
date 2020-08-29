@@ -12,7 +12,7 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
 }
 - (IBAction)deleteBtnClick:(id)sender {
     emptyBlock(self.deleteBlock);

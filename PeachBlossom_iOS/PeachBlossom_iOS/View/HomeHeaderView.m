@@ -22,4 +22,8 @@
 
 }
 
+- (IBAction)seletecdBtnClick:(UIButton *)sender {
+    emptyBlock(self.seletecdIndexBlock,sender.tag);
+}
+
 @end
