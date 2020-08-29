@@ -24,6 +24,15 @@ NS_ASSUME_NONNULL_BEGIN
                        weight:(NSString *)weight
                         place:(NSString *)place;
 
+//- (void)configViewData:(UIImage *)headImage
+//                  name:(NSString *)name
+//               comment:(NSString *)comment
+//                images:(NSArray *)imgArr
+//                  time:(NSString *)time
+//                  spec:(NSString *)spec
+//                weight:(NSString *)weight
+//                 place:(NSString *)place;
+
 @end
 
 NS_ASSUME_NONNULL_END

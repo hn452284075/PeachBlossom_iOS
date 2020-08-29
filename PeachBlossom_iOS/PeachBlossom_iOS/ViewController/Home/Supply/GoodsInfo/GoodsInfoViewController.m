@@ -7,6 +7,7 @@
 //
 
 #import "GoodsInfoViewController.h"
+#import "GoodsCommentController.h"
 #import "Masonry.h"
 #import "SDCycleScrollView.h"
 #import "SupplyGoodsInfoView.h"
@@ -15,8 +16,9 @@
 #import "CommentOneView.h"
 #import "ShopInfoView.h"
 #import "BottumBuyView.h"
+#import "AddToCartView.h"
 
-@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate,ShopInfoViewDelegate,UIWebViewDelegate,BottumBuyViewDelegate>
+@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate,ShopInfoViewDelegate,UIWebViewDelegate,BottumBuyViewDelegate,AddToCartDelegate,CommentHeaderViewDelegate>
 
 //返回按钮
 @property (nonatomic, strong) UIButton *backBtn;
@@ -53,6 +55,9 @@
 //最下方的聊一聊 、 加购物车的view
 @property (nonatomic, strong) BottumBuyView *buyView;
 
+//加入购物车弹出框
+@property (nonatomic, strong) AddToCartView *addCartView;
+
 @end
 
 @implementation GoodsInfoViewController
@@ -61,13 +66,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    int iphonex_height = 0;
+    if(iPhoneX || IS_IPHONE_Xr || IS_IPHONE_Xs || IS_IPHONE_Xs_Max)
+        iphonex_height = 20;
     self.mainScrollerView = [[UIScrollView alloc] init];
     [self.view addSubview:self.mainScrollerView];
     [self.mainScrollerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(0);
         make.left.equalTo(self.view.mas_left).offset(0);
         make.width.mas_equalTo(kScreenWidth);
-        make.height.mas_equalTo(kScreenHeight-57);
+        make.height.mas_equalTo(kScreenHeight-57-iphonex_height);
     }];
     self.mainScrollerView.contentSize = CGSizeMake(kScreenWidth, 1339);
     self.mainScrollerView.backgroundColor = kGetColor(0xf7, 0xf7, 0xf7);
@@ -97,11 +105,11 @@
     self.infoImgScrollView.autoScroll = NO;
     
     [self initGoodsInfo_TitleView];
-    [self initGoodsInfo_SpecView];
-    [self initGoodsInfo_expressView];
-    [self initGoodsInfo_commentHeaderView];
-    [self initGoodsInfo_commentView];
-    [self initGoodsInfo_shopInfoView];
+    [self initGoodsInfo_SpecView];           //规格
+    [self initGoodsInfo_expressView];        //物流信息
+    [self initGoodsInfo_commentHeaderView];  //评论头部
+    [self initGoodsInfo_commentView];        //显示的两条评论
+    [self initGoodsInfo_shopInfoView];       //店铺信息
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self initGoodsInfo_webView];
     });
@@ -234,6 +242,7 @@
 - (void)initGoodsInfo_commentHeaderView
 {
     self.commentheaderview = [[[NSBundle mainBundle] loadNibNamed:@"CommentHeaderView" owner:self options:nil] lastObject];
+    self.commentheaderview.delegate = self;
     [self.mainScrollerView addSubview:self.commentheaderview];
     [self.commentheaderview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.expressView.mas_bottom).offset(15);
@@ -247,6 +256,7 @@
 {
     NSString *comment = @"当数据很多列表过，长的时候必行了可以往以下几个方面考虑当，数据很多列表过长的时候优化就势在必行了可以往以下几个方，表过，长的时候必行了可以往以下几个方面考虑当，数据很多列表过长的时候优化就势在必行了可以往以下几个方，表过，长的时候必行了可以往以下几个方面考虑当，数据很多列表过长的时候优化就势在必行了可以往以下几个方面考虑当数据很，多列大暗示法";
     NSArray *imageArr = [[NSArray alloc] initWithObjects:IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"), nil];
+        
     
     NSDictionary * dict = @{
         NSFontAttributeName : [UIFont systemFontOfSize:14]
@@ -331,8 +341,11 @@
         tempheight = 20;
     self.buyView = [[BottumBuyView alloc] initWithFrame:CGRectMake(0, kScreenHeight-60-tempheight, kScreenWidth, 60+tempheight)];
     self.buyView.delegate = self;
+    self.buyView.delegate = self;
     [self.view addSubview:self.buyView];
 }
+
+
 
 
 #pragma mark ------------------------View Event---------------------------
@@ -341,12 +354,12 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-//展示物流详情弹出view
+#pragma mark ------------------------ 展示物流详情弹出view
 - (void)showExpressInfoView:(id)sender
 {
     UIView *bv = [[UIView alloc] initWithFrame:self.view.frame];
     bv.alpha = 0.5;
-    bv.tag = 100;
+    bv.tag = 112;
     bv.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:bv];
     
@@ -365,24 +378,36 @@
 
 
 #pragma mark ------------------------Delegate-----------------------------
+#pragma mark --------- 商品分享按钮
 - (void)supply_share_Action
 {
     NSLog(@"供应大厅--商品分享按钮");
 }
 
+#pragma mark --------- 商品收藏按钮
 - (void)supply_love_Action
 {
     NSLog(@"供应大厅--商品收藏按钮");
 }
 
+//移除物流弹出框
 - (void)expressInfoViewDismiss
 {
     self.expressInfoView.delegate = nil;
     [self.expressInfoView removeFromSuperview];
-    UIView *bv = [self.view viewWithTag:100];
+    UIView *bv = [self.view viewWithTag:112];
     [bv removeFromSuperview];
 }
 
+#pragma mark --------- 查看所有交易评论
+- (void)showAllCommentAction
+{
+    GoodsCommentController *commentCon = [[GoodsCommentController alloc] init];
+    [self.navigationController pushViewController:commentCon animated:YES];
+}
+
+
+#pragma mark --------- 进店看看
 - (void)enterShopController
 {
     NSLog(@"供应大厅--进店看看");
@@ -409,13 +434,51 @@
 #pragma mark --------- 加入购物车
 - (void)addToCart_action
 {
+    UIView *bv = [[UIView alloc] initWithFrame:self.view.frame];
+    bv.alpha = 0.5;
+    bv.tag = 112;
+    bv.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:bv];
     
+    NSArray *specarr = [[NSArray alloc] initWithObjects:@"大狗",@"大大大大大大狗",@"大hjhjjjjj狗",@"大狗",@"大狗",@"大大大狗", nil];
+    
+    self.addCartView = [[[NSBundle mainBundle] loadNibNamed:@"AddToCartView" owner:self options:nil] lastObject];
+    [self.addCartView _initCartViewInfo:IMAGE(@"supply_goodsimg") price:@"123.45" msg:@"发到你开那几款和接口很快就回家抗洪晶科科技很快就发商方开始发" specArr:specarr];
+    self.addCartView.delegate = self;
+    [self.view addSubview:self.addCartView];
+    [self.addCartView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.bottom.equalTo(self.view.mas_bottom);
+        make.height.mas_equalTo(385);
+    }];
+    self.addCartView.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark --------- 立即购买
 - (void)buy_action
 {
     
+}
+
+#pragma mark --------- 确定 加入购物车
+- (void)addToCart_Ok:(int)selectedIndex
+{
+    self.addCartView.delegate = nil;
+    [self.addCartView removeFromSuperview];
+    UIView *bv = [self.view viewWithTag:112];
+    [bv removeFromSuperview];
+    
+    NSLog(@"选中的规格索引 = %d",selectedIndex);
+}
+
+#pragma mark --------- 取消 加入购物车
+- (void)addToCart_Cancel
+{
+    self.addCartView.delegate = nil;
+    [self.addCartView removeFromSuperview];
+    UIView *bv = [self.view viewWithTag:112];
+    [bv removeFromSuperview];
 }
 
 

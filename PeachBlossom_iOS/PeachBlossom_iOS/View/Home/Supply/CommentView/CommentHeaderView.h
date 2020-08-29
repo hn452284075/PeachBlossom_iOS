@@ -10,7 +10,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CommentHeaderView : UIView
+@protocol CommentHeaderViewDelegate <NSObject>
+
+- (void)showAllCommentAction;
+
+@end
+
+@interface CommentHeaderView : UIView<CommentHeaderViewDelegate>
+
+@property (nonatomic, weak) id<CommentHeaderViewDelegate>delegate;
+
+
+- (IBAction)showAllComment:(id)sender;
 
 @end
 

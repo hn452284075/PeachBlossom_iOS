@@ -338,6 +338,9 @@
 		9795BE2F24F894E300F23D48 /* ShopInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9795BE2E24F894E300F23D48 /* ShopInfoView.xib */; };
 		9795BE3324F8B4E300F23D48 /* BottumBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE3224F8B4E200F23D48 /* BottumBuyView.m */; };
 		9795BE3A24F8EE4B00F23D48 /* AddToCartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE3924F8EE4B00F23D48 /* AddToCartView.m */; };
+		9795BE3C24F8F64F00F23D48 /* AddToCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9795BE3B24F8F64F00F23D48 /* AddToCartView.xib */; };
+		97AD0B7024F9E4CB007083B6 /* GoodsCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD0B6E24F9E4CB007083B6 /* GoodsCommentController.m */; };
+		97AD0B7124F9E4CB007083B6 /* GoodsCommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97AD0B6F24F9E4CB007083B6 /* GoodsCommentController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -989,6 +992,10 @@
 		9795BE3224F8B4E200F23D48 /* BottumBuyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottumBuyView.m; sourceTree = "<group>"; };
 		9795BE3824F8EE4B00F23D48 /* AddToCartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddToCartView.h; sourceTree = "<group>"; };
 		9795BE3924F8EE4B00F23D48 /* AddToCartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddToCartView.m; sourceTree = "<group>"; };
+		9795BE3B24F8F64F00F23D48 /* AddToCartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddToCartView.xib; sourceTree = "<group>"; };
+		97AD0B6D24F9E4CB007083B6 /* GoodsCommentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsCommentController.h; sourceTree = "<group>"; };
+		97AD0B6E24F9E4CB007083B6 /* GoodsCommentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodsCommentController.m; sourceTree = "<group>"; };
+		97AD0B6F24F9E4CB007083B6 /* GoodsCommentController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsCommentController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2399,6 +2406,7 @@
 		972CC5DF24F6008E002DC0F1 /* Supply */ = {
 			isa = PBXGroup;
 			children = (
+				97AD0B6C24F9E452007083B6 /* GoodsComment */,
 				977466B824F79CE30078313C /* GoodsInfo */,
 				972CC5E024F600C3002DC0F1 /* SupplyViewController.h */,
 				972CC5E124F600C3002DC0F1 /* SupplyViewController.m */,
@@ -2489,8 +2497,19 @@
 			children = (
 				9795BE3824F8EE4B00F23D48 /* AddToCartView.h */,
 				9795BE3924F8EE4B00F23D48 /* AddToCartView.m */,
+				9795BE3B24F8F64F00F23D48 /* AddToCartView.xib */,
 			);
 			path = AddToCartView;
+			sourceTree = "<group>";
+		};
+		97AD0B6C24F9E452007083B6 /* GoodsComment */ = {
+			isa = PBXGroup;
+			children = (
+				97AD0B6D24F9E4CB007083B6 /* GoodsCommentController.h */,
+				97AD0B6E24F9E4CB007083B6 /* GoodsCommentController.m */,
+				97AD0B6F24F9E4CB007083B6 /* GoodsCommentController.xib */,
+			);
+			path = GoodsComment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2616,6 +2635,7 @@
 				7746F54824F6376E000DC145 /* ZZAddressController.xib in Resources */,
 				7708DA9724E7C61A00A4DB25 /* AlipaySDK.bundle in Resources */,
 				7708DA4424E7B6FA00A4DB25 /* wphoto_back@2x.png in Resources */,
+				97AD0B7124F9E4CB007083B6 /* GoodsCommentController.xib in Resources */,
 				7708D7E424E79BD700A4DB25 /* LaunchScreen.storyboard in Resources */,
 				7708D84724E7A1B200A4DB25 /* GuideViewController.xib in Resources */,
 				977466BF24F79D070078313C /* GoodsInfoViewController.xib in Resources */,
@@ -2623,6 +2643,7 @@
 				7746F54424F6004B000DC145 /* AddressMangerCell.xib in Resources */,
 				977466C624F7A0F20078313C /* ExpressInfoView.xib in Resources */,
 				77A17C7E24F4F8DA00CBF0A6 /* MeHeaderView.xib in Resources */,
+				9795BE3C24F8F64F00F23D48 /* AddToCartView.xib in Resources */,
 				7708D84C24E7A1B200A4DB25 /* GlobleErrorView.xib in Resources */,
 				77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */,
 				7708D97E24E7ABA200A4DB25 /* MJRefresh.bundle in Resources */,
@@ -2754,6 +2775,7 @@
 				7708DC2924E7DF5C00A4DB25 /* SDWebImageDownloaderOperation.m in Sources */,
 				7708D97324E7ABA200A4DB25 /* UIWebView+AFNetworking.m in Sources */,
 				7708D98A24E7ABA300A4DB25 /* MJRefreshGifHeader.m in Sources */,
+				97AD0B7024F9E4CB007083B6 /* GoodsCommentController.m in Sources */,
 				7708D96D24E7ABA200A4DB25 /* UIProgressView+AFNetworking.m in Sources */,
 				7708D99724E7ABA300A4DB25 /* IQKeyboardManager.m in Sources */,
 				7708DC3024E7DF5C00A4DB25 /* SDImageGraphics.m in Sources */,

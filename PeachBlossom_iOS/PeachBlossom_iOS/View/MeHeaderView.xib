@@ -233,9 +233,10 @@
             <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
             <connections>
                 <outlet property="goodsBtn" destination="ds2-yv-gCR" id="9b3-6e-I5w"/>
+                <outlet property="loginBtn" destination="oTR-Yf-clS" id="9it-rV-Ldh"/>
                 <outlet property="storeBtn" destination="1c1-GX-zAg" id="Iku-GW-tLr"/>
             </connections>
-            <point key="canvasLocation" x="136.95652173913044" y="111.49553571428571"/>
+            <point key="canvasLocation" x="-301" y="36"/>
         </collectionReusableView>
     </objects>
     <resources>
