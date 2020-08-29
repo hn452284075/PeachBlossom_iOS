@@ -354,12 +354,12 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-//展示物流详情弹出view
+#pragma mark ------------------------ 展示物流详情弹出view
 - (void)showExpressInfoView:(id)sender
 {
     UIView *bv = [[UIView alloc] initWithFrame:self.view.frame];
     bv.alpha = 0.5;
-    bv.tag = 100;
+    bv.tag = 112;
     bv.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:bv];
     
@@ -395,7 +395,7 @@
 {
     self.expressInfoView.delegate = nil;
     [self.expressInfoView removeFromSuperview];
-    UIView *bv = [self.view viewWithTag:100];
+    UIView *bv = [self.view viewWithTag:112];
     [bv removeFromSuperview];
 }
 
@@ -436,7 +436,7 @@
 {
     UIView *bv = [[UIView alloc] initWithFrame:self.view.frame];
     bv.alpha = 0.5;
-    bv.tag = 100;
+    bv.tag = 112;
     bv.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:bv];
     
@@ -466,7 +466,7 @@
 {
     self.addCartView.delegate = nil;
     [self.addCartView removeFromSuperview];
-    UIView *bv = [self.view viewWithTag:100];
+    UIView *bv = [self.view viewWithTag:112];
     [bv removeFromSuperview];
     
     NSLog(@"选中的规格索引 = %d",selectedIndex);
@@ -477,7 +477,7 @@
 {
     self.addCartView.delegate = nil;
     [self.addCartView removeFromSuperview];
-    UIView *bv = [self.view viewWithTag:100];
+    UIView *bv = [self.view viewWithTag:112];
     [bv removeFromSuperview];
 }
 
