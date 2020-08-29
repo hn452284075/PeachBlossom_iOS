@@ -290,6 +290,15 @@
 		7753A36D24F8E74D00F66734 /* SearchFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A36C24F8E74D00F66734 /* SearchFlowLayout.m */; };
 		7753A37024F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A36F24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		7753A37524F9034200F66734 /* AlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A37424F9034200F66734 /* AlertViewManager.m */; };
+		7753A37924FA2CD500F66734 /* CQSideBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A37824FA2CD500F66734 /* CQSideBarManager.m */; };
+		7753A37D24FA2E9800F66734 /* ScreeningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A37C24FA2E9800F66734 /* ScreeningVC.m */; };
+		7753A38024FA47DC00F66734 /* SearchStoreResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A37F24FA47DC00F66734 /* SearchStoreResultVC.m */; };
+		7753A38424FA494000F66734 /* SearchStoreResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A38224FA494000F66734 /* SearchStoreResultCell.m */; };
+		7753A38524FA494000F66734 /* SearchStoreResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7753A38324FA494000F66734 /* SearchStoreResultCell.xib */; };
+		7753A38B24FA4F7600F66734 /* ShopCartCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7753A38824FA4F7600F66734 /* ShopCartCell.xib */; };
+		7753A38C24FA4F7600F66734 /* ShopCartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A38A24FA4F7600F66734 /* ShopCartCell.m */; };
+		7753A38F24FA4FDA00F66734 /* AddAndSubtractButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A38E24FA4FD900F66734 /* AddAndSubtractButton.m */; };
+		7753A39324FA501700F66734 /* GoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A39224FA501700F66734 /* GoodsModel.m */; };
 		77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17BB624EB830700CBF0A6 /* UIView+Design.m */; };
 		77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4424F4B0CC00CBF0A6 /* area.plist */; };
 		77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */; };
@@ -904,6 +913,22 @@
 		7753A36F24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		7753A37424F9034200F66734 /* AlertViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewManager.m; sourceTree = "<group>"; };
 		7753A37624F9035700F66734 /* AlertViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewManager.h; sourceTree = "<group>"; };
+		7753A37724FA2CD500F66734 /* CQSideBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQSideBarManager.h; sourceTree = "<group>"; };
+		7753A37824FA2CD500F66734 /* CQSideBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQSideBarManager.m; sourceTree = "<group>"; };
+		7753A37B24FA2E9800F66734 /* ScreeningVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreeningVC.h; sourceTree = "<group>"; };
+		7753A37C24FA2E9800F66734 /* ScreeningVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreeningVC.m; sourceTree = "<group>"; };
+		7753A37E24FA47DC00F66734 /* SearchStoreResultVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchStoreResultVC.h; sourceTree = "<group>"; };
+		7753A37F24FA47DC00F66734 /* SearchStoreResultVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchStoreResultVC.m; sourceTree = "<group>"; };
+		7753A38124FA494000F66734 /* SearchStoreResultCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchStoreResultCell.h; sourceTree = "<group>"; };
+		7753A38224FA494000F66734 /* SearchStoreResultCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchStoreResultCell.m; sourceTree = "<group>"; };
+		7753A38324FA494000F66734 /* SearchStoreResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchStoreResultCell.xib; sourceTree = "<group>"; };
+		7753A38824FA4F7600F66734 /* ShopCartCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopCartCell.xib; sourceTree = "<group>"; };
+		7753A38924FA4F7600F66734 /* ShopCartCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCartCell.h; sourceTree = "<group>"; };
+		7753A38A24FA4F7600F66734 /* ShopCartCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCartCell.m; sourceTree = "<group>"; };
+		7753A38D24FA4FD900F66734 /* AddAndSubtractButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddAndSubtractButton.h; sourceTree = "<group>"; };
+		7753A38E24FA4FD900F66734 /* AddAndSubtractButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAndSubtractButton.m; sourceTree = "<group>"; };
+		7753A39124FA501700F66734 /* GoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsModel.h; sourceTree = "<group>"; };
+		7753A39224FA501700F66734 /* GoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsModel.m; sourceTree = "<group>"; };
 		77A17BB524EB830700CBF0A6 /* UIView+Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Design.h"; sourceTree = "<group>"; };
 		77A17BB624EB830700CBF0A6 /* UIView+Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Design.m"; sourceTree = "<group>"; };
 		77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressShowView.h; sourceTree = "<group>"; };
@@ -1586,6 +1611,7 @@
 		7708D9C824E7ACAB00A4DB25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7753A38724FA4F4C00F66734 /* ShoppingCart */,
 				7746F56124F65AC8000DC145 /* Procurement */,
 				7746F54F24F64209000DC145 /* CollectGoods */,
 				7746F53F24F60027000DC145 /* Address */,
@@ -1601,6 +1627,8 @@
 		7708D9C924E7ACAC00A4DB25 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				7753A38624FA4EDA00F66734 /* ShoppingCart */,
+				7753A37A24FA2E5D00F66734 /* Screening */,
 				7746F56224F65ACE000DC145 /* Procurement */,
 				7746F55024F64210000DC145 /* CollectGoods */,
 				7746F53B24F5FE30000DC145 /* Address */,
@@ -1617,6 +1645,7 @@
 		7708D9CA24E7ACB700A4DB25 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7753A39024FA500100F66734 /* ShoppingCart */,
 				7708DC4324E7E85B00A4DB25 /* User */,
 			);
 			path = Model;
@@ -1865,6 +1894,8 @@
 		7708DABC24E7D90000A4DB25 /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
+				7753A37724FA2CD500F66734 /* CQSideBarManager.h */,
+				7753A37824FA2CD500F66734 /* CQSideBarManager.m */,
 				7708DAC724E7DA8900A4DB25 /* ALActionSheetView.h */,
 				7708DAC624E7DA8900A4DB25 /* ALActionSheetView.m */,
 				7708DAC324E7D91400A4DB25 /* PhotoView.h */,
@@ -2123,6 +2154,8 @@
 			children = (
 				7746F59924F7C831000DC145 /* SearchGoodsVC.h */,
 				7746F59A24F7C831000DC145 /* SearchGoodsVC.m */,
+				7753A37E24FA47DC00F66734 /* SearchStoreResultVC.h */,
+				7753A37F24FA47DC00F66734 /* SearchStoreResultVC.m */,
 				7708DD3724EB5BA400A4DB25 /* SearchViewController.h */,
 				7708DD3824EB5BA400A4DB25 /* SearchViewController.m */,
 				7708DD3A24EB5E0300A4DB25 /* SearchListVC.h */,
@@ -2244,6 +2277,43 @@
 			path = Cancel;
 			sourceTree = "<group>";
 		};
+		7753A37A24FA2E5D00F66734 /* Screening */ = {
+			isa = PBXGroup;
+			children = (
+				7753A37B24FA2E9800F66734 /* ScreeningVC.h */,
+				7753A37C24FA2E9800F66734 /* ScreeningVC.m */,
+			);
+			path = Screening;
+			sourceTree = "<group>";
+		};
+		7753A38624FA4EDA00F66734 /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
+		7753A38724FA4F4C00F66734 /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				7753A38D24FA4FD900F66734 /* AddAndSubtractButton.h */,
+				7753A38E24FA4FD900F66734 /* AddAndSubtractButton.m */,
+				7753A38924FA4F7600F66734 /* ShopCartCell.h */,
+				7753A38A24FA4F7600F66734 /* ShopCartCell.m */,
+				7753A38824FA4F7600F66734 /* ShopCartCell.xib */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
+		7753A39024FA500100F66734 /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				7753A39124FA501700F66734 /* GoodsModel.h */,
+				7753A39224FA501700F66734 /* GoodsModel.m */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
 		77A17C4124F4B0CC00CBF0A6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -2265,6 +2335,9 @@
 				7753A33B24F8D84800F66734 /* SearchGoodsCell.m */,
 				7753A36B24F8E74D00F66734 /* SearchFlowLayout.h */,
 				7753A36C24F8E74D00F66734 /* SearchFlowLayout.m */,
+				7753A38124FA494000F66734 /* SearchStoreResultCell.h */,
+				7753A38224FA494000F66734 /* SearchStoreResultCell.m */,
+				7753A38324FA494000F66734 /* SearchStoreResultCell.xib */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -2547,6 +2620,7 @@
 				7746F58B24F7A23D000DC145 /* WaitingPayDetailsVC.xib in Resources */,
 				7708DA4324E7B6FA00A4DB25 /* wphoto_select_yes@2x.png in Resources */,
 				7746F54E24F63D6B000DC145 /* city.plist in Resources */,
+				7753A38B24FA4F7600F66734 /* ShopCartCell.xib in Resources */,
 				7746F58424F7657A000DC145 /* WaitingPayTotalView.xib in Resources */,
 				77A17C5324F4B0CC00CBF0A6 /* AddressCell.xib in Resources */,
 				7708D9A324E7ABA300A4DB25 /* SVProgressHUD.bundle in Resources */,
@@ -2574,6 +2648,7 @@
 				77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */,
 				7708D97E24E7ABA200A4DB25 /* MJRefresh.bundle in Resources */,
 				77A17C6624F4E20F00CBF0A6 /* HomeHeaderView.xib in Resources */,
+				7753A38524FA494000F66734 /* SearchStoreResultCell.xib in Resources */,
 				977466CC24F7AA6D0078313C /* CommentHeaderView.xib in Resources */,
 				7746F57F24F74DC1000DC145 /* WaitingPayAddressView.xib in Resources */,
 				972CC5E424F600C3002DC0F1 /* SupplyViewController.xib in Resources */,
@@ -2671,6 +2746,7 @@
 				7708DC4224E7DF5D00A4DB25 /* UIColor+HexString.m in Sources */,
 				7708DA4624E7B6FA00A4DB25 /* UIImage+fixOrientation.m in Sources */,
 				7746F54924F6376E000DC145 /* ZZAddressController.m in Sources */,
+				7753A38F24FA4FDA00F66734 /* AddAndSubtractButton.m in Sources */,
 				7708D97124E7ABA200A4DB25 /* UIButton+AFNetworking.m in Sources */,
 				7708D9A124E7ABA300A4DB25 /* SVProgressHUD.m in Sources */,
 				7708D84524E7A1B200A4DB25 /* GuideViewController.m in Sources */,
@@ -2681,6 +2757,7 @@
 				77A17C5224F4B0CC00CBF0A6 /* SearchCell.m in Sources */,
 				7708D99024E7ABA300A4DB25 /* IQTextView.m in Sources */,
 				7746F56524F65B19000DC145 /* ProcurementOrderVC.m in Sources */,
+				7753A37D24FA2E9800F66734 /* ScreeningVC.m in Sources */,
 				7708DA3C24E7B6FA00A4DB25 /* PayManager.m in Sources */,
 				7708D98024E7ABA200A4DB25 /* NSBundle+MJRefresh.m in Sources */,
 				7708DC8124E7ECF200A4DB25 /* UploadPhotoManager.m in Sources */,
@@ -2708,6 +2785,7 @@
 				7708DC1524E7DF5C00A4DB25 /* SDImageLoader.m in Sources */,
 				7708DC3824E7DF5D00A4DB25 /* UIView+WebCache.m in Sources */,
 				7708D97A24E7ABA200A4DB25 /* AFNetworkReachabilityManager.m in Sources */,
+				7753A38024FA47DC00F66734 /* SearchStoreResultVC.m in Sources */,
 				7753A36D24F8E74D00F66734 /* SearchFlowLayout.m in Sources */,
 				7746F53E24F5FF19000DC145 /* AddressMangerController.m in Sources */,
 				7708D87C24E7AA6800A4DB25 /* BaseLoadingView.m in Sources */,
@@ -2748,6 +2826,7 @@
 				7746F56C24F65E36000DC145 /* ProcurementCell.m in Sources */,
 				7708DC3E24E7DF5D00A4DB25 /* SDWeakProxy.m in Sources */,
 				7708DC7724E7EC7C00A4DB25 /* MASCompositeConstraint.m in Sources */,
+				7753A39324FA501700F66734 /* GoodsModel.m in Sources */,
 				7708DA3824E7B6FA00A4DB25 /* PayManager+requestPayNeedInfo.m in Sources */,
 				7708DC2824E7DF5C00A4DB25 /* SDImageFrame.m in Sources */,
 				7708DC5A24E7EA3100A4DB25 /* UIImageView+sd_SetImg.m in Sources */,
@@ -2764,6 +2843,7 @@
 				7708DADD24E7DCD900A4DB25 /* TADotView.m in Sources */,
 				7746F58824F7891E000DC145 /* WaitingPayInfoView.m in Sources */,
 				7746F59724F7B4B7000DC145 /* CancelTableViewCell.m in Sources */,
+				7753A37924FA2CD500F66734 /* CQSideBarManager.m in Sources */,
 				7708D87524E7AA0900A4DB25 /* NSDictionary+null.m in Sources */,
 				7708D98224E7ABA200A4DB25 /* MJRefreshBackGifFooter.m in Sources */,
 				7708DC1324E7DF5C00A4DB25 /* UIImage+Transform.m in Sources */,
@@ -2791,6 +2871,7 @@
 				7708DC1824E7DF5C00A4DB25 /* UIImage+GIF.m in Sources */,
 				7708D89824E7AB4300A4DB25 /* AFNHttpRequestOPManager+DLUnNomalApi.m in Sources */,
 				7708DADE24E7DCD900A4DB25 /* TAPageControl.m in Sources */,
+				7753A38C24FA4F7600F66734 /* ShopCartCell.m in Sources */,
 				7746F57424F74977000DC145 /* WaitingPayDetailsVC.m in Sources */,
 				7708D97424E7ABA200A4DB25 /* AFAutoPurgingImageCache.m in Sources */,
 				7708DC5424E7EA1200A4DB25 /* UploadPhotoImgHandler.m in Sources */,
@@ -2862,6 +2943,7 @@
 				7708DC1124E7DF5C00A4DB25 /* SDAnimatedImageView.m in Sources */,
 				7753A37524F9034200F66734 /* AlertViewManager.m in Sources */,
 				7708DC3724E7DF5D00A4DB25 /* UIView+WebCacheOperation.m in Sources */,
+				7753A38424FA494000F66734 /* SearchStoreResultCell.m in Sources */,
 				7708D98924E7ABA300A4DB25 /* MJRefreshStateHeader.m in Sources */,
 				7708DC7924E7EC7C00A4DB25 /* MASLayoutConstraint.m in Sources */,
 				7708DADA24E7DCD900A4DB25 /* SDCycleScrollView.m in Sources */,
