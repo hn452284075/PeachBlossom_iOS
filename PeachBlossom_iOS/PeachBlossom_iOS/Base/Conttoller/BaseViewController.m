@@ -13,6 +13,7 @@
 #import "AFNHttpRequestOPManager+checkNetworkStatus.h"
 #import "CNotificationManager.h"
 #import "UIBarButtonItem+BarButtonItem.h"
+#import "AlertViewManager.h"
 const CGFloat defaulDelayGoBackSeconds = 1.2;
 @interface BaseViewController ()<PlaceholderViewDelegate>
 
@@ -271,14 +272,23 @@ const CGFloat defaulDelayGoBackSeconds = 1.2;
     [self.navigationController.navigationBar setBackgroundImage:navBarBgImg forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar setShadowImage:navBarImg];
     self.navigationController.navigationBar.barTintColor =[UIColor whiteColor];//导航栏颜色
-    //    self.view.backgroundColor =  KViewBgColor;
+     
+    UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height-0.5, kScreenWidth, 0.5)];
+    lineView.tag=1001;
+   lineView.backgroundColor = UIColorFromRGB(0xf2f2f2);
+   [self.navigationController.navigationBar addSubview:lineView];
+     
+   
 }
 
-
- 
-
- 
-
+//有的界面导航栏不需要线
+- (void)removeLine{
+    for (UIView *view in self.navigationController.navigationBar.subviews) {
+        if (view.tag==1001) {
+            [view removeFromSuperview];
+        }
+    }
+}
 
  
 
@@ -388,26 +398,6 @@ const CGFloat defaulDelayGoBackSeconds = 1.2;
             sureAction(action);
         }
     } otherActionTitle:@"取消" otherActionStyle:UIAlertActionStyleDefault otherAlertViewAction:^(UIAlertAction *action) {
-        if (cancelAction) {
-            cancelAction(action);
-        }
-    }];
-}
-
-- (void)showAlertWithTitle:(NSString *)alertTitle
-                   message:(NSString *)alertMessage
-                 sureTitle:(NSString *)sureTitle
-               cancelTitle:(NSString *)cancelTitle
-                sureAction:(AlertViewAction)sureAction
-              cancelAction:(AlertViewOtherAction)cancelAction
-{
-    
-    //两个action
-    [self.alertManager showAlertViewWithControllerTitle:alertTitle message:alertMessage controllerStyle:UIAlertControllerStyleAlert isHaveTextField:NO actionTitle:sureTitle actionStyle:UIAlertActionStyleDefault alertViewAction:^(UIAlertAction *action) {
-        if (sureAction) {
-            sureAction(action);
-        }
-    } otherActionTitle:cancelTitle otherActionStyle:UIAlertActionStyleDefault otherAlertViewAction:^(UIAlertAction *action) {
         if (cancelAction) {
             cancelAction(action);
         }

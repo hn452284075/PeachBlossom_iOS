@@ -13,6 +13,7 @@
 #import "TMCache.h"
 #import "SearchGoodsCell.h"
 #import "SearchFlowLayout.h"
+#import "SearchViewController.h"
 @interface SearchGoodsVC ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
     UIView  *lineView;
@@ -42,10 +43,15 @@
     _searchHistoriesArr =[[NSMutableArray alloc]initWithArray:[[TMCache sharedCache] objectForKey:HistoriesArray]];
      
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.collectionView reloadData];
+}
 
 - (void)_initTopView{
     
-   
+    [self removeLine];
+    
     self.searchArr = [[NSMutableArray alloc]init];
     if (!isEmpty(_searchHistoriesArr)) {
         NSDictionary *hisDic=@{@"title":@"我搜索过的",@"content":_searchHistoriesArr};
@@ -82,7 +88,7 @@
    seachBtn.titleLabel.font= CUSTOMFONT(12);
    [seachView addSubview:seachBtn];
     // 创建文本框
-    _searchField = [[UITextField alloc] initWithFrame:CGRectMake(seachBtn.right+5, 0, seachView.width-seachBtn.right-5, 30)];
+    _searchField = [[UITextField alloc] initWithFrame:CGRectMake(seachBtn.right+5, 0, seachView.width-seachBtn.right-10, 30)];
     // 设置文本框的字体
     _searchField.font = [UIFont systemFontOfSize:12];
     // 设置文本的颜色
@@ -266,7 +272,10 @@
     [self.searchArr insertObject:hisDic atIndex:0];
     }
     
-    [self.collectionView reloadData];
+//    [self.collectionView reloadData];
+    SearchViewController *vc = [[SearchViewController alloc]init];
+    [self navigatePushViewController:vc animate:YES];
+
 
 }
 //点击的头部按钮方法

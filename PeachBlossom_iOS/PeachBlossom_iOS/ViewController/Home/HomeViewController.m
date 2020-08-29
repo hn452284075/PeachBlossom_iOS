@@ -138,7 +138,10 @@
             
             self.headerV  = (HomeHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HomeHeaderView" forIndexPath:indexPath];
             [self.headerV setArray:@[]];
-          
+            WEAK_SELF
+            self.headerV.seletecdIndexBlock = ^(NSInteger index) {
+                [weak_self jumoPageIndex:index];
+            };
             
             return self.headerV;
         }
@@ -219,6 +222,48 @@
 -(void)jumpSeachPage{
     SearchGoodsVC *vc = [[SearchGoodsVC alloc]init];
     [self navigatePushViewController:vc animate:YES];
+}
+-(void)jumoPageIndex:(NSInteger)index{
+    
+        
+        switch (index) {
+            case 0://供应大厅
+                {
+                  
+
+                }
+                break;
+                
+            case 1://求购大厅
+                {
+                
+
+                }
+                break;
+                
+            case 2://一件代发
+                {
+                   
+                }
+                break;
+                
+            case 3://物流叫车
+                {
+                
+                }
+                break;
+                    
+          
+                
+            
+ 
+            default:
+                break;
+        }
+        
+
+
+    
 }
 
 -(void)cartClick{

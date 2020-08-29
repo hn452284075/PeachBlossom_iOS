@@ -8,82 +8,119 @@
 
 #import "AddressShowView.h"
 #import "UIView+BlockGesture.h"
-static AddressShowView *_addressShowView = nil;
-static dispatch_once_t onceToken;
 @implementation AddressShowView
-+ (instancetype)addressManager{
+-(instancetype)initWithAddresFrame:(CGRect)frame {
+     self = [super initWithFrame:frame];
+      if (self) {
+        
+          [self initUI];
+             
+        }
+        
+        return self;
     
-       dispatch_once(&onceToken, ^{
-           
-           _addressShowView  = [[AddressShowView alloc] init];
-           
-       });
+}
+
+-(void)initUI{
+        
+       _viewBG = [[UIView alloc]initWithFrame:CGRectMake(0,0, kScreenWidth, self.height)];
+       _viewBG.tag=222;
+       _viewBG.backgroundColor =  [UIColor colorWithWhite:0.f alpha:0.5];
+       [self addSubview:_viewBG];
+    
+       self.titleArr=@[@"省份选择"];
+        NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area" ofType:@"plist"]];
+       self.locationModel = [[EWCountryModel alloc]initWithDic:dic];
+       self.dataArray = [[NSMutableArray alloc]initWithArray:_locationModel.provincesArray];
+       [self.dataArray insertObject:@"全部" atIndex:0];
        
-       return _addressShowView;
-}
- 
-
--(void)show:(SeletecdAddressBlock)block{
-    _addressBlock=block;
-    _viewBG = [[UIView alloc]initWithFrame:CGRectMake(0, 130, kScreenWidth, kScreenHeight-130)];
-    _viewBG.tag=222;
-    _viewBG.backgroundColor =  [UIColor colorWithWhite:0.f alpha:0.5];
-    [[UIApplication sharedApplication].keyWindow addSubview:_viewBG];
-    self.titleArr=@[@"省份选择"];
-     NSDictionary *dic = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"area" ofType:@"plist"]];
-    self.locationModel = [[EWCountryModel alloc]initWithDic:dic];
-    self.dataArray = [[NSMutableArray alloc]initWithArray:_locationModel.provincesArray];
-    [self.dataArray insertObject:@"全部" atIndex:0];
-      
-    [_viewBG addSubview:self.collectionView];
-    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0,kScreenHeight-130-130, kScreenWidth, 130)];
-    bottomView.backgroundColor = [UIColor clearColor];
-    WEAK_SELF
-    [bottomView addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
-        [weak_self colse];
-    }];
-    [_viewBG addSubview:bottomView];
-      
-     
-    [UIView animateWithDuration:0.3 animations:^{
-             
-      weak_self.collectionView.frame = CGRectMake(0, 0, kScreenWidth, kScreenHeight-130-kNavHeightAndTabHeight);
-             
-             
-      } completion:^(BOOL finished) {
-         
-         
-      }];
-    
+       [_viewBG addSubview:self.collectionView];
+       
+       self.resetBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+       self.resetBtn.frame = CGRectMake(0,self.height-130-50, kScreenWidth/2, 50);
+       [self.resetBtn setTitle:@"重置" forState:UIControlStateNormal];
+       self.resetBtn.titleLabel.font=CUSTOMFONT(16);
+       [self.resetBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+       [self.resetBtn addTarget:self action:@selector(resetBtnClick) forControlEvents:UIControlEventTouchUpInside];
+       [self.resetBtn setBackgroundColor:KTextColor];
+       self.resetBtn.hidden=YES;
+       [_viewBG addSubview:self.resetBtn];
+       
+       self.confirmBtn= [UIButton buttonWithType:UIButtonTypeRoundedRect];
+       self.confirmBtn.frame = CGRectMake(kScreenWidth/2,self.height-130-50, kScreenWidth/2, 50);
+       [self.confirmBtn setTitle:@"确定" forState:UIControlStateNormal];
+       self.confirmBtn.titleLabel.font=CUSTOMFONT(16);
+       [self.confirmBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+       [self.confirmBtn addTarget:self action:@selector(confirmBtnClick) forControlEvents:UIControlEventTouchUpInside];
+       [self.confirmBtn setBackgroundColor:KCOLOR_Main];
+       self.confirmBtn.hidden=YES;
+       [_viewBG addSubview:self.confirmBtn];
     
        
+       UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0,self.confirmBtn.bottom, kScreenWidth, self.height-self.confirmBtn.bottom)];
+       WEAK_SELF
+       [bottomView addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+           emptyBlock(weak_self.addressBlock,@"");
+           [weak_self colse];
+       }];
+       [_viewBG addSubview:bottomView];
+         
+        
+       [UIView animateWithDuration:0.2 animations:^{
+                
+         weak_self.collectionView.frame = CGRectMake(0, 0, kScreenWidth, self.height-130-50);
+           
+                
+         } completion:^(BOOL finished) {
+            
+            weak_self.resetBtn.hidden=NO;
+            weak_self.confirmBtn.hidden=NO;
+         }];
     
 }
-
-
- 
  
 
-- (void)seletecdBtnClick{
+
+-(void)confirmBtnClick{
+    if (isEmpty(_areaStr)) {
+        return;
+    }
     
-   
+    emptyBlock(self.addressBlock,[NSString stringWithFormat:@"%@%@%@",self.provinceStr,self.cityStr,self.areaStr]);
+    [self colse];
 }
+ 
 
--(void)cancelBtnBtnClick{
-   
+ 
+
+-(void)resetBtnClick{
+   [self resetData];
+   [self.collectionView reloadData];
 }
 
 
 
 - (void)colse{
     
-    onceToken = 0; // 只有置成0,GCD才会认为它从未执行过.它默认为0.这样才能保证下次再次调用shareInstance的时候,再次创建对象.
+//    onceToken = 0; // 只有置成0,GCD才会认为它从未执行过.它默认为0.这样才能保证下次再次调用shareInstance的时候,再次创建对象.
+//
+//    _addressShowView = nil;
+//
+//    [[[UIApplication sharedApplication].keyWindow viewWithTag:222] removeFromSuperview];
+     
     
-    _addressShowView = nil;
-  
-    [[[UIApplication sharedApplication].keyWindow viewWithTag:222] removeFromSuperview];
-     
-     
+    self.resetBtn.hidden=YES;
+    self.confirmBtn.hidden=YES;
+    self.viewBG.backgroundColor=[UIColor clearColor];
+    WEAK_SELF
+     [UIView animateWithDuration:0.3 animations:^{
+         
+        weak_self.collectionView.frame = CGRectMake(0, 0, kScreenWidth, 0);
+         
+
+     } completion:^(BOOL finished) {
+          [self removeFromSuperview];
+     }];
 }
 
 
@@ -141,11 +178,7 @@ static dispatch_once_t onceToken;
     
     cell.deleteBlock = ^{
         if (indexPath.section==0) {
-            weak_self.cityArray=@[].mutableCopy;
-            weak_self.provinceStr=@"";
-            weak_self.cityStr=@"";
-            weak_self.areaArray=@[].mutableCopy;
-            weak_self.titleArr=@[@"省份选择"];
+            [weak_self resetData];
             
         }else if (indexPath.section==1){
             weak_self.areaArray=@[].mutableCopy;
@@ -158,8 +191,20 @@ static dispatch_once_t onceToken;
        [weak_self.collectionView reloadData];
     };
     
+    //默认选中每组的第一个
+     if (indexPath.row==0) {
+         cell.titleLabel.layer.borderWidth=0.5;
+         cell.titleLabel.backgroundColor=[UIColor whiteColor];
+         cell.titleLabel.layer.borderColor=KCOLOR_Main.CGColor;
+         cell.titleLabel.textColor=KCOLOR_Main;
+     }else{
+        
+         cell.titleLabel.backgroundColor=UIColorFromRGB(0xf2f2f2);
+         cell.titleLabel.layer.borderColor=[UIColor clearColor].CGColor;
+         cell.titleLabel.textColor=UIColorFromRGB(0x666666);
+     }
     
- 
+  
     
     if (!isEmpty(_cityArray)) {
         if (!isEmpty(_areaArray)) {
@@ -167,33 +212,59 @@ static dispatch_once_t onceToken;
           if (indexPath.section==0) {
                cell.titleLabel.text=_provinceStr;
                cell.delBtn.hidden = NO;
+
            }else if (indexPath.section==1) {
                cell.titleLabel.text=_cityStr;
                cell.delBtn.hidden = NO;
            }else{
+//               if (indexPath.section==2) {
+                 if (_currentIndex==indexPath.row) {
+                     cell.titleLabel.layer.borderWidth=0.5;
+                     cell.titleLabel.backgroundColor=[UIColor whiteColor];
+                     cell.titleLabel.layer.borderColor=KCOLOR_Main.CGColor;
+                     cell.titleLabel.textColor=KCOLOR_Main;
+                 }else{
+                    
+                     cell.titleLabel.backgroundColor=UIColorFromRGB(0xf2f2f2);
+                     cell.titleLabel.layer.borderColor=[UIColor clearColor].CGColor;
+                     cell.titleLabel.textColor=UIColorFromRGB(0x666666);
+                 }
+                 
+//             }
                cell.delBtn.hidden = YES;
                cell.titleLabel.text = self.areaArray[indexPath.row];
+
            }
             return cell;
         }else{
             if (indexPath.section==0) {
-                cell.titleLabel.text=_provinceStr;
-                cell.delBtn.hidden = NO;
+                    cell.titleLabel.text=_provinceStr;
+                    cell.delBtn.hidden = NO;
+ 
             }else{
-                cell.delBtn.hidden = YES;
-                cell.titleLabel.text = self.cityArray[indexPath.row];
-                
+                    cell.delBtn.hidden = YES;
+                    cell.titleLabel.text = self.cityArray[indexPath.row];
+ 
             }
             return cell;
         }
     }
-
+    
     cell.delBtn.hidden = YES;
     cell.titleLabel.text = self.dataArray[indexPath.row];
- 
+                    
     return cell;
         
      
+}
+
+-(void)resetData {
+    
+   self.cityArray=@[].mutableCopy;
+   self.provinceStr=@"";
+   self.cityStr=@"";
+   self.areaArray=@[].mutableCopy;
+   self.titleArr=@[@"省份选择"];
 }
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -215,10 +286,7 @@ static dispatch_once_t onceToken;
       
 
         self.flowlayout = [[UICollectionViewFlowLayout alloc] init];
-         
-//        [self.flowlayout setHeaderReferenceSize:CGSizeMake(kScreenWidth, kScreenWidth/2.4+141)];
-         
-        
+ 
         //设置滚动方向
         [self.flowlayout setScrollDirection:UICollectionViewScrollDirectionVertical];
         _collectionView.alwaysBounceVertical = YES;
@@ -243,7 +311,7 @@ static dispatch_once_t onceToken;
 }
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     EWProvinceModel *provincesModel2;
-    if (indexPath.row==0) {
+    if (indexPath.row==0&&indexPath.section!=2) {
         return;
     }
     if (isEmpty(_cityArray)) {
@@ -257,8 +325,13 @@ static dispatch_once_t onceToken;
     }
     if (!isEmpty(self.areaArray)) {
         NSLog(@"%@",self.areaArray[indexPath.row]);
-        emptyBlock(self.addressBlock,self.areaArray[indexPath.row]);
-        [self colse];
+//        emptyBlock(self.addressBlock,self.areaArray[indexPath.row]);
+//        [self colse];
+        self.areaStr =self.areaArray[indexPath.row];
+        if (_currentIndex !=indexPath.row) {
+            _currentIndex=indexPath.row;
+            [self.collectionView reloadData];
+        }
         return;
     }
     if (!isEmpty(_cityArray)) {

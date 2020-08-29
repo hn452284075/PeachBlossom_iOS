@@ -36,7 +36,6 @@
 		7708D86024E7A8DD00A4DB25 /* ZZTabbarItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7708D85D24E7A8DD00A4DB25 /* ZZTabbarItemView.m */; };
 		7708D87424E7AA0900A4DB25 /* NSDictionary+log.m in Sources */ = {isa = PBXBuildFile; fileRef = 7708D87024E7AA0900A4DB25 /* NSDictionary+log.m */; };
 		7708D87524E7AA0900A4DB25 /* NSDictionary+null.m in Sources */ = {isa = PBXBuildFile; fileRef = 7708D87124E7AA0900A4DB25 /* NSDictionary+null.m */; };
-		7708D87924E7AA4E00A4DB25 /* AlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7708D87824E7AA4E00A4DB25 /* AlertViewManager.m */; };
 		7708D87C24E7AA6800A4DB25 /* BaseLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7708D87B24E7AA6700A4DB25 /* BaseLoadingView.m */; };
 		7708D88124E7AAB200A4DB25 /* UIView+BlockGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7708D88024E7AAB200A4DB25 /* UIView+BlockGesture.m */; };
 		7708D88424E7AAFF00A4DB25 /* PlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7708D88224E7AAFF00A4DB25 /* PlaceholderView.m */; };
@@ -256,7 +255,6 @@
 		7708DC8124E7ECF200A4DB25 /* UploadPhotoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7708DC8024E7ECF200A4DB25 /* UploadPhotoManager.m */; };
 		7708DD3924EB5BA400A4DB25 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7708DD3824EB5BA400A4DB25 /* SearchViewController.m */; };
 		7708DD3C24EB5E0300A4DB25 /* SearchListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7708DD3B24EB5E0300A4DB25 /* SearchListVC.m */; };
-		7708DD3E24EB61F600A4DB25 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7708DD3D24EB61F600A4DB25 /* SearchViewController.xib */; };
 		7746F53E24F5FF19000DC145 /* AddressMangerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F53D24F5FF19000DC145 /* AddressMangerController.m */; };
 		7746F54324F6004B000DC145 /* AddressMangerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7746F54124F6004B000DC145 /* AddressMangerCell.m */; };
 		7746F54424F6004B000DC145 /* AddressMangerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7746F54224F6004B000DC145 /* AddressMangerCell.xib */; };
@@ -291,6 +289,7 @@
 		7753A33C24F8D84800F66734 /* SearchGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A33B24F8D84800F66734 /* SearchGoodsCell.m */; };
 		7753A36D24F8E74D00F66734 /* SearchFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A36C24F8E74D00F66734 /* SearchFlowLayout.m */; };
 		7753A37024F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A36F24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		7753A37524F9034200F66734 /* AlertViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A37424F9034200F66734 /* AlertViewManager.m */; };
 		77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17BB624EB830700CBF0A6 /* UIView+Design.m */; };
 		77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4424F4B0CC00CBF0A6 /* area.plist */; };
 		77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */; };
@@ -411,8 +410,6 @@
 		7708D87224E7AA0900A4DB25 /* NSDictionary+log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+log.h"; sourceTree = "<group>"; };
 		7708D87324E7AA0900A4DB25 /* NSDictionary+null.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+null.h"; sourceTree = "<group>"; };
 		7708D87624E7AA2D00A4DB25 /* TabbarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabbarButton.h; sourceTree = "<group>"; };
-		7708D87724E7AA4E00A4DB25 /* AlertViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewManager.h; sourceTree = "<group>"; };
-		7708D87824E7AA4E00A4DB25 /* AlertViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewManager.m; sourceTree = "<group>"; };
 		7708D87A24E7AA6700A4DB25 /* BaseLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseLoadingView.h; sourceTree = "<group>"; };
 		7708D87B24E7AA6700A4DB25 /* BaseLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseLoadingView.m; sourceTree = "<group>"; };
 		7708D87F24E7AAB200A4DB25 /* UIView+BlockGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BlockGesture.h"; sourceTree = "<group>"; };
@@ -845,7 +842,6 @@
 		7708DD3824EB5BA400A4DB25 /* SearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = PeachBlossom_iOS/Base/SearchViewController.m; sourceTree = SOURCE_ROOT; };
 		7708DD3A24EB5E0300A4DB25 /* SearchListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SearchListVC.h; path = PeachBlossom_iOS/Base/SearchListVC.h; sourceTree = SOURCE_ROOT; };
 		7708DD3B24EB5E0300A4DB25 /* SearchListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SearchListVC.m; path = PeachBlossom_iOS/Base/SearchListVC.m; sourceTree = SOURCE_ROOT; };
-		7708DD3D24EB61F600A4DB25 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = SearchViewController.xib; path = PeachBlossom_iOS/Base/SearchViewController.xib; sourceTree = SOURCE_ROOT; };
 		7746F53C24F5FF19000DC145 /* AddressMangerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressMangerController.h; sourceTree = "<group>"; };
 		7746F53D24F5FF19000DC145 /* AddressMangerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddressMangerController.m; sourceTree = "<group>"; };
 		7746F54024F6004B000DC145 /* AddressMangerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddressMangerCell.h; sourceTree = "<group>"; };
@@ -903,6 +899,8 @@
 		7753A36C24F8E74D00F66734 /* SearchFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchFlowLayout.m; sourceTree = "<group>"; };
 		7753A36E24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		7753A36F24F8F0E000F66734 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		7753A37424F9034200F66734 /* AlertViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertViewManager.m; sourceTree = "<group>"; };
+		7753A37624F9035700F66734 /* AlertViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertViewManager.h; sourceTree = "<group>"; };
 		77A17BB524EB830700CBF0A6 /* UIView+Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Design.h"; sourceTree = "<group>"; };
 		77A17BB624EB830700CBF0A6 /* UIView+Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Design.m"; sourceTree = "<group>"; };
 		77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressShowView.h; sourceTree = "<group>"; };
@@ -1186,12 +1184,12 @@
 		7708D85724E7A86C00A4DB25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7753A37624F9035700F66734 /* AlertViewManager.h */,
+				7753A37424F9034200F66734 /* AlertViewManager.m */,
 				7708D88324E7AAFF00A4DB25 /* PlaceholderView.h */,
 				7708D88224E7AAFF00A4DB25 /* PlaceholderView.m */,
 				7708D87A24E7AA6700A4DB25 /* BaseLoadingView.h */,
 				7708D87B24E7AA6700A4DB25 /* BaseLoadingView.m */,
-				7708D87724E7AA4E00A4DB25 /* AlertViewManager.h */,
-				7708D87824E7AA4E00A4DB25 /* AlertViewManager.m */,
 				7708D87624E7AA2D00A4DB25 /* TabbarButton.h */,
 				7708D85A24E7A8DD00A4DB25 /* BadgeValueButton.h */,
 				7708D85824E7A8DD00A4DB25 /* BadgeValueButton.m */,
@@ -2120,7 +2118,6 @@
 				7746F59A24F7C831000DC145 /* SearchGoodsVC.m */,
 				7708DD3724EB5BA400A4DB25 /* SearchViewController.h */,
 				7708DD3824EB5BA400A4DB25 /* SearchViewController.m */,
-				7708DD3D24EB61F600A4DB25 /* SearchViewController.xib */,
 				7708DD3A24EB5E0300A4DB25 /* SearchListVC.h */,
 				7708DD3B24EB5E0300A4DB25 /* SearchListVC.m */,
 			);
@@ -2545,7 +2542,6 @@
 				7746F54824F6376E000DC145 /* ZZAddressController.xib in Resources */,
 				7708DA9724E7C61A00A4DB25 /* AlipaySDK.bundle in Resources */,
 				7708DA4424E7B6FA00A4DB25 /* wphoto_back@2x.png in Resources */,
-				7708DD3E24EB61F600A4DB25 /* SearchViewController.xib in Resources */,
 				7708D7E424E79BD700A4DB25 /* LaunchScreen.storyboard in Resources */,
 				7708D84724E7A1B200A4DB25 /* GuideViewController.xib in Resources */,
 				977466BF24F79D070078313C /* GoodsInfoViewController.xib in Resources */,
@@ -2663,7 +2659,6 @@
 				7708DA4524E7B6FA00A4DB25 /* WPFunctionView.m in Sources */,
 				77A17C5224F4B0CC00CBF0A6 /* SearchCell.m in Sources */,
 				7708D99024E7ABA300A4DB25 /* IQTextView.m in Sources */,
-				7708D87924E7AA4E00A4DB25 /* AlertViewManager.m in Sources */,
 				7746F56524F65B19000DC145 /* ProcurementOrderVC.m in Sources */,
 				7708DA3C24E7B6FA00A4DB25 /* PayManager.m in Sources */,
 				7708D98024E7ABA200A4DB25 /* NSBundle+MJRefresh.m in Sources */,
@@ -2843,6 +2838,7 @@
 				977466C424F7A0E00078313C /* ExpressInfoView.m in Sources */,
 				7746F54C24F63A37000DC145 /* CityPickView.m in Sources */,
 				7708DC1124E7DF5C00A4DB25 /* SDAnimatedImageView.m in Sources */,
+				7753A37524F9034200F66734 /* AlertViewManager.m in Sources */,
 				7708DC3724E7DF5D00A4DB25 /* UIView+WebCacheOperation.m in Sources */,
 				7708D98924E7ABA300A4DB25 /* MJRefreshStateHeader.m in Sources */,
 				7708DC7924E7EC7C00A4DB25 /* MASLayoutConstraint.m in Sources */,

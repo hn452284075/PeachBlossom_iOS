@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "SDCycleScrollView.h"
-NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^SeletecdIndexBlock)(NSInteger index);
+
 
 @interface HomeHeaderView : UICollectionReusableView<SDCycleScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet SDCycleScrollView *headCycleView;
 @property (nonatomic,strong)NSArray *array;
+@property (nonatomic,copy)SeletecdIndexBlock seletecdIndexBlock;
 
 @end
 
-NS_ASSUME_NONNULL_END
