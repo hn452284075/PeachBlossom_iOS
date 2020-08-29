@@ -19,17 +19,20 @@
 #import "AddressShowView.h"
 #import "UIBarButtonItem+BarButtonItem.h"
 #import "UIView+Frame.h"
-@interface SearchViewController ()<UITableViewDataSource,UITableViewDelegate>
+#import "ScreeningVC.h"
+#import "CQSideBarManager.h"
+@interface SearchViewController ()<UITableViewDataSource,UITableViewDelegate,CQSideBarManagerDelegate>
 {
     UIView  *lineView;
 }
+@property (nonatomic,strong)ScreeningVC *screeningVC;//筛选页面，用控制器方便后续扩展
 @property (nonatomic,strong)UITextField *searchField;
 @property (nonatomic,assign)NSInteger indexBtn;
 @property (nonatomic,assign)NSInteger typeindexBtn;
 @property (nonatomic,strong)NSMutableArray *buttonArr;
 @property (nonatomic,strong)NSMutableArray *buttonTypeArr;
-@property (strong, nonatomic) HMSegmentedControl *topBarControl;
-@property (strong, nonatomic) HMSegementController *topBarController;
+@property (strong, nonatomic)HMSegmentedControl *topBarControl;
+@property (strong, nonatomic)HMSegementController *topBarController;
 @property (nonatomic,strong)MycommonTableView *listTableView;
 @property (nonatomic, strong)UICollectionView *collectionView;
 @property (nonatomic,strong)UICollectionViewFlowLayout *flowlayout;
@@ -246,6 +249,7 @@
         _typeindexBtn = 2;
     }else{
         _typeindexBtn = 3;
+         [[CQSideBarManager sharedInstance] openSideBar:self];
        }
     
 }
@@ -262,6 +266,35 @@
 }
 
 #pragma mark ------------------------Delegate-----------------------------
+#pragma mark - CQSideBarManagerDelegate
+- (UIView *)viewForSideBar
+{
+    /*
+     *  如果使用VC的view作为侧边栏视图，那么需要注意在ARC模式下控制器出了作用域会被释放掉这种情况，导致无法响应点击事件，个别同学已经碰到这种问题，现已作出解释。比如以下这个写法:
+     *  SideBarViewController *sideBarVC = [[SideBarViewController alloc] init];
+     *  sideBarVC.view.cq_width = self.view.cq_width - 35.f;
+     *  return sideBarVC.view;
+     */
+    return self.screeningVC.view;
+}
+
+- (BOOL)canCloseSideBar
+{
+    return YES;
+}
+
+#pragma mark ---Getter
+- (ScreeningVC *)screeningVC
+{
+    if (!_screeningVC) {
+        _screeningVC = [[ScreeningVC alloc] init];
+        _screeningVC.view.width = kScreenWidth-99;
+        _screeningVC.screeningDataBlock = ^(NSString *str) {
+            NSLog(@"%@",str);
+        };
+    }
+    return _screeningVC;
+}
 - (MycommonTableView *)listTableView{
     
     if (!_listTableView) {

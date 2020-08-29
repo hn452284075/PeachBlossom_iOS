@@ -14,6 +14,7 @@
 #import "SearchGoodsCell.h"
 #import "SearchFlowLayout.h"
 #import "SearchViewController.h"
+#import "SearchStoreResultVC.h"
 @interface SearchGoodsVC ()<UICollectionViewDelegate,UICollectionViewDataSource>
 {
     UIView  *lineView;
@@ -237,6 +238,8 @@
            NSArray *arrar = dic[@"content"];
            NSString *text=arrar[indexPath.row];
     NSLog(@"%@",text);
+    SearchViewController *vc = [[SearchViewController alloc]init];
+    [self navigatePushViewController:vc animate:YES];
 }
 
 
@@ -273,8 +276,15 @@
     }
     
 //    [self.collectionView reloadData];
-    SearchViewController *vc = [[SearchViewController alloc]init];
-    [self navigatePushViewController:vc animate:YES];
+    if (_indexBtn==0) {
+        SearchViewController *vc = [[SearchViewController alloc]init];
+        [self navigatePushViewController:vc animate:YES];
+    }else{
+        
+        SearchStoreResultVC *vc = [[SearchStoreResultVC alloc]init];
+        [self navigatePushViewController:vc animate:YES];
+    }
+   
 
 
 }

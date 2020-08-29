@@ -48,7 +48,7 @@
        
        self.confirmBtn= [UIButton buttonWithType:UIButtonTypeRoundedRect];
        self.confirmBtn.frame = CGRectMake(kScreenWidth/2,self.height-130-50, kScreenWidth/2, 50);
-       [self.confirmBtn setTitle:@"确定" forState:UIControlStateNormal];
+       [self.confirmBtn setTitle:@"确认" forState:UIControlStateNormal];
        self.confirmBtn.titleLabel.font=CUSTOMFONT(16);
        [self.confirmBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
        [self.confirmBtn addTarget:self action:@selector(confirmBtnClick) forControlEvents:UIControlEventTouchUpInside];

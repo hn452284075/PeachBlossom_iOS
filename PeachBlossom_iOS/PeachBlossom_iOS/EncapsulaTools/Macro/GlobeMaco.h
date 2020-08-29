@@ -95,6 +95,7 @@
 //NSUserDefaults 的全局
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
 
+#define EditorGoodsCenter @"EditorGoodsCenter"
 
 #define ModifyUserImage @"ModifyUserImage"
 
