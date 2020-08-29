@@ -49,6 +49,7 @@
     }];
     topImg.image = IMAGE(@"topImage");
     
+    
     UILabel *titleLab = [[UILabel alloc] init];
     [self.view addSubview:titleLab];
     [titleLab mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -388,7 +389,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
     GoodsInfoViewController *infoCon = [[GoodsInfoViewController alloc] init];    
     [self navigatePushViewController:infoCon animate:YES];
@@ -413,7 +414,7 @@
 {
     static NSString *cellID = @"supplygoodscell";
     SupplyGoodsCell *cell = (SupplyGoodsCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if(cell == nil)
     {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"SupplyGoodsCell" owner:nil options:nil] firstObject];

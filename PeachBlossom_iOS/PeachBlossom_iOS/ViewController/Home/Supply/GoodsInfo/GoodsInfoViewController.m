@@ -7,6 +7,7 @@
 //
 
 #import "GoodsInfoViewController.h"
+#import "GoodsCommentController.h"
 #import "Masonry.h"
 #import "SDCycleScrollView.h"
 #import "SupplyGoodsInfoView.h"
@@ -17,7 +18,7 @@
 #import "BottumBuyView.h"
 #import "AddToCartView.h"
 
-@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate,ShopInfoViewDelegate,UIWebViewDelegate,BottumBuyViewDelegate,AddToCartDelegate>
+@interface GoodsInfoViewController ()<SupplyGoodsInfoDelegate,ExpressInfoViewDlegate,ShopInfoViewDelegate,UIWebViewDelegate,BottumBuyViewDelegate,AddToCartDelegate,CommentHeaderViewDelegate>
 
 //返回按钮
 @property (nonatomic, strong) UIButton *backBtn;
@@ -241,6 +242,7 @@
 - (void)initGoodsInfo_commentHeaderView
 {
     self.commentheaderview = [[[NSBundle mainBundle] loadNibNamed:@"CommentHeaderView" owner:self options:nil] lastObject];
+    self.commentheaderview.delegate = self;
     [self.mainScrollerView addSubview:self.commentheaderview];
     [self.commentheaderview mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.expressView.mas_bottom).offset(15);
@@ -254,6 +256,7 @@
 {
     NSString *comment = @"当数据很多列表过，长的时候必行了可以往以下几个方面考虑当，数据很多列表过长的时候优化就势在必行了可以往以下几个方，表过，长的时候必行了可以往以下几个方面考虑当，数据很多列表过长的时候优化就势在必行了可以往以下几个方，表过，长的时候必行了可以往以下几个方面考虑当，数据很多列表过长的时候优化就势在必行了可以往以下几个方面考虑当数据很，多列大暗示法";
     NSArray *imageArr = [[NSArray alloc] initWithObjects:IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"), nil];
+        
     
     NSDictionary * dict = @{
         NSFontAttributeName : [UIFont systemFontOfSize:14]
@@ -375,16 +378,19 @@
 
 
 #pragma mark ------------------------Delegate-----------------------------
+#pragma mark --------- 商品分享按钮
 - (void)supply_share_Action
 {
     NSLog(@"供应大厅--商品分享按钮");
 }
 
+#pragma mark --------- 商品收藏按钮
 - (void)supply_love_Action
 {
     NSLog(@"供应大厅--商品收藏按钮");
 }
 
+//移除物流弹出框
 - (void)expressInfoViewDismiss
 {
     self.expressInfoView.delegate = nil;
@@ -393,6 +399,15 @@
     [bv removeFromSuperview];
 }
 
+#pragma mark --------- 查看所有交易评论
+- (void)showAllCommentAction
+{
+    GoodsCommentController *commentCon = [[GoodsCommentController alloc] init];
+    [self.navigationController pushViewController:commentCon animated:YES];
+}
+
+
+#pragma mark --------- 进店看看
 - (void)enterShopController
 {
     NSLog(@"供应大厅--进店看看");

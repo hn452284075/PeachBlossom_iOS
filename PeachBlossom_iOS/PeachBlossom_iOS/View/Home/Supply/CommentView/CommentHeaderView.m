@@ -9,6 +9,7 @@
 #import "CommentHeaderView.h"
 
 @implementation CommentHeaderView
+@synthesize delegate;
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -18,4 +19,8 @@
 }
 */
 
+- (IBAction)showAllComment:(id)sender
+{
+    [self.delegate showAllCommentAction];
+}
 @end

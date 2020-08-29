@@ -11,7 +11,7 @@
 
 @implementation CommentOneView
 
-
+//- (instancetype)initWithFrame:(CGRect)frame headImage:(UIImage *)headImage name:(NSString *)name comment:(NSString *)comment images:(NSArray *)imgArr time:(NSString *)time spec:(NSString *)spec weight:(NSString *)weight place:(NSString *)place
 
 - (instancetype)initWithFrame:(CGRect)frame headImage:(UIImage *)headImage name:(NSString *)name comment:(NSString *)comment images:(NSArray *)imgArr time:(NSString *)time spec:(NSString *)spec weight:(NSString *)weight place:(NSString *)place
 {
@@ -24,6 +24,7 @@
         headimg.image = headImage;
         headimg.layer.masksToBounds = YES;
         headimg.layer.cornerRadius = 41/2;
+        headimg.tag = 1;
         
         //名称
         UILabel *namelabel = [[UILabel alloc] initWithFrame:CGRectMake(headimg.frame.origin.x+headimg.frame.size.width+7, 0, 200, 14)];
@@ -32,13 +33,14 @@
         namelabel.text = name;
         namelabel.font = [UIFont systemFontOfSize:14];
         namelabel.textColor = kGetColor(0x11, 0x11, 0x11);
-        
+        namelabel.tag = 2;
         
         UILabel *commentLab = [[UILabel alloc] initWithFrame:CGRectMake(12, 12+41+12, kScreenWidth-24, 100)];
         commentLab.lineBreakMode = NSLineBreakByWordWrapping;
         commentLab.numberOfLines = 0;
         commentLab.font = [UIFont systemFontOfSize:14];
         [self addSubview:commentLab];
+        commentLab.tag = 3;
         
         
         NSDictionary * dict = @{
@@ -67,6 +69,7 @@
                 UIImageView *imgv = [[UIImageView alloc] init];
                 imgv.frame = CGRectMake(x+(w+2)*temp++, y+h*i, w, h);
                 imgv.image = [imgArr objectAtIndex:i];
+                imgv.tag = 4+j;
                 [self addSubview:imgv];
                 endY = y+h*i + h;
                 if(temp > 3)
@@ -78,12 +81,34 @@
         [self addSubview:timeLab];
         timeLab.font = [UIFont systemFontOfSize:12];
         timeLab.textColor = kGetColor(0x99, 0x99, 0x99);
-        timeLab.text = [NSString stringWithFormat:@"%@ %@ %@ %@",time,spec,weight,place];        
+        timeLab.text = [NSString stringWithFormat:@"%@ %@ %@ %@",time,spec,weight,place];
+        timeLab.tag = 100;
         
     }
     return self;
 }
 
+
+- (void)configViewData:(UIImage *)headImage name:(NSString *)name comment:(NSString *)comment images:(NSArray *)imgArr time:(NSString *)time spec:(NSString *)spec weight:(NSString *)weight place:(NSString *)place
+{
+    UIImageView *headerimg = [self viewWithTag:1];
+    headerimg.image = headImage;
+    
+    UILabel *namelab = [self viewWithTag:2];
+    namelab.text = name;
+    
+    UILabel *commentlab = [self viewWithTag:3];
+    commentlab.text = comment;
+    
+    for(int i=0;i<imgArr.count;i++)
+    {
+        UIImageView *headerimg = [self viewWithTag:4+i];
+        headerimg.image = [imgArr objectAtIndex:i];
+    }
+    
+    UILabel *msglab = [self viewWithTag:100];
+    msglab.text = [NSString stringWithFormat:@"%@ %@ %@ %@",time,spec,weight,place];;
+}
 
 
 

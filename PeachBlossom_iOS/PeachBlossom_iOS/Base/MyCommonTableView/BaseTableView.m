@@ -82,7 +82,7 @@
             //重置nomoredata
             [weak_self.mj_footer resetNoMoreData];
             if (headerRequestBlock) {
-                weak_self.userInteractionEnabled = NO;//没刷新完不可以点击cell
+//                weak_self.userInteractionEnabled = NO;//没刷新完不可以点击cell
                 headerRequestBlock();
             }
         }
@@ -96,7 +96,7 @@
 }
 
 -(void)footerRreshRequestBlock:(RequestDataBlock)footerRequestBlock {
-    self.userInteractionEnabled = NO;//没刷新完不可以点击cell
+//    self.userInteractionEnabled = NO;//没刷新完不可以点击cell
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         //上拉刷新
         if (footerRequestBlock) {
@@ -156,7 +156,7 @@
  
                 self.mj_footer.hidden = YES;
                 [self.mj_header endRefreshing];
-                self.userInteractionEnabled = YES;
+//                self.userInteractionEnabled = YES;
                 return;
             }
             
@@ -165,7 +165,7 @@
             [self.mj_header endRefreshing];
             [self.mj_footer endRefreshingWithNoMoreData];
             self.mj_footer.hidden = NO;
-            self.userInteractionEnabled = YES;
+//            self.userInteractionEnabled = YES;
             [self reloadData];
             return;
         }
@@ -195,10 +195,10 @@
     }else {
         self.mj_footer.hidden = NO;
         [self.mj_footer resetNoMoreData];
-        self.userInteractionEnabled = YES;
+//        self.userInteractionEnabled = YES;
         return;
     }
-     self.userInteractionEnabled = YES;
+//     self.userInteractionEnabled = YES;
     if (self.noDataLogicModule.needDealNodataCondition) {
         [self nodataShowDeal];
     }
