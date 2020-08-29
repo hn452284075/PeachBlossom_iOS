@@ -13,6 +13,9 @@
 @property (nonatomic, strong) UITextField *phoneFiled;
 @property (nonatomic, strong) UITextField *codeFiled;
 
+@property (nonatomic, strong) UIButton *loginBtn;
+@property (nonatomic, strong) UIButton *clearBtn;
+
 @end
 
 @implementation LoginViewController
@@ -74,6 +77,19 @@
     }];
     phoneiconImg.image = IMAGE(@"login_phoneicon");
     
+    //---清除手机号码按钮，默认隐藏，有文字输入后显示
+    self.clearBtn = [[UIButton alloc] init];
+    [self.view addSubview:self.clearBtn];
+    [self.clearBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(phonebackview.mas_right).offset(-12);
+        make.centerY.equalTo(phonebackview.mas_centerY).offset(0);
+        make.width.mas_equalTo(22);
+        make.height.mas_equalTo(22);
+    }];
+    self.clearBtn.hidden = YES;
+    [self.clearBtn setBackgroundImage:IMAGE(@"close-lv") forState:UIControlStateNormal];
+    [self.clearBtn addTarget:self action:@selector(clearPhoneFiled:) forControlEvents:UIControlEventTouchUpInside];
+    
     //---手机输入框
     self.phoneFiled = [[UITextField alloc] init];
     [self.view addSubview:self.phoneFiled];
@@ -87,6 +103,8 @@
     self.phoneFiled.font = CUSTOMFONT(14);
     self.phoneFiled.keyboardType = UIKeyboardTypeNumberPad;
     self.phoneFiled.placeholder = @"请输入手机号";
+    [self.phoneFiled addTarget:self action:@selector(changedTextField:) forControlEvents:UIControlEventEditingChanged];
+
     
     
     //输入验证码
@@ -127,6 +145,7 @@
     self.codeFiled.font = CUSTOMFONT(14);
     self.codeFiled.keyboardType = UIKeyboardTypeNumberPad;
     self.codeFiled.placeholder = @"请输入验证码";
+    [self.codeFiled addTarget:self action:@selector(changedTextField:) forControlEvents:UIControlEventEditingChanged];
     
     //-------获取验证码按钮
     UIButton *getCodeBtn = [[UIButton alloc] init];
@@ -148,15 +167,16 @@
     
     
     //登录按钮
-    UIButton *loginBtn = [[UIButton alloc] init];
-    [self.view addSubview:loginBtn];
-    [loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+    self.loginBtn = [[UIButton alloc] init];
+    self.loginBtn.alpha = 0.5;
+    [self.view addSubview:self.loginBtn];
+    [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(codebackview.mas_bottom).offset(35);
         make.left.equalTo(self.view.mas_left).offset(35);
         make.right.equalTo(self.view.mas_right).offset(-35);
         make.height.mas_equalTo(45);
     }];
-    [self factory_btn:loginBtn
+    [self factory_btn:self.loginBtn
            backColor:kGetColor(0x46, 0xc6, 0x7c)
            textColor:[UIColor whiteColor]
          borderColor:kGetColor(0x46, 0xc6, 0x7c)
@@ -169,7 +189,7 @@
     UILabel *lab = [[UILabel alloc] init];
     [self.view addSubview:lab];
     [lab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(loginBtn.mas_bottom).offset(115);
+        make.top.equalTo(self.loginBtn.mas_bottom).offset(115);
         make.centerX.equalTo(self.view.mas_centerX).offset(0);
         make.height.mas_equalTo(15);
     }];
@@ -264,6 +284,12 @@
     
 }
 
+- (void)clearPhoneFiled:(id)sender
+{
+    self.phoneFiled.text = @"";
+    self.loginBtn.alpha = 0.5;
+}
+
 
 #pragma mark ------------------------ 获取手机验证码
 - (void)btnClicked:(id)sender
@@ -278,6 +304,10 @@
         case 2:
         {
             NSLog(@"登录");
+            if(self.phoneFiled.text.length > 0 && self.codeFiled.text.length > 0)
+            {
+                
+            }
         }
             break;
         case 10:
@@ -289,6 +319,22 @@
             break;
     }
 }
+
+- (void)changedTextField:(UITextField *)sender
+{
+    if(self.phoneFiled.text.length > 0)
+        self.clearBtn.hidden = NO;
+    else
+        self.clearBtn.hidden = YES;
+    
+    if(self.phoneFiled.text.length > 0 && self.codeFiled.text.length > 0)
+        self.loginBtn.alpha = 1.;
+    else
+        self.loginBtn.alpha = 0.5;
+}
+
+
+#pragma mark ------------------------Delegate-----------------------------
 
  
 @end
