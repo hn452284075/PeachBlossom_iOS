@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol AddToCartDelegate <NSObject>
 
-- (void)addToCart_Ok;
+- (void)addToCart_Ok:(int)selectedIndex;
 - (void)addToCart_Cancel;
 
 @end

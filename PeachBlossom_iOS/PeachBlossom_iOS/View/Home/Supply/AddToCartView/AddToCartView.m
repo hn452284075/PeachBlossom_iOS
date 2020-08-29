@@ -8,6 +8,12 @@
 
 #import "AddToCartView.h"
 
+@interface AddToCartView()
+
+@property (nonatomic, assign) int selectedIndex;
+
+@end
+
 @implementation AddToCartView
 @synthesize delegate;
 
@@ -21,6 +27,8 @@
 
 - (void)_initCartViewInfo:(UIImage *)image price:(NSString *)price msg:(NSString *)msg specArr:(NSArray *)specarr
 {
+    self.selectedIndex = 0;
+    
     UIImageView *imgview = (UIImageView *)[self viewWithTag:1];
     imgview.image = image;
     
@@ -41,6 +49,7 @@
         
         [tagbtn setTitleColor:kGetColor(0x22, 0x22, 0x22) forState:UIControlStateNormal];
         tagbtn.layer.cornerRadius = 3.0;
+        tagbtn.tag = 10+i;
         
         CGSize ze = [self sizeWithText:[specarr objectAtIndex:i] font:[UIFont systemFontOfSize:14] maxSize:CGSizeMake(200, 31)];
         
@@ -50,13 +59,43 @@
             y = y + 31 + 15;
         }
         
-        tagbtn.frame = CGRectMake(x, y, ze.width+5, 31);
+        tagbtn.frame = CGRectMake(x, y, ze.width+12, 31);
         tagbtn.titleLabel.font = [UIFont systemFontOfSize:12];
         x +=15;
         x +=ze.width;
+        
+        [tagbtn addTarget:self action:@selector(tagBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        
+        if(i == 0)
+        {
+            [tagbtn sendActionsForControlEvents:UIControlEventTouchUpInside];
+        }
+    }
+}
+
+
+- (void)tagBtnClicked:(id)sender
+{
+    for(UIView *v in self.subviews)
+    {
+        if([v isKindOfClass:[UIButton class]] && v.tag!= 100 && v.tag != 101)
+        {
+            UIButton *btn = (UIButton *)v;
+            btn.layer.borderWidth = 0;
+            [btn setTitleColor:kGetColor(0x22, 0x22, 0x22) forState:UIControlStateNormal];
+            btn.backgroundColor = kGetColor(0xf5, 0xf5, 0xf5);
+        }
     }
     
+    UIButton *btn = (UIButton *)sender;
+    btn.layer.borderColor = kGetColor(0x47, 0xc6, 0x7c).CGColor;
+    [btn setTitleColor:kGetColor(0x47, 0xc6, 0x7c) forState:UIControlStateNormal];
+    btn.layer.borderWidth = 1.;
+    btn.backgroundColor = [UIColor clearColor];
+    self.selectedIndex = (int)btn.tag - 10;
 }
+    
+
 
 
 - (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxSize:(CGSize)maxSize {
@@ -76,6 +115,6 @@
 
 - (IBAction)addToCart:(id)sender
 {
-    [self.delegate addToCart_Ok];
+    [self.delegate addToCart_Ok:self.selectedIndex];
 }
 @end

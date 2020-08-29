@@ -65,13 +65,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    int iphonex_height = 0;
+    if(iPhoneX || IS_IPHONE_Xr || IS_IPHONE_Xs || IS_IPHONE_Xs_Max)
+        iphonex_height = 20;
     self.mainScrollerView = [[UIScrollView alloc] init];
     [self.view addSubview:self.mainScrollerView];
     [self.mainScrollerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(0);
         make.left.equalTo(self.view.mas_left).offset(0);
         make.width.mas_equalTo(kScreenWidth);
-        make.height.mas_equalTo(kScreenHeight-57);
+        make.height.mas_equalTo(kScreenHeight-57-iphonex_height);
     }];
     self.mainScrollerView.contentSize = CGSizeMake(kScreenWidth, 1339);
     self.mainScrollerView.backgroundColor = kGetColor(0xf7, 0xf7, 0xf7);
@@ -101,11 +104,11 @@
     self.infoImgScrollView.autoScroll = NO;
     
     [self initGoodsInfo_TitleView];
-    [self initGoodsInfo_SpecView];
-    [self initGoodsInfo_expressView];
-    [self initGoodsInfo_commentHeaderView];
-    [self initGoodsInfo_commentView];
-    [self initGoodsInfo_shopInfoView];
+    [self initGoodsInfo_SpecView];           //规格
+    [self initGoodsInfo_expressView];        //物流信息
+    [self initGoodsInfo_commentHeaderView];  //评论头部
+    [self initGoodsInfo_commentView];        //显示的两条评论
+    [self initGoodsInfo_shopInfoView];       //店铺信息
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [self initGoodsInfo_webView];
     });
@@ -444,12 +447,14 @@
 }
 
 #pragma mark --------- 确定 加入购物车
-- (void)addToCart_Ok
+- (void)addToCart_Ok:(int)selectedIndex
 {
     self.addCartView.delegate = nil;
     [self.addCartView removeFromSuperview];
     UIView *bv = [self.view viewWithTag:100];
     [bv removeFromSuperview];
+    
+    NSLog(@"选中的规格索引 = %d",selectedIndex);
 }
 
 #pragma mark --------- 取消 加入购物车
