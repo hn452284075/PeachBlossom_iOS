@@ -111,7 +111,7 @@
     
     NSArray *imageArr2 = [[NSArray alloc] initWithObjects:IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"home-icon_3"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"home-icon_3"),IMAGE(@"home-icon_3"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"),IMAGE(@"supply_goodsimg"), nil];
     NSDictionary *dic2 = [[NSDictionary alloc] initWithObjectsAndKeys:IMAGE(@"supply_goodsimg"),@"headImg",
-                               @"Rover",@"name",
+                               @"方天画戟",@"name",
                                @"这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容",@"comment",
                                imageArr2,@"commentimg",
                                @"2020-02-20",@"date",
@@ -122,7 +122,7 @@
     
     NSArray *imageArr3 = [[NSArray alloc] init];
     NSDictionary *dic3 = [[NSDictionary alloc] initWithObjectsAndKeys:IMAGE(@"supply_goodsimg"),@"headImg",
-                               @"Rover",@"name",
+                               @"来自阿拉伯的水怪",@"name",
                                @"这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容这是评论内容",@"comment",
                                imageArr3,@"commentimg",
                                @"2020-02-20",@"date",
@@ -196,19 +196,18 @@
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellID];
     if(!cell){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-        
-        CommentOneView *cv = [[CommentOneView alloc] init];
-        cv.tag = 1;
-        [cell.contentView addSubview:cv];
     }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     NSDictionary *c_dic = [self.dic objectForKey:[NSString stringWithFormat:@"%d",(int)indexPath.row+1]];
     
-    CommentOneView *cv = [cell viewWithTag:1];
-    
-        [cv configViewData:c_dic[@"headImg"]
+    CommentOneView *tempcv = (CommentOneView *)[cell viewWithTag:1];
+    if(tempcv != nil)
+        [tempcv removeFromSuperview];
+        
+    CommentOneView *cv = [[CommentOneView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)
+            headImage:c_dic[@"headImg"]
                  name:c_dic[@"name"]
               comment:c_dic[@"comment"]
                images:c_dic[@"commentimg"]
@@ -216,6 +215,9 @@
                  spec:c_dic[@"spec"]
                weight:c_dic[@"weight"]
                 place:c_dic[@"express"]];
+    
+    cv.tag = 1;
+    [cell.contentView addSubview:cv];
     
     
     

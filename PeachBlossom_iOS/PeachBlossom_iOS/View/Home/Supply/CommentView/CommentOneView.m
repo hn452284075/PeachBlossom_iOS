@@ -13,6 +13,7 @@
 
 //- (instancetype)initWithFrame:(CGRect)frame headImage:(UIImage *)headImage name:(NSString *)name comment:(NSString *)comment images:(NSArray *)imgArr time:(NSString *)time spec:(NSString *)spec weight:(NSString *)weight place:(NSString *)place
 
+
 - (instancetype)initWithFrame:(CGRect)frame headImage:(UIImage *)headImage name:(NSString *)name comment:(NSString *)comment images:(NSArray *)imgArr time:(NSString *)time spec:(NSString *)spec weight:(NSString *)weight place:(NSString *)place
 {
     self = [super initWithFrame:frame];
@@ -88,27 +89,6 @@
     return self;
 }
 
-
-- (void)configViewData:(UIImage *)headImage name:(NSString *)name comment:(NSString *)comment images:(NSArray *)imgArr time:(NSString *)time spec:(NSString *)spec weight:(NSString *)weight place:(NSString *)place
-{
-    UIImageView *headerimg = [self viewWithTag:1];
-    headerimg.image = headImage;
-    
-    UILabel *namelab = [self viewWithTag:2];
-    namelab.text = name;
-    
-    UILabel *commentlab = [self viewWithTag:3];
-    commentlab.text = comment;
-    
-    for(int i=0;i<imgArr.count;i++)
-    {
-        UIImageView *headerimg = [self viewWithTag:4+i];
-        headerimg.image = [imgArr objectAtIndex:i];
-    }
-    
-    UILabel *msglab = [self viewWithTag:100];
-    msglab.text = [NSString stringWithFormat:@"%@ %@ %@ %@",time,spec,weight,place];;
-}
 
 
 

@@ -86,6 +86,7 @@
     }];
     self.goodsTableview.delegate = self;
     self.goodsTableview.dataSource = self;
+    self.goodsTableview.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.goodsTableview.tableHeaderView = [self tableHeaderView];
 }
 
