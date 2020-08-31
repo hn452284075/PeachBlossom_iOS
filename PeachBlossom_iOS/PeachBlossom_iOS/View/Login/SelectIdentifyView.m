@@ -58,9 +58,9 @@
             make.top.equalTo(namelab.mas_bottom).offset(13);
             make.left.equalTo(self.mas_left).offset(54);
             make.right.equalTo(self.mas_right).offset(-54);
-            make.height.mas_equalTo(35);
+            make.height.mas_equalTo(40);
         }];
-        self.nameFiled.layer.cornerRadius = 15;
+        self.nameFiled.layer.cornerRadius = 20;
         self.nameFiled.layer.masksToBounds = YES;
         self.nameFiled.textAlignment = NSTextAlignmentCenter;
         self.nameFiled.backgroundColor = kGetColor(0xf5, 0xf5, 0xf5);
@@ -127,11 +127,11 @@
             make.bottom.equalTo(self.mas_bottom).offset(-15);
             make.left.equalTo(self.mas_left).offset(54);
             make.right.equalTo(self.mas_right).offset(-54);
-            make.height.mas_equalTo(35);
+            make.height.mas_equalTo(40);
         }];
         [okBtn setTitle:@"确定" forState:UIControlStateNormal];
         okBtn.titleLabel.font = CUSTOMFONT(16);
-        okBtn.layer.cornerRadius = 15;
+        okBtn.layer.cornerRadius = 20;
         okBtn.layer.masksToBounds = YES;
         [okBtn setTitleColor:kGetColor(0xff, 0xff, 0xff) forState:UIControlStateNormal];
         [okBtn setBackgroundColor:kGetColor(0x46, 0xc6, 0x7b)];
