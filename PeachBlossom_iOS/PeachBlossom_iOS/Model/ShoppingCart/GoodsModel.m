@@ -34,7 +34,7 @@
         self.unit = dic[@"unit"];
         self.shipping_cost = dic[@"shipping_cost"];
         self.shipping_from = dic[@"shipping_from"];
-        self.specialPrice = [NSString stringWithFormat:@"￥%@",dic[@"special_price"]];
+        self.specialPrice = [NSString stringWithFormat:@"%@",dic[@"special_price"]];
         self.goodsOriginalPrice = dic[@"special_price"];
         self.goodsNumber = dic[@"goods_num"];
         self.valid = @1;

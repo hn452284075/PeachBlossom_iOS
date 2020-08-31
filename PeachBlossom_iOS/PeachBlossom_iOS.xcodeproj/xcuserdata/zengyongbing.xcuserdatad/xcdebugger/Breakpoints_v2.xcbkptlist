@@ -206,8 +206,8 @@
             filePath = "PeachBlossom_iOS/ViewController/Home/HomeViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "235"
+            endingLineNumber = "235"
             landmarkName = "-jumoPageIndex:"
             landmarkType = "7">
          </BreakpointContent>
@@ -215,128 +215,96 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E85CF2A9-6AD6-4A6E-A52C-01311CA08C02"
+            uuid = "726ADC09-FAE0-4816-B0F6-CF276E096B0E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PeachBlossom_iOS/Base/SearchViewController.m"
+            filePath = "PeachBlossom_iOS/View/ShoppingCart/AddAndSubtractButton.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
-            landmarkName = "-screeningVC"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "-btnTouchUp:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3F7B33B4-2D90-402D-B7B6-2B29D4D42515"
+            uuid = "F212E359-CE29-4106-988E-06F62AAA4284"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PeachBlossom_iOS/Base/Conttoller/BaseViewController.m"
+            filePath = "PeachBlossom_iOS/View/ShoppingCart/AddAndSubtractButton.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "-navigatePushViewController:animate:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3F7B33B4-2D90-402D-B7B6-2B29D4D42515 - b6c253dcb5e73daf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BaseViewController navigatePushViewController:animate:]"
-                  moduleName = "PeachBlossom_iOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zengyongbing/Desktop/%E6%A1%83%E8%8A%B1%E6%BA%90/PeachBlossom_iOS/PeachBlossom_iOS/Base/Conttoller/BaseViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  uuid = "3F7B33B4-2D90-402D-B7B6-2B29D4D42515 - b6c253dcb5e73daf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BaseViewController navigatePushViewController:animate:]"
-                  moduleName = "PeachBlossom_iOS"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/zengyongbing/Desktop/%E6%A1%83%E8%8A%B1%E6%BA%90/PeachBlossom_iOS/PeachBlossom_iOS/Base/Conttoller/BaseViewController.m"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "195">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2724C535-7B8E-4073-A36B-BC8809907B1B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PeachBlossom_iOS/Base/Conttoller/BaseViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "228"
-            endingLineNumber = "228"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "-cleanTimer"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "30264CB0-E742-470D-AA68-21E010593816"
+            uuid = "3FD6752B-9771-486A-8F14-A2B02CA34684"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PeachBlossom_iOS/Base/Conttoller/BaseViewController.m"
+            filePath = "PeachBlossom_iOS/ViewController/ShoppingCart/ShopCartViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "-clickedSeletedLeftBtn:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C63408B7-2BD1-4EC8-817F-90F22CE4618E"
+            uuid = "84C7E4BC-3C65-429A-8CC9-4A1D49F31BC3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PeachBlossom_iOS/Base/Conttoller/BaseViewController.m"
+            filePath = "PeachBlossom_iOS/ViewController/ShoppingCart/ShopCartViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "-clickedSeletedLeftBtn:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "ABD5141F-1D53-4BD1-B0F6-CC2873660B4F"
+            uuid = "36A4C00A-6204-400F-B30E-72F95A60B7D8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PeachBlossom_iOS/ViewController/Home/HomeViewController.m"
+            filePath = "PeachBlossom_iOS/Model/ShoppingCart/ShopCartManger.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
-            landmarkName = "-dataSource"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "-clickSeletedGoods:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9A5554B-E9DF-4850-9554-54871B8EDF86"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PeachBlossom_iOS/Model/ShoppingCart/ShopCartManger.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "-clickSeletedGoods:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

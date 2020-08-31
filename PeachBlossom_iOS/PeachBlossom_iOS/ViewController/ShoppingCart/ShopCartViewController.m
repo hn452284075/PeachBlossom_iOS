@@ -52,7 +52,7 @@
     [ShopCartManger sharedManager].seletedCount=0;
     [ShopCartManger sharedManager].isSelecteAll=NO;
     _allSeletedBtn.selected = NO;
-    self.totalMoney.text = @"总计:￥0.00";
+    self.totalMoney.text = @"￥0.00";
     [self.settlementBtn setTitle:@"结算" forState:UIControlStateNormal];
     WEAK_SELF
     [ self _checkNetWork:^(BOOL isNetWork){
@@ -90,7 +90,7 @@
 }
 - (void)_initShopCartTableView{
     
-    self.shopCartTableView.rowHeight = 103;
+    self.shopCartTableView.rowHeight = 114;
     self.shopCartTableView.delegate = self;
     self.shopCartTableView.dataSource = self;
     [self.shopCartTableView registerNib:[UINib nibWithNibName:@"ShopCartCell" bundle:nil] forCellReuseIdentifier:@"ShopCartCell"];
@@ -133,7 +133,7 @@
         [GlobleErrorView showLoadingInView:self.shopCartTableView];
     }
     self.allSeletedBtn.selected = [ShopCartManger sharedManager].isSelecteAll;
-    self.totalMoney.text = [NSString stringWithFormat:@"总计:￥%.2f",[ShopCartManger sharedManager].totalPrice];
+    self.totalMoney.text = [NSString stringWithFormat:@"￥%.2f",[ShopCartManger sharedManager].totalPrice];
    
     if ([ShopCartManger sharedManager].seletedCount ==0) {
         
@@ -289,12 +289,12 @@
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 40;
+    return 50;
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     
-    return 0.0000001f;
+    return 25;
 }
 
 
@@ -314,7 +314,23 @@
     return _shopCartHeaderView;
 }
 
-
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    //圆角化尾部的view
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 25)];
+    footerView.backgroundColor = [UIColor clearColor];
+    UIView *subView = [[UIView alloc] initWithFrame:CGRectMake(14, 0, kScreenWidth-28, 25)];
+    subView.backgroundColor = [UIColor whiteColor];
+    [footerView addSubview:subView];
+    //创建 layer
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
+      maskLayer.frame = subView.bounds;
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect: maskLayer.frame = subView.bounds byRoundingCorners:UIRectCornerBottomLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(10,10)];
+    maskLayer.frame = subView.bounds;
+    //赋值
+    maskLayer.path = maskPath.CGPath;
+    subView.layer.mask = maskLayer;
+    return footerView;
+}
  
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

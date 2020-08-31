@@ -21,6 +21,7 @@
 #import "UIView+Frame.h"
 #import "ScreeningVC.h"
 #import "CQSideBarManager.h"
+#import "CategoryShowView.h"
 @interface SearchViewController ()<UITableViewDataSource,UITableViewDelegate,CQSideBarManagerDelegate>
 {
     UIView  *lineView;
@@ -37,6 +38,7 @@
 @property (nonatomic, strong)UICollectionView *collectionView;
 @property (nonatomic,strong)UICollectionViewFlowLayout *flowlayout;
 @property (nonatomic,strong)AddressShowView *addressShowView;
+@property (nonatomic,strong)CategoryShowView *categoryShowView;
 @end
 
 @implementation SearchViewController
@@ -230,6 +232,10 @@
     
     if (sender.tag == 2000) {
         _typeindexBtn = 0;
+        if (_categoryShowView!=nil) {
+            [_categoryShowView colse];
+            _categoryShowView=nil;
+        }
         if (_addressShowView==nil) {
             
             _addressShowView = [[AddressShowView alloc]initWithAddresFrame:CGRectMake(0, 80, kScreenWidth, kScreenHeight-80-kStatusBarAndNavigationBarHeight)];
@@ -245,6 +251,19 @@
         
     }else if (sender.tag == 2001){
         _typeindexBtn = 1;
+        if (_addressShowView!=nil) {
+            [_addressShowView colse];
+            _addressShowView=nil;
+        }
+        if (_categoryShowView==nil) {
+            _categoryShowView = [[CategoryShowView alloc]initWithCategoryShowViewFrame:CGRectMake(0, 80, kScreenWidth, kScreenHeight-80-kStatusBarAndNavigationBarHeight) AndDataSource:@[@"全部",@"大西瓜",@"大西瓜",@"大西瓜",@"大西瓜",@"大西瓜",@"大西瓜",@"大西瓜",@"大菠萝",@"栗子",@"苹果",@"大西瓜",@"大西瓜",@"大西瓜",@"大西瓜",@"大西瓜",@"大西瓜",@"大西瓜",@"大西瓜",@"大西瓜",@"大西瓜",@"葡萄"]];
+            WEAK_SELF
+            _categoryShowView.seletecdTypeBlock = ^(NSString * _Nullable str) {
+                NSLog(@"%@",str);
+                weak_self.categoryShowView=nil;
+            };
+            [self.view addSubview:_categoryShowView];
+        }
     }else if (sender.tag == 2002){
         _typeindexBtn = 2;
     }else{

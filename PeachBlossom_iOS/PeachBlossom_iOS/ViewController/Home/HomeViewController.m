@@ -269,7 +269,8 @@
 }
 
 -(void)cartClick{
-   
+   ShopCartViewController *vc = [[ShopCartViewController alloc]init];
+    [self navigatePushViewController:vc animate:YES];
 
 }
 

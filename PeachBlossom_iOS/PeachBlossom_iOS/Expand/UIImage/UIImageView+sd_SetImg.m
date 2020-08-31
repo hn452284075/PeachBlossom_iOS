@@ -20,7 +20,6 @@
         placeHolderImgName = @"placeHolder_square";
     }
     UIImage *placeHolderImage = IMAGE(placeHolderImgName);
-    urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [self sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:placeHolderImage];
 }
 
@@ -36,7 +35,7 @@
         placeHolderImgName = @"placeHolder_square";
     }
     UIImage *placeHolderImage = IMAGE(placeHolderImgName);
-    urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+  
     [self sd_setImageWithURL:[NSURL URLWithString:urlStr] placeholderImage:placeHolderImage options:options];
 }
 
