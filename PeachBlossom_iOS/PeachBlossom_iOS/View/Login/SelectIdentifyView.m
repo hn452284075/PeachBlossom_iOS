@@ -150,7 +150,8 @@
 
 - (void)okBtnClicked:(id)sender
 {
-    [self.delegate confirmInfoIdentifyName:@"" identify:self.selectedString];
+    [self.delegate confirmInfoIdentifyName:self.nameFiled.text
+                                  identify:self.selectedString];
 }
 
 - (void)tagBtnClicked:(id)sender
