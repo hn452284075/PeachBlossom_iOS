@@ -26,10 +26,13 @@
                                 </constraints>
                                 <state key="normal" image="carDefault"/>
                                 <state key="selected" image="carSeletecd"/>
+                                <connections>
+                                    <action selector="seletedClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3ns-jL-Vwt"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4xY-Iy-huk">
                                 <rect key="frame" x="45" y="7" width="100" height="100"/>
-                                <color key="backgroundColor" red="1" green="0.1529411765" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="lYp-YH-nXO"/>
                                     <constraint firstAttribute="height" constant="100" id="saO-c5-a9c"/>
@@ -76,11 +79,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T2g-Lu-YYM" customClass="AddAndSubtractButton">
-                                <rect key="frame" x="248" y="79" width="99" height="30"/>
+                                <rect key="frame" x="249" y="85" width="81" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ffq-8f-9ZV"/>
-                                    <constraint firstAttribute="width" constant="99" id="lMG-By-0CY"/>
+                                    <constraint firstAttribute="height" constant="24" id="ffq-8f-9ZV"/>
+                                    <constraint firstAttribute="width" constant="81" id="lMG-By-0CY"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acp-JO-6ie">
                                 <rect key="frame" x="159" y="47" width="90" height="20"/>
@@ -90,7 +98,8 @@
                                     <constraint firstAttribute="height" constant="20" id="gQA-wn-tov"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="规格">
+                                <inset key="imageEdgeInsets" minX="71" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="规格" image="grayArrow">
                                     <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -102,7 +111,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10斤起批" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnd-5F-jZR">
                                 <rect key="frame" x="287" y="51" width="42" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -124,7 +133,7 @@
                             <constraint firstItem="acp-JO-6ie" firstAttribute="centerY" secondItem="4xY-Iy-huk" secondAttribute="centerY" id="dMq-Ou-uQx"/>
                             <constraint firstItem="aeC-2H-nYJ" firstAttribute="leading" secondItem="4xY-Iy-huk" secondAttribute="trailing" constant="14" id="h3q-Nj-rSQ"/>
                             <constraint firstAttribute="bottom" secondItem="Gu2-EQ-ZkG" secondAttribute="bottom" constant="9" id="hMX-Zb-46j"/>
-                            <constraint firstAttribute="trailing" secondItem="T2g-Lu-YYM" secondAttribute="trailing" id="k49-hK-sEX"/>
+                            <constraint firstAttribute="trailing" secondItem="T2g-Lu-YYM" secondAttribute="trailing" constant="17" id="k49-hK-sEX"/>
                             <constraint firstItem="Gu2-EQ-ZkG" firstAttribute="leading" secondItem="KmE-1V-b1F" secondAttribute="trailing" constant="2.5" id="lQG-it-ZIv"/>
                             <constraint firstItem="Wnd-5F-jZR" firstAttribute="centerY" secondItem="acp-JO-6ie" secondAttribute="centerY" id="w8U-6M-vvf"/>
                             <constraint firstItem="4xY-Iy-huk" firstAttribute="centerY" secondItem="04l-gW-T9j" secondAttribute="centerY" id="zzo-51-wQN"/>
@@ -141,7 +150,7 @@
             <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="addSubtractButton" destination="T2g-Lu-YYM" id="cTu-5k-HCf"/>
-                <outlet property="goodsImage" destination="4xY-Iy-huk" id="jr9-Zu-E23"/>
+                <outlet property="goodsImage" destination="4xY-Iy-huk" id="IUT-zW-EFO"/>
                 <outlet property="goodsName" destination="aeC-2H-nYJ" id="dI3-Df-Afl"/>
                 <outlet property="price" destination="KmE-1V-b1F" id="AvK-Ys-vnR"/>
                 <outlet property="seletecdBtn" destination="04l-gW-T9j" id="VPk-14-fjv"/>
@@ -153,5 +162,6 @@
     <resources>
         <image name="carDefault" width="21" height="21"/>
         <image name="carSeletecd" width="21" height="21"/>
+        <image name="grayArrow" width="8" height="8"/>
     </resources>
 </document>

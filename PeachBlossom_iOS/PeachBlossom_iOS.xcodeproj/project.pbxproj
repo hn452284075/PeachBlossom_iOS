@@ -306,6 +306,7 @@
 		7753A3A024FC89CE00F66734 /* StoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A39F24FC89CD00F66734 /* StoreModel.m */; };
 		7753A3A524FC89D500F66734 /* ShopCartManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A3A124FC89D400F66734 /* ShopCartManger.m */; };
 		7753A3A624FC89D500F66734 /* ShopCartManger+request.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A3A424FC89D500F66734 /* ShopCartManger+request.m */; };
+		7753A3A924FCD4D400F66734 /* CategoryShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A3A824FCD4D400F66734 /* CategoryShowView.m */; };
 		77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17BB624EB830700CBF0A6 /* UIView+Design.m */; };
 		77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4424F4B0CC00CBF0A6 /* area.plist */; };
 		77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */; };
@@ -951,6 +952,8 @@
 		7753A3A224FC89D400F66734 /* ShopCartManger+request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShopCartManger+request.h"; sourceTree = "<group>"; };
 		7753A3A324FC89D500F66734 /* ShopCartManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCartManger.h; sourceTree = "<group>"; };
 		7753A3A424FC89D500F66734 /* ShopCartManger+request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShopCartManger+request.m"; sourceTree = "<group>"; };
+		7753A3A724FCD4D400F66734 /* CategoryShowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryShowView.h; sourceTree = "<group>"; };
+		7753A3A824FCD4D400F66734 /* CategoryShowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryShowView.m; sourceTree = "<group>"; };
 		77A17BB524EB830700CBF0A6 /* UIView+Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Design.h"; sourceTree = "<group>"; };
 		77A17BB624EB830700CBF0A6 /* UIView+Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Design.m"; sourceTree = "<group>"; };
 		77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressShowView.h; sourceTree = "<group>"; };
@@ -2359,6 +2362,8 @@
 			children = (
 				77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */,
 				77A17C4B24F4B0CC00CBF0A6 /* AddressShowView.m */,
+				7753A3A724FCD4D400F66734 /* CategoryShowView.h */,
+				7753A3A824FCD4D400F66734 /* CategoryShowView.m */,
 				77A17C4324F4B0CC00CBF0A6 /* AddressCell.h */,
 				77A17C4424F4B0CC00CBF0A6 /* area.plist */,
 				77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */,
@@ -3001,6 +3006,7 @@
 				7708DA3324E7B6FA00A4DB25 /* HMSegmentedControl.m in Sources */,
 				7708DC5724E7EA1200A4DB25 /* PublishEvaluationModel.m in Sources */,
 				977466C424F7A0E00078313C /* ExpressInfoView.m in Sources */,
+				7753A3A924FCD4D400F66734 /* CategoryShowView.m in Sources */,
 				7746F54C24F63A37000DC145 /* CityPickView.m in Sources */,
 				7708DC1124E7DF5C00A4DB25 /* SDAnimatedImageView.m in Sources */,
 				7753A37524F9034200F66734 /* AlertViewManager.m in Sources */,

@@ -79,15 +79,15 @@ static ShopCartManger *_shopCartManger = nil;
 - (void)ShopCartAllDataBlock:(ShopCartAllDataBlock)shopCartAllDataBlock{
 
     [self requestShopCartAllData:^(BOOL isSuccess) {
-        
+
         if (isSuccess) {
-            
+
             shopCartAllDataBlock(YES,self.goodsShopCartArray);
         }else{
-            
+
             shopCartAllDataBlock(NO,self.goodsShopCartArray);
         }
-        
+
     }];
     
     
@@ -224,22 +224,26 @@ static ShopCartManger *_shopCartManger = nil;
     StoreModel * shopCarModel = self.goodsShopCartArray[indexpath.section];
     GoodsModel * model = shopCarModel.listArr[indexpath.row];
  
-//    [[BaseLoadingView sharedManager]show];
+    
+    //先写死假数据
+    model.goodsNumber = count;
+    [self GetTotalBill];
+    isSuccess(YES);
     WEAK_SELF
-    [self requestAdjustShopCartGoodsDataOfGoodsId:model.productId IsAdd:isAdd adjustShopCartBlock:^(BOOL isAdjust,NSString *status) {
-        
-        if (isAdjust) {
-//            [[BaseLoadingView sharedManager] dissmiss];
-            model.goodsNumber = count;
-            [weak_self GetTotalBill];
-            isSuccess(YES);
-        }else{
-            isSuccess(NO);
-            
-            [[BaseLoadingView sharedManager]showErrorWithStatus:status];
-            return;
-        }
-    }];
+//    [self requestAdjustShopCartGoodsDataOfGoodsId:model.productId IsAdd:isAdd adjustShopCartBlock:^(BOOL isAdjust,NSString *status) {
+//
+//        if (isAdjust) {
+//
+//            model.goodsNumber = count;
+//            [weak_self GetTotalBill];
+//            isSuccess(YES);
+//        }else{
+//            isSuccess(NO);
+//
+//            [[BaseLoadingView sharedManager]showErrorWithStatus:status];
+//            return;
+//        }
+//    }];
     
     
 }

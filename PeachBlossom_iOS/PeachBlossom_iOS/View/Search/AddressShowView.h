@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "SearchCell.h"
-#import "MyCommonCollectionView.h"
 #import "AddressCell.h"
 #import "EWAddressModel.h"
 #import "AddressHeaderView.h"
@@ -35,7 +34,7 @@ typedef void(^SeletecdAddressBlock)(NSString *str);
 @property (nonatomic,assign)NSInteger currentIndex;
 @property (nonatomic,copy)SeletecdAddressBlock addressBlock;
 -(instancetype)initWithAddresFrame:(CGRect)frame;
-
+-(void)colse;
 @end
 
 NS_ASSUME_NONNULL_END

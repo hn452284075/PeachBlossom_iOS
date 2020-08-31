@@ -74,26 +74,32 @@
     
     UIColor *lineColor = [UIColor colorWithRed:213.0/255.0 green:214.0/255.0 blue:215.0/255.0 alpha:1.0];
     
-    self.frame = CGRectMake(0, 0, 90, 30);
+    self.frame = CGRectMake(0, 0, 81, 24);
     self.backgroundColor = [UIColor whiteColor];
-//    self.layer.cornerRadius = 0.5;
+    self.layer.cornerRadius = 0.5;
     self.clipsToBounds = YES;
-//    self.layer.borderWidth = 0.5;
-//    self.layer.borderColor = [lineColor CGColor];
+    self.layer.borderWidth = 0.5;
+    self.layer.borderColor = [lineColor CGColor];
     
     _oneLine = [[UIView alloc] init];
-//    _oneLine.backgroundColor = lineColor;
+    _oneLine.backgroundColor = lineColor;
     [self addSubview:_oneLine];
     
     _twoLine = [[UIView alloc] init];
-//    _twoLine.backgroundColor = lineColor;
+    _twoLine.backgroundColor = lineColor;
     [self addSubview:_twoLine];
     
     _decreaseBtn = [[UIButton alloc] init];
+    [_decreaseBtn setTitle:@"-" forState:UIControlStateNormal];
+    _decreaseBtn.titleLabel.font=CUSTOMFONT(12);
+    [_decreaseBtn setTitleColor:UIColorFromRGB(0x9a9a9a) forState:UIControlStateNormal];
     [self setupButton:_decreaseBtn normalImage:@"删减按钮" HighlightImage:nil];
     [self addSubview:_decreaseBtn];
     
     _increaseBtn = [[UIButton alloc] init];
+    _increaseBtn.titleLabel.font=CUSTOMFONT(12);
+    [_increaseBtn setTitle:@"+" forState:UIControlStateNormal];
+    [_increaseBtn setTitleColor:UIColorFromRGB(0x121212) forState:UIControlStateNormal];
     [self setupButton:_increaseBtn normalImage:@"增加按钮" HighlightImage:nil];
     [self addSubview:_increaseBtn];
     
@@ -154,8 +160,8 @@
 }
 
 - (void)setupButton:(UIButton *)btn normalImage:(NSString *)norImage HighlightImage:(NSString *)highImage{
-    [btn setImage:[UIImage imageNamed:norImage] forState:UIControlStateNormal];
-    [btn setImage:[UIImage imageNamed:highImage] forState:UIControlStateHighlighted];
+//    [btn setImage:[UIImage imageNamed:norImage] forState:UIControlStateNormal];
+//    [btn setImage:[UIImage imageNamed:highImage] forState:UIControlStateHighlighted];
     [btn addTarget:self action:@selector(btnTouchDown:) forControlEvents:UIControlEventTouchDown];
     [btn addTarget:self action:@selector(btnTouchUp:) forControlEvents:UIControlEventTouchUpOutside|UIControlEventTouchUpInside|UIControlEventTouchCancel];
 }
