@@ -311,6 +311,8 @@
 		7753A3B824FCEAC600F66734 /* GoodsShelvesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A3B624FCEAC600F66734 /* GoodsShelvesVC.m */; };
 		7753A3BB24FCEB2600F66734 /* ShelvesHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A3BA24FCEB2600F66734 /* ShelvesHeaderView.m */; };
 		7753A3BD24FCEB8A00F66734 /* ShelvesHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7753A3BC24FCEB8A00F66734 /* ShelvesHeaderView.xib */; };
+		7753A3C624FCF3CA00F66734 /* ShelvesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A3C424FCF3CA00F66734 /* ShelvesCell.m */; };
+		7753A3C724FCF3CA00F66734 /* ShelvesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7753A3C524FCF3CA00F66734 /* ShelvesCell.xib */; };
 		77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17BB624EB830700CBF0A6 /* UIView+Design.m */; };
 		77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4424F4B0CC00CBF0A6 /* area.plist */; };
 		77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */; };
@@ -965,6 +967,9 @@
 		7753A3B924FCEB2600F66734 /* ShelvesHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShelvesHeaderView.h; sourceTree = "<group>"; };
 		7753A3BA24FCEB2600F66734 /* ShelvesHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShelvesHeaderView.m; sourceTree = "<group>"; };
 		7753A3BC24FCEB8A00F66734 /* ShelvesHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShelvesHeaderView.xib; sourceTree = "<group>"; };
+		7753A3C324FCF3CA00F66734 /* ShelvesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShelvesCell.h; sourceTree = "<group>"; };
+		7753A3C424FCF3CA00F66734 /* ShelvesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShelvesCell.m; sourceTree = "<group>"; };
+		7753A3C524FCF3CA00F66734 /* ShelvesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShelvesCell.xib; sourceTree = "<group>"; };
 		77A17BB524EB830700CBF0A6 /* UIView+Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Design.h"; sourceTree = "<group>"; };
 		77A17BB624EB830700CBF0A6 /* UIView+Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Design.m"; sourceTree = "<group>"; };
 		77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressShowView.h; sourceTree = "<group>"; };
@@ -2374,6 +2379,9 @@
 				7753A3B924FCEB2600F66734 /* ShelvesHeaderView.h */,
 				7753A3BA24FCEB2600F66734 /* ShelvesHeaderView.m */,
 				7753A3BC24FCEB8A00F66734 /* ShelvesHeaderView.xib */,
+				7753A3C324FCF3CA00F66734 /* ShelvesCell.h */,
+				7753A3C424FCF3CA00F66734 /* ShelvesCell.m */,
+				7753A3C524FCF3CA00F66734 /* ShelvesCell.xib */,
 			);
 			name = Shelves;
 			path = ../../../../../Shelves;
@@ -2718,6 +2726,7 @@
 				7753A3BD24FCEB8A00F66734 /* ShelvesHeaderView.xib in Resources */,
 				77A17C5324F4B0CC00CBF0A6 /* AddressCell.xib in Resources */,
 				7708D9A324E7ABA300A4DB25 /* SVProgressHUD.bundle in Resources */,
+				7753A3C724FCF3CA00F66734 /* ShelvesCell.xib in Resources */,
 				7746F57A24F74BDE000DC145 /* WaitingPayTabCell.xib in Resources */,
 				7746F55824F6434A000DC145 /* CollectGoodsCell.xib in Resources */,
 				7708DA4224E7B6FA00A4DB25 /* wphoto_select_no@2x.png in Resources */,
@@ -2807,6 +2816,7 @@
 				7708DD3C24EB5E0300A4DB25 /* SearchListVC.m in Sources */,
 				7708D84124E7A1B200A4DB25 /* BaseViewController.m in Sources */,
 				7708D98824E7ABA300A4DB25 /* MJRefreshNormalHeader.m in Sources */,
+				7753A3C624FCF3CA00F66734 /* ShelvesCell.m in Sources */,
 				77A17C7D24F4F8DA00CBF0A6 /* MeHeaderView.m in Sources */,
 				7708DA3924E7B6FA00A4DB25 /* PayResponseBaseModel.m in Sources */,
 				7708DC7624E7EC7C00A4DB25 /* ViewController+MASAdditions.m in Sources */,
