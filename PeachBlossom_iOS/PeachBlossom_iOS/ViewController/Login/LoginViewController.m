@@ -7,14 +7,20 @@
 //
 
 #import "LoginViewController.h"
+#import "SelectIdentifyView.h"
+#import "IdentifyCodeView.h"
 #import "Util.h"
-@interface LoginViewController ()
+@interface LoginViewController ()<SelectIdentifyDelegate,CodeViewDelegate>
 
 @property (nonatomic, strong) UITextField *phoneFiled;
 @property (nonatomic, strong) UITextField *codeFiled;
 
 @property (nonatomic, strong) UIButton *loginBtn;
 @property (nonatomic, strong) UIButton *clearBtn;
+
+@property (nonatomic, strong) SelectIdentifyView *identifyView;
+@property (nonatomic, strong) IdentifyCodeView   *codeView;      //填写验证码弹出view
+@property (nonatomic, strong) IdentifyCodeView   *contactView;   //填写联系手机弹出view
 
 @end
 
@@ -263,6 +269,71 @@
     btn.tag = tag;
 }
 
+- (void)_initSelectIdentifyView
+{
+    NSArray *arr = [[NSArray alloc] initWithObjects:@"身份1",@"身份2",@"身份2",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"经纪人/代办",@"身份1",@"身份1",@"身份1",@"身份1", nil];
+    
+    UIView *bv = [[UIView alloc] initWithFrame:self.view.frame];
+    bv.alpha = 0.5;
+    bv.tag = 112;
+    bv.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:bv];
+    
+    self.identifyView = [[SelectIdentifyView alloc] initWithFrame:CGRectMake(0, 0, 290, 414) identifyArr:arr];
+    self.identifyView.backgroundColor = [UIColor whiteColor];
+    self.identifyView.center = self.view.center;
+    self.identifyView.delegate = self;
+    [self.view addSubview:self.identifyView];
+    self.identifyView.layer.cornerRadius = 10.;
+}
+
+- (void)_initCodeView
+{
+    UIView *bv = [[UIView alloc] initWithFrame:self.view.frame];
+    bv.alpha = 0.5;
+    bv.tag = 112;
+    bv.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:bv];
+    
+    self.codeView = [[[NSBundle mainBundle] loadNibNamed:@"IdentifyCodeView" owner:self options:nil] lastObject];
+    self.codeView.delegate = self;
+    [self.codeView configViewTitle:@"向您的手机：123****6876"
+                          subTitle:@"发送了验证码"
+                        defaultstr:@"在这里填写验证码"
+                          btnTitle:@"确定"
+                          hideFlag:NO];
+    [self.view addSubview:self.codeView];
+    self.codeView.frame = CGRectMake(0, 0, 290, 250);
+    self.codeView.backgroundColor = [UIColor whiteColor];
+    self.codeView.center = self.view.center;
+    
+    self.codeView.layer.cornerRadius = 10.;
+    
+}
+
+
+- (void)_initContactView
+{
+    UIView *bv = [[UIView alloc] initWithFrame:self.view.frame];
+    bv.alpha = 0.5;
+    bv.tag = 112;
+    bv.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:bv];
+    
+    self.contactView = [[[NSBundle mainBundle] loadNibNamed:@"IdentifyCodeView" owner:self options:nil] lastObject];
+    self.contactView.delegate = self;
+    [self.contactView configViewTitle:@"老板怎么联系到您呢？"
+                          subTitle:@"请提供一个常用的手机号"
+                        defaultstr:@"在这里填写11位手机号码"
+                          btnTitle:@"验证手机"
+                          hideFlag:YES];
+    [self.view addSubview:self.contactView];
+    self.contactView.frame = CGRectMake(0, 0, 290, 250);
+    self.contactView.backgroundColor = [UIColor whiteColor];
+    self.contactView.center = self.view.center;
+    
+    self.contactView.layer.cornerRadius = 10.;
+}
 
 #pragma mark ------------------------View Event---------------------------
 
@@ -299,11 +370,13 @@
         case 1:
         {
             NSLog(@"获取验证码");
+            [self _initCodeView];
         }
             break;
         case 2:
         {
             NSLog(@"登录");
+            [self _initSelectIdentifyView];
             if(self.phoneFiled.text.length > 0 && self.codeFiled.text.length > 0)
             {
                 
@@ -313,6 +386,7 @@
         case 10:
         {
             NSLog(@"微信登录");
+            [self _initContactView];
         }
             break;
         default:
@@ -336,5 +410,68 @@
 
 #pragma mark ------------------------Delegate-----------------------------
 
+#pragma mark --------------- 关闭身份选择view
+- (void)disMissIdentifyView
+{
+    UIView *bv = [self.view viewWithTag:112];
+    [bv removeFromSuperview];
+    self.identifyView.delegate = nil;
+    [self.identifyView removeFromSuperview];
+}
  
+
+#pragma mark --------------- 确定身份选择
+- (void)confirmInfoIdentifyName:(NSString *)name identify:(NSString *)iname
+{
+    UIView *bv = [self.view viewWithTag:112];
+    [bv removeFromSuperview];
+    self.identifyView.delegate = nil;
+    [self.identifyView removeFromSuperview];
+}
+
+
+- (void)disMissCodeView
+{
+    if(self.codeView)
+    {
+        UIView *bv = [self.view viewWithTag:112];
+        [bv removeFromSuperview];
+        self.codeView.delegate = nil;
+        [self.codeView removeFromSuperview];
+    }
+    
+    if(self.contactView)
+    {
+        UIView *bv = [self.view viewWithTag:112];
+        [bv removeFromSuperview];
+        self.contactView.delegate = nil;
+        [self.contactView removeFromSuperview];
+    }
+}
+
+- (void)getCodeAgin
+{
+    
+}
+
+- (void)confirmCodeInfo:(NSString *)code
+{
+    if(self.codeView)
+    {
+        UIView *bv = [self.view viewWithTag:112];
+        [bv removeFromSuperview];
+        self.codeView.delegate = nil;
+        [self.codeView removeFromSuperview];
+    }
+    
+    if(self.contactView)
+    {
+        UIView *bv = [self.view viewWithTag:112];
+        [bv removeFromSuperview];
+        self.contactView.delegate = nil;
+        [self.contactView removeFromSuperview];
+    }
+}
+
+
 @end
