@@ -299,6 +299,13 @@
 		7753A38C24FA4F7600F66734 /* ShopCartCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A38A24FA4F7600F66734 /* ShopCartCell.m */; };
 		7753A38F24FA4FDA00F66734 /* AddAndSubtractButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A38E24FA4FD900F66734 /* AddAndSubtractButton.m */; };
 		7753A39324FA501700F66734 /* GoodsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A39224FA501700F66734 /* GoodsModel.m */; };
+		7753A39724FC895900F66734 /* ShopCartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7753A39424FC895800F66734 /* ShopCartViewController.xib */; };
+		7753A39824FC895900F66734 /* ShopCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A39524FC895900F66734 /* ShopCartViewController.m */; };
+		7753A39C24FC898E00F66734 /* ShopCartHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A39924FC898D00F66734 /* ShopCartHeaderView.m */; };
+		7753A39D24FC898E00F66734 /* ShopCartHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7753A39B24FC898E00F66734 /* ShopCartHeaderView.xib */; };
+		7753A3A024FC89CE00F66734 /* StoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A39F24FC89CD00F66734 /* StoreModel.m */; };
+		7753A3A524FC89D500F66734 /* ShopCartManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A3A124FC89D400F66734 /* ShopCartManger.m */; };
+		7753A3A624FC89D500F66734 /* ShopCartManger+request.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A3A424FC89D500F66734 /* ShopCartManger+request.m */; };
 		77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17BB624EB830700CBF0A6 /* UIView+Design.m */; };
 		77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4424F4B0CC00CBF0A6 /* area.plist */; };
 		77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */; };
@@ -929,6 +936,18 @@
 		7753A38E24FA4FD900F66734 /* AddAndSubtractButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddAndSubtractButton.m; sourceTree = "<group>"; };
 		7753A39124FA501700F66734 /* GoodsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsModel.h; sourceTree = "<group>"; };
 		7753A39224FA501700F66734 /* GoodsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsModel.m; sourceTree = "<group>"; };
+		7753A39424FC895800F66734 /* ShopCartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopCartViewController.xib; sourceTree = "<group>"; };
+		7753A39524FC895900F66734 /* ShopCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCartViewController.m; sourceTree = "<group>"; };
+		7753A39624FC895900F66734 /* ShopCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCartViewController.h; sourceTree = "<group>"; };
+		7753A39924FC898D00F66734 /* ShopCartHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCartHeaderView.m; sourceTree = "<group>"; };
+		7753A39A24FC898D00F66734 /* ShopCartHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCartHeaderView.h; sourceTree = "<group>"; };
+		7753A39B24FC898E00F66734 /* ShopCartHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopCartHeaderView.xib; sourceTree = "<group>"; };
+		7753A39E24FC89CD00F66734 /* StoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreModel.h; sourceTree = "<group>"; };
+		7753A39F24FC89CD00F66734 /* StoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreModel.m; sourceTree = "<group>"; };
+		7753A3A124FC89D400F66734 /* ShopCartManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopCartManger.m; sourceTree = "<group>"; };
+		7753A3A224FC89D400F66734 /* ShopCartManger+request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ShopCartManger+request.h"; sourceTree = "<group>"; };
+		7753A3A324FC89D500F66734 /* ShopCartManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopCartManger.h; sourceTree = "<group>"; };
+		7753A3A424FC89D500F66734 /* ShopCartManger+request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ShopCartManger+request.m"; sourceTree = "<group>"; };
 		77A17BB524EB830700CBF0A6 /* UIView+Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Design.h"; sourceTree = "<group>"; };
 		77A17BB624EB830700CBF0A6 /* UIView+Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Design.m"; sourceTree = "<group>"; };
 		77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressShowView.h; sourceTree = "<group>"; };
@@ -2289,6 +2308,9 @@
 		7753A38624FA4EDA00F66734 /* ShoppingCart */ = {
 			isa = PBXGroup;
 			children = (
+				7753A39624FC895900F66734 /* ShopCartViewController.h */,
+				7753A39524FC895900F66734 /* ShopCartViewController.m */,
+				7753A39424FC895800F66734 /* ShopCartViewController.xib */,
 			);
 			path = ShoppingCart;
 			sourceTree = "<group>";
@@ -2298,6 +2320,9 @@
 			children = (
 				7753A38D24FA4FD900F66734 /* AddAndSubtractButton.h */,
 				7753A38E24FA4FD900F66734 /* AddAndSubtractButton.m */,
+				7753A39A24FC898D00F66734 /* ShopCartHeaderView.h */,
+				7753A39924FC898D00F66734 /* ShopCartHeaderView.m */,
+				7753A39B24FC898E00F66734 /* ShopCartHeaderView.xib */,
 				7753A38924FA4F7600F66734 /* ShopCartCell.h */,
 				7753A38A24FA4F7600F66734 /* ShopCartCell.m */,
 				7753A38824FA4F7600F66734 /* ShopCartCell.xib */,
@@ -2308,6 +2333,12 @@
 		7753A39024FA500100F66734 /* ShoppingCart */ = {
 			isa = PBXGroup;
 			children = (
+				7753A3A324FC89D500F66734 /* ShopCartManger.h */,
+				7753A3A124FC89D400F66734 /* ShopCartManger.m */,
+				7753A3A224FC89D400F66734 /* ShopCartManger+request.h */,
+				7753A3A424FC89D500F66734 /* ShopCartManger+request.m */,
+				7753A39E24FC89CD00F66734 /* StoreModel.h */,
+				7753A39F24FC89CD00F66734 /* StoreModel.m */,
 				7753A39124FA501700F66734 /* GoodsModel.h */,
 				7753A39224FA501700F66734 /* GoodsModel.m */,
 			);
@@ -2622,6 +2653,7 @@
 				7746F54E24F63D6B000DC145 /* city.plist in Resources */,
 				7753A38B24FA4F7600F66734 /* ShopCartCell.xib in Resources */,
 				7746F58424F7657A000DC145 /* WaitingPayTotalView.xib in Resources */,
+				7753A39724FC895900F66734 /* ShopCartViewController.xib in Resources */,
 				77A17C5324F4B0CC00CBF0A6 /* AddressCell.xib in Resources */,
 				7708D9A324E7ABA300A4DB25 /* SVProgressHUD.bundle in Resources */,
 				7746F57A24F74BDE000DC145 /* WaitingPayTabCell.xib in Resources */,
@@ -2657,6 +2689,7 @@
 				7746F58924F7891E000DC145 /* WaitingPayInfoView.xib in Resources */,
 				7708DA5524E7B7C700A4DB25 /* README.txt in Resources */,
 				7708D7E124E79BD700A4DB25 /* Assets.xcassets in Resources */,
+				7753A39D24FC898E00F66734 /* ShopCartHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2758,6 +2791,7 @@
 				7708D99024E7ABA300A4DB25 /* IQTextView.m in Sources */,
 				7746F56524F65B19000DC145 /* ProcurementOrderVC.m in Sources */,
 				7753A37D24FA2E9800F66734 /* ScreeningVC.m in Sources */,
+				7753A3A624FC89D500F66734 /* ShopCartManger+request.m in Sources */,
 				7708DA3C24E7B6FA00A4DB25 /* PayManager.m in Sources */,
 				7708D98024E7ABA200A4DB25 /* NSBundle+MJRefresh.m in Sources */,
 				7708DC8124E7ECF200A4DB25 /* UploadPhotoManager.m in Sources */,
@@ -2804,8 +2838,10 @@
 				7708D97624E7ABA200A4DB25 /* AFURLResponseSerialization.m in Sources */,
 				7708DC3124E7DF5C00A4DB25 /* SDImageCacheDefine.m in Sources */,
 				7708DC4124E7DF5D00A4DB25 /* NSBezierPath+RoundedCorners.m in Sources */,
+				7753A39C24FC898E00F66734 /* ShopCartHeaderView.m in Sources */,
 				7708DC7824E7EC7C00A4DB25 /* MASConstraintMaker.m in Sources */,
 				7708DAE024E7DCD900A4DB25 /* TAAbstractDotView.m in Sources */,
+				7753A39824FC895900F66734 /* ShopCartViewController.m in Sources */,
 				7708DC4624E7E87D00A4DB25 /* UserModel.m in Sources */,
 				7708D9BF24E7ABA300A4DB25 /* NSObject+MJKeyValue.m in Sources */,
 				7708D99E24E7ABA300A4DB25 /* IQKeyboardReturnKeyHandler.m in Sources */,
@@ -2856,6 +2892,7 @@
 				7708DD3924EB5BA400A4DB25 /* SearchViewController.m in Sources */,
 				7708DC1B24E7DF5C00A4DB25 /* SDMemoryCache.m in Sources */,
 				7708DA3A24E7B6FA00A4DB25 /* AliPayResponseModel.m in Sources */,
+				7753A3A524FC89D500F66734 /* ShopCartManger.m in Sources */,
 				7708DC1F24E7DF5C00A4DB25 /* SDWebImagePrefetcher.m in Sources */,
 				7708D89624E7AB4300A4DB25 /* AFNHttpRequestOPManager+errorHandle.m in Sources */,
 				7708D97D24E7ABA200A4DB25 /* MJRefreshConst.m in Sources */,
@@ -2892,6 +2929,7 @@
 				77A17C5B24F4B3F600CBF0A6 /* HomeViewController.m in Sources */,
 				7708DC1924E7DF5C00A4DB25 /* SDImageCodersManager.m in Sources */,
 				7708D85024E7A1B200A4DB25 /* CellCalculateModel.m in Sources */,
+				7753A3A024FC89CE00F66734 /* StoreModel.m in Sources */,
 				77A17C5524F4B0CC00CBF0A6 /* AddressCell.m in Sources */,
 				7708DA4724E7B6FA00A4DB25 /* TMDiskCache.m in Sources */,
 				7746F59E24F7C8CE000DC145 /* UIView+Frame.m in Sources */,

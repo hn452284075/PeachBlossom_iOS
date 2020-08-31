@@ -15,12 +15,12 @@ typedef void(^GoodsNumBlock)(UITableViewCell *cell,NSNumber *num,NSString *addSu
 @class GoodsModel;
 @interface ShopCartCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet AddAndSubtractButton *addSubtractButton;
-@property (weak, nonatomic) IBOutlet UIButton *seletedaBtn;
+@property (weak, nonatomic) IBOutlet UIButton *seletecdBtn;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imageLeft;
-@property (strong, nonatomic) IBOutlet UIImageView *goodsImage;
-@property (strong, nonatomic) IBOutlet UILabel *goodsName;
-@property (strong, nonatomic) IBOutlet UILabel *price;
-@property (weak, nonatomic) IBOutlet UILabel *rented;
+@property (weak, nonatomic) IBOutlet UIImageView *goodsImage;
+@property (weak, nonatomic) IBOutlet UILabel *goodsName;
+@property (weak, nonatomic) IBOutlet UILabel *price;
+@property (weak, nonatomic) IBOutlet UILabel *specLabel;
 
 @property (nonatomic,strong)GoodsModel *model;
 @property (nonatomic,copy)SeletedBlock seletedBlock;

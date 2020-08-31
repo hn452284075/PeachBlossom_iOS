@@ -101,7 +101,7 @@
 
     [_goodsImage sd_SetImgWithUrlStr:model.goodsThumb placeHolderImgName:@"首页列表产品加载缩略图"];
     
-    _seletedaBtn.selected = model.selected;
+    _seletecdBtn.selected = model.selected;
     _goodsName.text = model.goodsName;
 
     _addSubtractButton.textField.text = [NSString stringWithFormat:@"%d",[model.goodsNumber intValue]];
@@ -114,18 +114,18 @@
         weak_self.goodsNumBlock(weak_self,@(currentNum),addSub);
     };
     
-    _rented.hidden = ![model.isLease intValue];
+    
 #pragma mark - MODIFY
     if (!model.isValid) {
         if (model.isEditing) {
-            self.seletedaBtn.enabled = YES;
-            self.seletedaBtn.selected = model.selected;
+            self.seletecdBtn.enabled = YES;
+            self.seletecdBtn.selected = model.selected;
         }else {
-            self.seletedaBtn.enabled = NO;
-            self.seletedaBtn.selected = NO;
+            self.seletecdBtn.enabled = NO;
+            self.seletecdBtn.selected = NO;
         }
     }else {
-        self.seletedaBtn.enabled = YES;
+        self.seletecdBtn.enabled = YES;
     }
     
     
