@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ShopCartHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxZ-5c-foN">
+                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="bii-pe-EUY"/>
+                        <constraint firstAttribute="height" constant="40" id="zDS-Nc-zIe"/>
+                    </constraints>
+                    <state key="normal" image="未选中状态"/>
+                    <state key="selected" image="选中状态"/>
+                    <connections>
+                        <action selector="seletedClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="sjr-7q-bom"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="卒子旗舰店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzN-im-ggJ">
+                    <rect key="frame" x="33" y="10" width="181" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ejc-Cx-Ite"/>
+                        <constraint firstAttribute="width" constant="181" id="nhC-ka-lq7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="hzN-im-ggJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="4sh-6h-Ulp"/>
+                <constraint firstAttribute="bottom" secondItem="hzN-im-ggJ" secondAttribute="bottom" constant="9" id="BAh-nc-ICF"/>
+                <constraint firstItem="ZxZ-5c-foN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JFp-uv-CPc"/>
+                <constraint firstItem="hzN-im-ggJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="33" id="V0i-w6-0k9"/>
+                <constraint firstAttribute="bottom" secondItem="ZxZ-5c-foN" secondAttribute="bottom" id="VPM-0l-eKk"/>
+                <constraint firstItem="ZxZ-5c-foN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="byX-V8-2kJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="seletedBtn" destination="ZxZ-5c-foN" id="rDZ-bJ-eld"/>
+                <outlet property="storeName" destination="hzN-im-ggJ" id="iU8-8l-Aaq"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="未选中状态" width="14" height="14"/>
+        <image name="选中状态" width="14" height="14"/>
+    </resources>
+</document>

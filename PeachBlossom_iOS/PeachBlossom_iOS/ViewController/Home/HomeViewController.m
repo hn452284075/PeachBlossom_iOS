@@ -14,6 +14,7 @@
 #import "SearchGoodsVC.h"
 #import "SupplyViewController.h"
 #import "AppDelegate.h"
+#import "ShopCartViewController.h"
 @interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong)MyCommonCollectionView *collectionView;
 @property (nonatomic, strong)NSMutableArray *dataSource;
@@ -229,7 +230,8 @@
         switch (index) {
             case 0://供应大厅
                 {
-                  
+                  SupplyViewController *supplyCon = [[SupplyViewController alloc] init];
+                  [self navigatePushViewController:supplyCon animate:YES];
 
                 }
                 break;
@@ -267,13 +269,8 @@
 }
 
 -(void)cartClick{
-  
-    //暂时点击购物车跳转到供应大厅
-    AppDelegate *delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [delegate.mainVC showOrHideTabBar:NO];
-    SupplyViewController *supplyCon = [[SupplyViewController alloc] init];   
-    [self navigatePushViewController:supplyCon animate:YES];
-  
+   
+
 }
 
 - (NSMutableArray *)dataSource

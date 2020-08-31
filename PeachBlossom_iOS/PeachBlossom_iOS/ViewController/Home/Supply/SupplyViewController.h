@@ -6,7 +6,6 @@
 //  Copyright © 2020 zengyongbing. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
