@@ -10,7 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SelectIdentifyView : UIView
+@protocol SelectIdentifyDelegate <NSObject>
+
+- (void)disMissIdentifyView;
+- (void)confirmInfoIdentifyName:(NSString *)name identify:(NSString *)iname;
+
+@end
+
+@interface SelectIdentifyView : UIView<SelectIdentifyDelegate>
+
+@property (nonatomic, weak) id<SelectIdentifyDelegate> delegate;
 
 - (instancetype)initWithFrame:(CGRect)frame identifyArr:(NSArray *)iArr;
 

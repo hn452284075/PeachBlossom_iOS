@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "SelectIdentifyView.h"
 #import "Util.h"
-@interface LoginViewController ()
+@interface LoginViewController ()<SelectIdentifyDelegate>
 
 @property (nonatomic, strong) UITextField *phoneFiled;
 @property (nonatomic, strong) UITextField *codeFiled;
@@ -268,10 +268,20 @@
 
 - (void)_initSelectIdentifyView
 {
-    NSArray *arr = [[NSArray alloc] initWithObjects:@"身份1",@"身份2",@"身份2",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1", nil];
+    NSArray *arr = [[NSArray alloc] initWithObjects:@"身份1",@"身份2",@"身份2",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"经纪人/代办",@"身份1",@"身份1",@"身份1",@"身份1", nil];
+    
+    UIView *bv = [[UIView alloc] initWithFrame:self.view.frame];
+    bv.alpha = 0.5;
+    bv.tag = 112;
+    bv.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:bv];
+    
     self.identifyView = [[SelectIdentifyView alloc] initWithFrame:CGRectMake(0, 0, 290, 414) identifyArr:arr];
-    self.identifyView.backgroundColor = [UIColor orangeColor];
+    self.identifyView.backgroundColor = [UIColor whiteColor];
     self.identifyView.center = self.view.center;
+    self.identifyView.delegate = self;
+    [self.view addSubview:self.identifyView];
+    self.identifyView.layer.cornerRadius = 10.;
 }
 
 
@@ -348,5 +358,20 @@
 
 #pragma mark ------------------------Delegate-----------------------------
 
+#pragma mark --------------- 关闭身份选择view
+- (void)disMissIdentifyView
+{
+    self.identifyView.delegate = nil;
+    [self.identifyView removeFromSuperview];
+}
  
+
+#pragma mark --------------- 确定身份选择
+- (void)confirmInfoIdentifyName:(NSString *)name identify:(NSString *)iname
+{
+    self.identifyView.delegate = nil;
+    [self.identifyView removeFromSuperview];
+}
+
+
 @end
