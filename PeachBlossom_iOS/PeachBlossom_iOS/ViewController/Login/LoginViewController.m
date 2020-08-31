@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "SelectIdentifyView.h"
 #import "Util.h"
 @interface LoginViewController ()
 
@@ -15,6 +16,8 @@
 
 @property (nonatomic, strong) UIButton *loginBtn;
 @property (nonatomic, strong) UIButton *clearBtn;
+
+@property (nonatomic, strong) SelectIdentifyView *identifyView;
 
 @end
 
@@ -263,6 +266,14 @@
     btn.tag = tag;
 }
 
+- (void)_initSelectIdentifyView
+{
+    NSArray *arr = [[NSArray alloc] initWithObjects:@"身份1",@"身份2",@"身份2",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1",@"身份1", nil];
+    self.identifyView = [[SelectIdentifyView alloc] initWithFrame:CGRectMake(0, 0, 290, 414) identifyArr:arr];
+    self.identifyView.backgroundColor = [UIColor orangeColor];
+    self.identifyView.center = self.view.center;
+}
+
 
 #pragma mark ------------------------View Event---------------------------
 
@@ -304,6 +315,7 @@
         case 2:
         {
             NSLog(@"登录");
+            [self _initSelectIdentifyView];
             if(self.phoneFiled.text.length > 0 && self.codeFiled.text.length > 0)
             {
                 

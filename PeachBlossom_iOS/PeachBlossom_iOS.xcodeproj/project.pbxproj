@@ -341,6 +341,7 @@
 		9795BE3C24F8F64F00F23D48 /* AddToCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9795BE3B24F8F64F00F23D48 /* AddToCartView.xib */; };
 		97AD0B7024F9E4CB007083B6 /* GoodsCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD0B6E24F9E4CB007083B6 /* GoodsCommentController.m */; };
 		97AD0B7124F9E4CB007083B6 /* GoodsCommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97AD0B6F24F9E4CB007083B6 /* GoodsCommentController.xib */; };
+		97D9211D24FC82EB0040B26D /* SelectIdentifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D9211C24FC82EB0040B26D /* SelectIdentifyView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -996,6 +997,8 @@
 		97AD0B6D24F9E4CB007083B6 /* GoodsCommentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GoodsCommentController.h; sourceTree = "<group>"; };
 		97AD0B6E24F9E4CB007083B6 /* GoodsCommentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoodsCommentController.m; sourceTree = "<group>"; };
 		97AD0B6F24F9E4CB007083B6 /* GoodsCommentController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsCommentController.xib; sourceTree = "<group>"; };
+		97D9211B24FC82EB0040B26D /* SelectIdentifyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectIdentifyView.h; sourceTree = "<group>"; };
+		97D9211C24FC82EB0040B26D /* SelectIdentifyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectIdentifyView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1611,6 +1614,7 @@
 		7708D9C824E7ACAB00A4DB25 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				97D9211A24FC825B0040B26D /* Login */,
 				7753A38724FA4F4C00F66734 /* ShoppingCart */,
 				7746F56124F65AC8000DC145 /* Procurement */,
 				7746F54F24F64209000DC145 /* CollectGoods */,
@@ -2512,6 +2516,15 @@
 			path = GoodsComment;
 			sourceTree = "<group>";
 		};
+		97D9211A24FC825B0040B26D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				97D9211B24FC82EB0040B26D /* SelectIdentifyView.h */,
+				97D9211C24FC82EB0040B26D /* SelectIdentifyView.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2879,6 +2892,7 @@
 				7708DC2C24E7DF5C00A4DB25 /* SDWebImageTransition.m in Sources */,
 				7746F55F24F64FF5000DC145 /* CollectStoreCell.m in Sources */,
 				7708DA3D24E7B6FA00A4DB25 /* PayRequestModel.m in Sources */,
+				97D9211D24FC82EB0040B26D /* SelectIdentifyView.m in Sources */,
 				7708D99924E7ABA300A4DB25 /* IQUIWindow+Hierarchy.m in Sources */,
 				7708DC3224E7DF5D00A4DB25 /* UIImage+MemoryCacheCost.m in Sources */,
 				7708D98524E7ABA300A4DB25 /* MJRefreshAutoStateFooter.m in Sources */,
