@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "IQKeyboardManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
      self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
+    IQKeyboardManager *keyboardManager = [IQKeyboardManager sharedManager];
+    keyboardManager.shouldResignOnTouchOutside = YES;
+    
     [self _entrance];
     return YES;
 }

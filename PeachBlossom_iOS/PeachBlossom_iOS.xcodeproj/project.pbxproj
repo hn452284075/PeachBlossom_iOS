@@ -349,6 +349,8 @@
 		97AD0B7024F9E4CB007083B6 /* GoodsCommentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD0B6E24F9E4CB007083B6 /* GoodsCommentController.m */; };
 		97AD0B7124F9E4CB007083B6 /* GoodsCommentController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97AD0B6F24F9E4CB007083B6 /* GoodsCommentController.xib */; };
 		97D9211D24FC82EB0040B26D /* SelectIdentifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D9211C24FC82EB0040B26D /* SelectIdentifyView.m */; };
+		97D9212024FCA3820040B26D /* IdentifyCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D9211F24FCA3820040B26D /* IdentifyCodeView.m */; };
+		97D9212224FCA3BF0040B26D /* IdentifyCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D9212124FCA3BF0040B26D /* IdentifyCodeView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1018,6 +1020,9 @@
 		97AD0B6F24F9E4CB007083B6 /* GoodsCommentController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoodsCommentController.xib; sourceTree = "<group>"; };
 		97D9211B24FC82EB0040B26D /* SelectIdentifyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectIdentifyView.h; sourceTree = "<group>"; };
 		97D9211C24FC82EB0040B26D /* SelectIdentifyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectIdentifyView.m; sourceTree = "<group>"; };
+		97D9211E24FCA3820040B26D /* IdentifyCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdentifyCodeView.h; sourceTree = "<group>"; };
+		97D9211F24FCA3820040B26D /* IdentifyCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdentifyCodeView.m; sourceTree = "<group>"; };
+		97D9212124FCA3BF0040B26D /* IdentifyCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdentifyCodeView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2552,6 +2557,9 @@
 			children = (
 				97D9211B24FC82EB0040B26D /* SelectIdentifyView.h */,
 				97D9211C24FC82EB0040B26D /* SelectIdentifyView.m */,
+				97D9211E24FCA3820040B26D /* IdentifyCodeView.h */,
+				97D9211F24FCA3820040B26D /* IdentifyCodeView.m */,
+				97D9212124FCA3BF0040B26D /* IdentifyCodeView.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -2675,6 +2683,7 @@
 				977466B024F784720078313C /* SupplyGoodsInfoView.xib in Resources */,
 				972CC5EA24F65A27002DC0F1 /* SupplyGoodsCell.xib in Resources */,
 				7746F56D24F65E36000DC145 /* ProcurementCell.xib in Resources */,
+				97D9212224FCA3BF0040B26D /* IdentifyCodeView.xib in Resources */,
 				77A17C6024F4B47C00CBF0A6 /* HomeAllCollectionCell.xib in Resources */,
 				9795BE2F24F894E300F23D48 /* ShopInfoView.xib in Resources */,
 				7746F54824F6376E000DC145 /* ZZAddressController.xib in Resources */,
@@ -2954,6 +2963,7 @@
 				977466CA24F7AA540078313C /* CommentHeaderView.m in Sources */,
 				7708DC1624E7DF5C00A4DB25 /* SDWebImageCacheSerializer.m in Sources */,
 				7708D98624E7ABA300A4DB25 /* MJRefreshAutoGifFooter.m in Sources */,
+				97D9212024FCA3820040B26D /* IdentifyCodeView.m in Sources */,
 				7708DC3424E7DF5D00A4DB25 /* SDWebImageCacheKeyFilter.m in Sources */,
 				7708DAA624E7C95E00A4DB25 /* LoginViewController.m in Sources */,
 				7708D96F24E7ABA200A4DB25 /* AFNetworkActivityIndicatorManager.m in Sources */,
