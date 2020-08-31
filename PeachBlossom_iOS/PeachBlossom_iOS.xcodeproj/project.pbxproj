@@ -352,6 +352,7 @@
 		97D9211D24FC82EB0040B26D /* SelectIdentifyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D9211C24FC82EB0040B26D /* SelectIdentifyView.m */; };
 		97D9212024FCA3820040B26D /* IdentifyCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D9211F24FCA3820040B26D /* IdentifyCodeView.m */; };
 		97D9212224FCA3BF0040B26D /* IdentifyCodeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 97D9212124FCA3BF0040B26D /* IdentifyCodeView.xib */; };
+		97D9212524FCF4B60040B26D /* StoreTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D9212424FCF4B60040B26D /* StoreTopView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1026,6 +1027,8 @@
 		97D9211E24FCA3820040B26D /* IdentifyCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IdentifyCodeView.h; sourceTree = "<group>"; };
 		97D9211F24FCA3820040B26D /* IdentifyCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IdentifyCodeView.m; sourceTree = "<group>"; };
 		97D9212124FCA3BF0040B26D /* IdentifyCodeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IdentifyCodeView.xib; sourceTree = "<group>"; };
+		97D9212324FCF4B60040B26D /* StoreTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = StoreTopView.h; path = PeachBlossom_iOS/View/Login/StoreTopView.h; sourceTree = SOURCE_ROOT; };
+		97D9212424FCF4B60040B26D /* StoreTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = StoreTopView.m; path = PeachBlossom_iOS/View/Login/StoreTopView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2413,6 +2416,8 @@
 		77A17C6824F4F5BA00CBF0A6 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				97D9212324FCF4B60040B26D /* StoreTopView.h */,
+				97D9212424FCF4B60040B26D /* StoreTopView.m */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -2890,6 +2895,7 @@
 				7708DC3E24E7DF5D00A4DB25 /* SDWeakProxy.m in Sources */,
 				7708DC7724E7EC7C00A4DB25 /* MASCompositeConstraint.m in Sources */,
 				7753A39324FA501700F66734 /* GoodsModel.m in Sources */,
+				97D9212524FCF4B60040B26D /* StoreTopView.m in Sources */,
 				7708DA3824E7B6FA00A4DB25 /* PayManager+requestPayNeedInfo.m in Sources */,
 				7708DC2824E7DF5C00A4DB25 /* SDImageFrame.m in Sources */,
 				7708DC5A24E7EA3100A4DB25 /* UIImageView+sd_SetImg.m in Sources */,
