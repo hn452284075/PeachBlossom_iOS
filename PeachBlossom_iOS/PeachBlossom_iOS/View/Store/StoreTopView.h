@@ -10,12 +10,24 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface StoreTopView : UIView
+
+@protocol StoreTopViewDelegate <NSObject>
+
+- (void)gradeRuleFunction;
+- (void)upGoodsFunction;
+- (void)downGoodsFunction;
+
+@end
 
 
-- (instancetype)initWithFrame:(CGRect)frame name:(NSString *)name grade:(NSString *)grade upNumber:(int)uvalue downNumber:(int)dvalue;
+@interface StoreTopView : UIView<StoreTopViewDelegate>
 
-//- (void)
+@property (nonatomic, weak) id<StoreTopViewDelegate> delegate;
+
+
+- (instancetype)initWithFrame:(CGRect)frame;
+
+- (void)configTopViewName:(NSString *)name grade:(NSString *)grade upNumber:(int)uvalue downNumber:(int)dvalue;
 
 
 

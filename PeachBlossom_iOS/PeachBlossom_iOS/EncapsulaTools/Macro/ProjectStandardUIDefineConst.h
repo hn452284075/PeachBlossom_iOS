@@ -33,4 +33,5 @@
 #define CUSTOMFONT(x)       [UIFont fontWithName:@"PingFang SC" size:x]
 #define CUSTOMBOLDFONT(x)   [UIFont boldSystemFontOfSize:x]
 
+
 #endif /* ProjectStandardUIDefineConst_h */

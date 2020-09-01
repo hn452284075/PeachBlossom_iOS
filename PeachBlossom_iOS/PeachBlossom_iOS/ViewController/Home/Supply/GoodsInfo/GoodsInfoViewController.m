@@ -67,7 +67,7 @@
     // Do any additional setup after loading the view from its nib.
     
     int iphonex_height = 0;
-    if(iPhoneX || IS_IPHONE_Xr || IS_IPHONE_Xs || IS_IPHONE_Xs_Max)
+    if(IS_Iphone_Series)
         iphonex_height = 20;
     self.mainScrollerView = [[UIScrollView alloc] init];
     [self.view addSubview:self.mainScrollerView];

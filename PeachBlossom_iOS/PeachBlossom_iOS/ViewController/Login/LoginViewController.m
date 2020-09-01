@@ -32,8 +32,8 @@
     [super viewDidLoad];
       
     int iphonex_height = 0;
-    if(iPhoneX || IS_IPHONE_Xr || IS_IPHONE_Xs || IS_IPHONE_Xs_Max)
-        iphonex_height = 25;
+    if(IS_Iphone_Series)
+        iphonex_height = 20;
   
     //返回按钮
     UIButton *closeBtn = [[UIButton alloc] init];

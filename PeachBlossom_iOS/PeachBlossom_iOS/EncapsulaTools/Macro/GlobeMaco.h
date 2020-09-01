@@ -70,6 +70,9 @@
 #define kStatusBarAndNavigationBarHeight ((iPhoneX==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? 88.0 : 64.0)
 #define kStatusBarAndTabBarHeight ((iPhoneX==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? 83.0 : 49.0)
 
+//判断iPhoneX系列
+#define IS_Iphone_Series ((iPhoneX==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES) ? YES : NO)
+
 
 #define APP_HEIGHT [[UIScreen mainScreen] applicationFrame].size.height
 #define APP_WIDTH [[UIScreen mainScreen] applicationFrame].size.width

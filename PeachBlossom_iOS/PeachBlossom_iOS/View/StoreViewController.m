@@ -11,8 +11,14 @@
 #import "SupplyOrderVC.h"
 #import "GoodsShelvesVC.h"
 @interface StoreViewController ()
+#import "SetPriceViewController.h"
+
+@interface StoreViewController ()<StoreTopViewDelegate>
 
 @property (nonatomic, strong) StoreTopView  *topView;
+
+@property (nonatomic, strong) UILabel   *loginmsgLabel; //没有登录情况label
+@property (nonatomic, strong) UIButton  *loginBtn;      //立即登录
 
 @property (nonatomic, strong) UIButton  *orderBtn;  //订单管理
 @property (nonatomic, strong) UILabel   *orderLabel;
@@ -37,7 +43,7 @@
     // Do any additional setup after loading the view.
     
     int iphonex_height = 0;
-    if(iPhoneX || IS_IPHONE_Xr || IS_IPHONE_Xs || IS_IPHONE_Xs_Max)
+    if(IS_Iphone_Series)
         iphonex_height = 20;
     
     //绿色背景view
@@ -52,7 +58,8 @@
     bgview.image = IMAGE(@"storebackgroundimg");
     
     //顶部相关信息显示view
-    [self _initTopViewWithLogin];
+//    [self _initTopViewWithLogin];       //登录情况
+    [self _initTopViewWithoutLogin];    //无登录情况
     
     
     //中间白色发布商品view
@@ -76,6 +83,7 @@
     pulishBtn.layer.shadowRadius = 13;
     pulishBtn.layer.shadowOffset = CGSizeMake(0.0f,0.0f);
     pulishBtn.layer.shadowOpacity = 0.5f;
+    [pulishBtn addTarget:self action:@selector(publishBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     
     //中间部分三个按钮和标签
     self.orderBtn = [self factoryButton:self.orderBtn img:@"storeicon_1" tag:1];
@@ -145,9 +153,10 @@
 - (void)_initTopViewWithLogin
 {
     int iphonex_height = 0;
-    if(iPhoneX || IS_IPHONE_Xr || IS_IPHONE_Xs || IS_IPHONE_Xs_Max)
+    if(IS_Iphone_Series)
         iphonex_height = 20;
-    self.topView = [[StoreTopView alloc] initWithFrame:CGRectMake(0, 0, 0, 0) name:@"澳大利亚" grade:@"个人等级:88" upNumber:100 downNumber:100];
+    self.topView = [[StoreTopView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    self.topView.delegate = self;
     [self.view addSubview:self.topView];
     [self.topView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(40+iphonex_height);
@@ -156,13 +165,44 @@
         make.height.mas_equalTo(130);
     }];
     self.topView.backgroundColor = [UIColor clearColor];
+    
+    [self.topView configTopViewName:@"澳大利亚" grade:@"个人等级:88" upNumber:200 downNumber:100];
 }
 
 #pragma mark ------------------ 没有登录的view
-//- (UIView *)_initTopViewWithoutLogin
-//{
-//    return nil;
-//}
+- (void)_initTopViewWithoutLogin
+{
+    self.loginmsgLabel = [[UILabel alloc] init];
+    [self.view addSubview:self.loginmsgLabel];
+    [self.loginmsgLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).offset(67);
+        make.left.equalTo(self.view.mas_left);
+        make.right.equalTo(self.view.mas_right);
+        make.height.mas_equalTo(20);
+    }];
+    self.loginmsgLabel.text = @"登录赚大钱";
+    self.loginmsgLabel.textColor = [UIColor whiteColor];
+    self.loginmsgLabel.font = CUSTOMFONT(19);
+    self.loginmsgLabel.textAlignment = NSTextAlignmentCenter;
+    
+    self.loginBtn = [[UIButton alloc] init];
+    [self.view addSubview:self.loginBtn];
+    [self.loginBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.loginmsgLabel.mas_bottom).offset(20);
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.width.mas_equalTo(87);
+        make.height.mas_equalTo(31);
+    }];
+    [self.loginBtn setTitle:@"立即登录" forState:UIControlStateNormal];
+    [self.loginBtn setTitleColor:kGetColor(0x46, 0xc6, 0x7c) forState:UIControlStateNormal];
+    self.loginBtn.titleLabel.font = CUSTOMFONT(14);
+    self.loginBtn.backgroundColor = [UIColor whiteColor];
+    self.loginBtn.layer.cornerRadius = 15.;
+    self.loginBtn.layer.masksToBounds = YES;
+    
+    [self.loginBtn addTarget:self action:@selector(loginBtnClciked:) forControlEvents:UIControlEventTouchUpInside];
+    
+}
 
 
  
@@ -204,7 +244,38 @@
     }
 }
 
+#pragma mark ------------- 没有登录时的  立即登录  点击事件
+- (void)loginBtnClciked:(id)sender
+{
+    
+}
+
+#pragma mark ------------- 发布商品
+- (void)publishBtnClicked:(id)sender
+{
+    SetPriceViewController *priceCon = [[SetPriceViewController alloc] init];
+    [self.navigationController pushViewController:priceCon animated:YES];
+}
+
+
 #pragma mark ------------------------Delegate-----------------------------
+#pragma mark ------------- 等级规则
+- (void)gradeRuleFunction
+{
+    
+}
+
+#pragma mark ------------- 已上架
+- (void)upGoodsFunction
+{
+    
+}
+
+#pragma mark ------------- 已下架
+- (void)downGoodsFunction
+{
+    
+}
 
 
 #pragma mark ------------------------Notification-------------------------

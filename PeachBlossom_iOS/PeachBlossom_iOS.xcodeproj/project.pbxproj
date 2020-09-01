@@ -337,6 +337,8 @@
 		77A17C7924F4F85D00CBF0A6 /* MeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C7724F4F85D00CBF0A6 /* MeCollectionViewCell.xib */; };
 		77A17C7D24F4F8DA00CBF0A6 /* MeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17C7B24F4F8DA00CBF0A6 /* MeHeaderView.m */; };
 		77A17C7E24F4F8DA00CBF0A6 /* MeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C7C24F4F8DA00CBF0A6 /* MeHeaderView.xib */; };
+		972A456324FDEFC600956A5F /* SetPriceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 972A456224FDEFC600956A5F /* SetPriceTableViewCell.m */; };
+		972A456624FE252C00956A5F /* PriceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 972A456524FE252C00956A5F /* PriceModel.m */; };
 		972CC5E324F600C3002DC0F1 /* SupplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 972CC5E124F600C3002DC0F1 /* SupplyViewController.m */; };
 		972CC5E424F600C3002DC0F1 /* SupplyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 972CC5E224F600C3002DC0F1 /* SupplyViewController.xib */; };
 		972CC5E924F65A27002DC0F1 /* SupplyGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 972CC5E724F65A27002DC0F1 /* SupplyGoodsCell.m */; };
@@ -351,6 +353,8 @@
 		977466CC24F7AA6D0078313C /* CommentHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 977466CB24F7AA6D0078313C /* CommentHeaderView.xib */; };
 		977466CF24F7AAA90078313C /* CommentOneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 977466CE24F7AAA90078313C /* CommentOneView.m */; };
 		9779545D24FDD3D600939DE9 /* StoreTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9779545C24FDD3D600939DE9 /* StoreTopView.m */; };
+		9779546324FDE8C900939DE9 /* SetPriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9779546124FDE8C900939DE9 /* SetPriceViewController.m */; };
+		9779546424FDE8C900939DE9 /* SetPriceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9779546224FDE8C900939DE9 /* SetPriceViewController.xib */; };
 		9795BE2D24F894D600F23D48 /* ShopInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE2C24F894D600F23D48 /* ShopInfoView.m */; };
 		9795BE2F24F894E300F23D48 /* ShopInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9795BE2E24F894E300F23D48 /* ShopInfoView.xib */; };
 		9795BE3324F8B4E300F23D48 /* BottumBuyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9795BE3224F8B4E200F23D48 /* BottumBuyView.m */; };
@@ -1018,6 +1022,10 @@
 		77A17C7A24F4F8DA00CBF0A6 /* MeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MeHeaderView.h; path = PeachBlossom_iOS/View/MeHeaderView.h; sourceTree = SOURCE_ROOT; };
 		77A17C7B24F4F8DA00CBF0A6 /* MeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MeHeaderView.m; path = PeachBlossom_iOS/View/MeHeaderView.m; sourceTree = SOURCE_ROOT; };
 		77A17C7C24F4F8DA00CBF0A6 /* MeHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MeHeaderView.xib; path = PeachBlossom_iOS/View/MeHeaderView.xib; sourceTree = SOURCE_ROOT; };
+		972A456124FDEFC600956A5F /* SetPriceTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetPriceTableViewCell.h; sourceTree = "<group>"; };
+		972A456224FDEFC600956A5F /* SetPriceTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetPriceTableViewCell.m; sourceTree = "<group>"; };
+		972A456424FE252C00956A5F /* PriceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriceModel.h; sourceTree = "<group>"; };
+		972A456524FE252C00956A5F /* PriceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PriceModel.m; sourceTree = "<group>"; };
 		972CC5E024F600C3002DC0F1 /* SupplyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupplyViewController.h; sourceTree = "<group>"; };
 		972CC5E124F600C3002DC0F1 /* SupplyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupplyViewController.m; sourceTree = "<group>"; };
 		972CC5E224F600C3002DC0F1 /* SupplyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SupplyViewController.xib; sourceTree = "<group>"; };
@@ -1040,6 +1048,9 @@
 		977466CE24F7AAA90078313C /* CommentOneView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentOneView.m; sourceTree = "<group>"; };
 		9779545B24FDD3D500939DE9 /* StoreTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTopView.h; sourceTree = "<group>"; };
 		9779545C24FDD3D600939DE9 /* StoreTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreTopView.m; sourceTree = "<group>"; };
+		9779546024FDE8C900939DE9 /* SetPriceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SetPriceViewController.h; sourceTree = "<group>"; };
+		9779546124FDE8C900939DE9 /* SetPriceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SetPriceViewController.m; sourceTree = "<group>"; };
+		9779546224FDE8C900939DE9 /* SetPriceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetPriceViewController.xib; sourceTree = "<group>"; };
 		9795BE2B24F894D600F23D48 /* ShopInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShopInfoView.h; sourceTree = "<group>"; };
 		9795BE2C24F894D600F23D48 /* ShopInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShopInfoView.m; sourceTree = "<group>"; };
 		9795BE2E24F894E300F23D48 /* ShopInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopInfoView.xib; sourceTree = "<group>"; };
@@ -2477,6 +2488,8 @@
 		77A17C6724F4F5B400CBF0A6 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				9779545E24FDE6B800939DE9 /* PublishGoods */,
+				7753A3B224FCEAC600F66734 /* Shelves */,
 				77A17C6924F4F5D000CBF0A6 /* StoreViewController.h */,
 				77A17C6A24F4F5D000CBF0A6 /* StoreViewController.m */,
 				7773756924FDD7DE005A6150 /* SupplyOrder */,
@@ -2488,6 +2501,7 @@
 		77A17C6824F4F5BA00CBF0A6 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				972A456024FDEF9200956A5F /* PublishGoods */,
 				9779545B24FDD3D500939DE9 /* StoreTopView.h */,
 				9779545C24FDD3D600939DE9 /* StoreTopView.m */,
 				7773756A24FDD7F1005A6150 /* SupplyOrder */,
@@ -2525,6 +2539,15 @@
 			children = (
 			);
 			path = BusinessCircle;
+			sourceTree = "<group>";
+		};
+		972A456024FDEF9200956A5F /* PublishGoods */ = {
+			isa = PBXGroup;
+			children = (
+				972A456124FDEFC600956A5F /* SetPriceTableViewCell.h */,
+				972A456224FDEFC600956A5F /* SetPriceTableViewCell.m */,
+			);
+			path = PublishGoods;
 			sourceTree = "<group>";
 		};
 		972CC5DF24F6008E002DC0F1 /* Supply */ = {
@@ -2595,6 +2618,18 @@
 				977466CE24F7AAA90078313C /* CommentOneView.m */,
 			);
 			path = CommentView;
+			sourceTree = "<group>";
+		};
+		9779545E24FDE6B800939DE9 /* PublishGoods */ = {
+			isa = PBXGroup;
+			children = (
+				9779546024FDE8C900939DE9 /* SetPriceViewController.h */,
+				9779546124FDE8C900939DE9 /* SetPriceViewController.m */,
+				9779546224FDE8C900939DE9 /* SetPriceViewController.xib */,
+				972A456424FE252C00956A5F /* PriceModel.h */,
+				972A456524FE252C00956A5F /* PriceModel.m */,
+			);
+			path = PublishGoods;
 			sourceTree = "<group>";
 		};
 		9795BE2A24F894AF00F23D48 /* ShopInfoView */ = {
@@ -2813,6 +2848,7 @@
 				977466CC24F7AA6D0078313C /* CommentHeaderView.xib in Resources */,
 				7746F57F24F74DC1000DC145 /* WaitingPayAddressView.xib in Resources */,
 				972CC5E424F600C3002DC0F1 /* SupplyViewController.xib in Resources */,
+				9779546424FDE8C900939DE9 /* SetPriceViewController.xib in Resources */,
 				77A17C5724F4B0CC00CBF0A6 /* SearchCell.xib in Resources */,
 				77A17C7924F4F85D00CBF0A6 /* MeCollectionViewCell.xib in Resources */,
 				7746F58924F7891E000DC145 /* WaitingPayInfoView.xib in Resources */,
@@ -2884,6 +2920,7 @@
 				7708D97224E7ABA200A4DB25 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				7708DC2F24E7DF5C00A4DB25 /* UIImageView+WebCache.m in Sources */,
 				7708D99F24E7ABA300A4DB25 /* SVRadialGradientLayer.m in Sources */,
+				972A456624FE252C00956A5F /* PriceModel.m in Sources */,
 				7708DC7E24E7EC7C00A4DB25 /* MASViewAttribute.m in Sources */,
 				7708D89424E7AB4300A4DB25 /* AFNHttpRequestOPManager+checkNetworkStatus.m in Sources */,
 				7708DA2E24E7B6FA00A4DB25 /* WSImageBroswerVC.m in Sources */,
@@ -2983,6 +3020,7 @@
 				7708DC1E24E7DF5C00A4DB25 /* SDWebImageError.m in Sources */,
 				7708D98D24E7ABA300A4DB25 /* MJRefreshBackFooter.m in Sources */,
 				9795BE3A24F8EE4B00F23D48 /* AddToCartView.m in Sources */,
+				9779546324FDE8C900939DE9 /* SetPriceViewController.m in Sources */,
 				7708DC1024E7DF5C00A4DB25 /* SDAnimatedImage.m in Sources */,
 				7708DA3B24E7B6FA00A4DB25 /* WXinPayResponseModel.m in Sources */,
 				7708D99A24E7ABA300A4DB25 /* IQUITextFieldView+Additions.m in Sources */,
@@ -3070,6 +3108,7 @@
 				7753A3A024FC89CE00F66734 /* StoreModel.m in Sources */,
 				77A17C5524F4B0CC00CBF0A6 /* AddressCell.m in Sources */,
 				7773757F24FE2943005A6150 /* ReturnGoodsHeaderView.m in Sources */,
+				972A456324FDEFC600956A5F /* SetPriceTableViewCell.m in Sources */,
 				7708DA4724E7B6FA00A4DB25 /* TMDiskCache.m in Sources */,
 				7746F59E24F7C8CE000DC145 /* UIView+Frame.m in Sources */,
 				7746F55B24F64F23000DC145 /* CollectStoreVC.m in Sources */,
