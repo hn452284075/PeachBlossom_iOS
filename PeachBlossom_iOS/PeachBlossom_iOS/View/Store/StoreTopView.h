@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithFrame:(CGRect)frame name:(NSString *)name grade:(NSString *)grade upNumber:(int)uvalue downNumber:(int)dvalue;
 
+//- (void)
+
 
 
 @end
