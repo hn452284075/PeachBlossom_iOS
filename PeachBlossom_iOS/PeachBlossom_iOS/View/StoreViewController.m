@@ -8,6 +8,7 @@
 
 #import "StoreViewController.h"
 #import "StoreTopView.h"
+#import "SetPriceViewController.h"
 
 @interface StoreViewController ()<StoreTopViewDelegate>
 
@@ -79,6 +80,7 @@
     pulishBtn.layer.shadowRadius = 13;
     pulishBtn.layer.shadowOffset = CGSizeMake(0.0f,0.0f);
     pulishBtn.layer.shadowOpacity = 0.5f;
+    [pulishBtn addTarget:self action:@selector(publishBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     
     //中间部分三个按钮和标签
     self.orderBtn = [self factoryButton:self.orderBtn img:@"storeicon_1" tag:1];
@@ -240,6 +242,13 @@
 - (void)loginBtnClciked:(id)sender
 {
     
+}
+
+#pragma mark ------------- 发布商品
+- (void)publishBtnClicked:(id)sender
+{
+    SetPriceViewController *priceCon = [[SetPriceViewController alloc] init];
+    [self.navigationController pushViewController:priceCon animated:YES];
 }
 
 
