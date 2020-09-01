@@ -189,6 +189,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="bottomHeight" destination="lK3-UW-Bq2" id="dML-tT-bVL"/>
                 <outlet property="bottomView" destination="Zci-60-wGV" id="cj3-cp-0kf"/>
                 <outlet property="buttonX" destination="X34-SD-cR0" id="u4D-gu-plw"/>
                 <outlet property="contentLabel" destination="Swf-FA-l6k" id="tSv-HI-Ipv"/>

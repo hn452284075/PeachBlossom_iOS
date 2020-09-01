@@ -13,7 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WaitingPayDetailsVC : BaseViewController
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomX;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
-
+@property (weak, nonatomic) IBOutlet UIButton *chatBtn;
+@property (weak, nonatomic) IBOutlet UIButton *phoneBtn;
+@property (weak, nonatomic) IBOutlet UIView *lineV;
+@property (nonatomic,assign)BOOL isSupplyOrderPush;
 @end
 
 NS_ASSUME_NONNULL_END

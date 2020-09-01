@@ -110,9 +110,16 @@
         str = @"发货成功";
         
     }
+    if([dic[@"status"]intValue]==5){
+        self.bottomHeight.constant=0;
+    }else{
+        self.bottomHeight.constant=55;
+    }
     
     self.orderStatus.text =str;
 //    [self.orderImage sd_SetImgWithUrlStr:[NSString stringWithFormat:@"%@%@",KImageHost,dic[@"productPic"]] placeHolderImgName:nil];
+    
+    
     
     
 }

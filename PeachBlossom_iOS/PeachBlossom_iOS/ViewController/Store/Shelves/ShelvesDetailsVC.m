@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-    
+    self.view.backgroundColor  = KViewBgColor;
     [self.view addSubview:self.listTableView];
     
     [_listTableView configureTableAfterRequestPagingData:@[@"",@""]];

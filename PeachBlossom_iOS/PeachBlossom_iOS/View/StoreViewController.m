@@ -8,7 +8,8 @@
 
 #import "StoreViewController.h"
 #import "StoreTopView.h"
-
+#import "SupplyOrderVC.h"
+#import "GoodsShelvesVC.h"
 @interface StoreViewController ()
 
 @property (nonatomic, strong) StoreTopView  *topView;
@@ -177,12 +178,15 @@
     switch (btn.tag) {
         case 1: //订单管理
         {
-            
+            SupplyOrderVC *vc = [[SupplyOrderVC alloc]init];
+            [self navigatePushViewController:vc animate:YES];
+
         }
             break;
         case 2: //店铺管理
         {
-            
+            GoodsShelvesVC *vc = [[GoodsShelvesVC alloc]init];
+            [self navigatePushViewController:vc animate:YES];
         }
             break;
         case 3: //马商通

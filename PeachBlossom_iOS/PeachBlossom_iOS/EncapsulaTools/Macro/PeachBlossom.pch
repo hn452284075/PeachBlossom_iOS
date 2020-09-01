@@ -15,4 +15,5 @@
 #import "UIImageView+sd_SetImg.h"
 #import "Masonry.h"
 #import "UIView+Nib.h"
+#import "BaseLoadingView.h"
 #endif /* PeachBlossom_pch */

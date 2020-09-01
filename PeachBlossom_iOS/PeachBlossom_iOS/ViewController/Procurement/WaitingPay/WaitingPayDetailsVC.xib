@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -11,6 +11,9 @@
             <connections>
                 <outlet property="bottomView" destination="Fvr-yJ-2g9" id="jih-2k-KAe"/>
                 <outlet property="bottomX" destination="zz1-Nb-bVT" id="cUr-Fd-ejR"/>
+                <outlet property="chatBtn" destination="ELn-hf-ORN" id="a3K-0u-vBp"/>
+                <outlet property="lineV" destination="DDV-vm-uRx" id="6G5-rf-5Fi"/>
+                <outlet property="phoneBtn" destination="raA-O5-REy" id="0xd-1c-8cd"/>
                 <outlet property="view" destination="iN0-l3-epB" id="h2e-dj-7qa"/>
             </connections>
         </placeholder>
@@ -31,9 +34,45 @@
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvr-yJ-2g9">
                             <rect key="frame" x="0.0" y="0.5" width="414" height="51.5"/>
+                            <subviews>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELn-hf-ORN">
+                                    <rect key="frame" x="1" y="1" width="205.5" height="49.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="4" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title=" 聊一聊" image="orderMsg">
+                                        <color key="titleColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="raA-O5-REy">
+                                    <rect key="frame" x="207.5" y="1" width="205.5" height="49.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title=" 打电话" image="orderPhone">
+                                        <color key="titleColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DDV-vm-uRx">
+                                    <rect key="frame" x="206.5" y="3" width="0.5" height="45.5"/>
+                                    <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="0.5" id="s8g-XO-piw"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="raA-O5-REy" secondAttribute="bottom" constant="1" id="1Lc-yG-8ae"/>
+                                <constraint firstAttribute="bottom" secondItem="ELn-hf-ORN" secondAttribute="bottom" constant="1" id="2Pi-7e-Ddx"/>
+                                <constraint firstItem="raA-O5-REy" firstAttribute="height" secondItem="ELn-hf-ORN" secondAttribute="height" id="3Q8-jd-Owm"/>
+                                <constraint firstItem="raA-O5-REy" firstAttribute="leading" secondItem="DDV-vm-uRx" secondAttribute="trailing" constant="0.5" id="84J-sw-JJ8"/>
+                                <constraint firstItem="raA-O5-REy" firstAttribute="top" secondItem="Fvr-yJ-2g9" secondAttribute="top" constant="1" id="Grr-ZN-SV5"/>
                                 <constraint firstAttribute="height" constant="51.5" id="I5O-5S-VzE"/>
+                                <constraint firstItem="DDV-vm-uRx" firstAttribute="top" secondItem="Fvr-yJ-2g9" secondAttribute="top" constant="3" id="MfI-5D-GA7"/>
+                                <constraint firstAttribute="bottom" secondItem="DDV-vm-uRx" secondAttribute="bottom" constant="3" id="NTN-gc-zLJ"/>
+                                <constraint firstAttribute="trailing" secondItem="raA-O5-REy" secondAttribute="trailing" constant="1" id="TyR-fC-yFu"/>
+                                <constraint firstItem="ELn-hf-ORN" firstAttribute="top" secondItem="Fvr-yJ-2g9" secondAttribute="top" constant="1" id="d28-tt-Fx4"/>
+                                <constraint firstItem="ELn-hf-ORN" firstAttribute="leading" secondItem="Fvr-yJ-2g9" secondAttribute="leading" constant="1" id="gwJ-Ac-qO2"/>
+                                <constraint firstItem="raA-O5-REy" firstAttribute="leading" secondItem="ELn-hf-ORN" secondAttribute="trailing" constant="1" id="xkX-1q-qOP"/>
+                                <constraint firstItem="raA-O5-REy" firstAttribute="width" secondItem="ELn-hf-ORN" secondAttribute="width" id="zCx-J0-vbH"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -59,4 +98,8 @@
             <point key="canvasLocation" x="137.68115942028987" y="81.696428571428569"/>
         </view>
     </objects>
+    <resources>
+        <image name="orderMsg" width="25" height="25"/>
+        <image name="orderPhone" width="25" height="25"/>
+    </resources>
 </document>

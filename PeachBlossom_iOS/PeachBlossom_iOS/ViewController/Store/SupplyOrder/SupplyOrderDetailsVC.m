@@ -1,27 +1,27 @@
 //
-//  ProcurementDetailsVC.m
+//  SupplyOrderDetailsVC.m
 //  PeachBlossom_iOS
 //
-//  Created by 曾勇兵 on 2020/8/26.
+//  Created by 曾勇兵 on 2020/9/1.
 //  Copyright © 2020 zengyongbing. All rights reserved.
 //
 
-#import "ProcurementDetailsVC.h"
+#import "SupplyOrderDetailsVC.h"
 #import "ProcurementCell.h"
 #import "MycommonTableView.h"
 #import "WaitingPayDetailsVC.h"
-@interface ProcurementDetailsVC ()
+@interface SupplyOrderDetailsVC ()
 @property (nonatomic,strong)MycommonTableView *listTableView;
 @end
 
-@implementation ProcurementDetailsVC
+@implementation SupplyOrderDetailsVC
 
-- (void)viewDidLoad {
+-(void)viewDidLoad {
     [super viewDidLoad];
   
     [self.view addSubview:self.listTableView];
-    
-    [_listTableView configureTableAfterRequestPagingData:@[@"",@""]];
+    [self removeLine];
+    [_listTableView configureTableAfterRequestPagingData:@[@{@"status":@"1"},@{@"status":@"2"},@{@"status":@"5"}]];
     [self _requestOrderData];
     if ([self.orderType isEqualToString:@"0"]) {
         
@@ -41,8 +41,9 @@
 
 
 #pragma mark ------------------------Page Navigate------------------------
--(void)jumpWaitingPayDetailsVC{//待付款
+-(void)jumpWaitingPayDetailsVC{
     WaitingPayDetailsVC *vc = [[WaitingPayDetailsVC alloc]init];
+    vc.isSupplyOrderPush=YES;
     [self navigatePushViewController:vc animate:YES];
 
 }
@@ -51,19 +52,27 @@
 - (MycommonTableView *)listTableView{
     
     if (!_listTableView) {
-        _listTableView  = [[MycommonTableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-40-kStatusBarAndNavigationBarHeight) style:UITableViewStylePlain];
+        _listTableView  = [[MycommonTableView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight-39-kStatusBarAndNavigationBarHeight) style:UITableViewStylePlain];
         _listTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _listTableView.showsVerticalScrollIndicator = NO;
         _listTableView.backgroundColor = KViewBgColor;
-        _listTableView.cellHeight = 273.0f;
-        
-     
         WEAK_SELF
+        _listTableView.cellHeightBlock = ^CGFloat(UITableView *tableView, id cellModel) {
+            NSDictionary *dic=(NSDictionary *)cellModel;
+            if([dic[@"status"]intValue]==5){
+                return  218.0f;
+            }else{
+               return  273.0f;
+            }
+        };
+     
+        
         [_listTableView configurecellNibName:@"ProcurementCell" configurecellData:^(UITableView *tableView, id cellModel, UITableViewCell *cell, NSUInteger index) {
+            NSDictionary *dic=(NSDictionary *)cellModel;
             ProcurementCell *orderCell =(ProcurementCell *)cell;
             orderCell.selectionStyle = UITableViewCellSelectionStyleNone;
             NSLog(@"%@",cellModel);
-            [orderCell setDic:@{@"status":@"1"}];
+            [orderCell setDic:dic];
             
             
             

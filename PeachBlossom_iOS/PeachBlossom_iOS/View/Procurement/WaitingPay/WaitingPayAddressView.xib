@@ -42,15 +42,34 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="supply_back"/>
                         </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sxI-x4-d5O">
+                            <rect key="frame" x="141" y="115" width="93" height="26"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="93" id="WA9-3x-RRy"/>
+                                <constraint firstAttribute="height" constant="26" id="aZg-19-rPu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="发货">
+                                <color key="titleColor" red="0.27450980390000002" green="0.77647058820000003" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="13"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.27450980392156865" green="0.77647058823529413" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="Kkf-hl-XYx" secondAttribute="bottom" constant="34" id="029-cy-gc0"/>
                         <constraint firstItem="TGo-11-FLE" firstAttribute="leading" secondItem="UfE-Id-dQv" secondAttribute="trailing" constant="10" id="1nk-zG-FUa"/>
+                        <constraint firstItem="sxI-x4-d5O" firstAttribute="top" secondItem="Kkf-hl-XYx" secondAttribute="bottom" constant="4" id="7b2-8q-yaw"/>
                         <constraint firstItem="UfE-Id-dQv" firstAttribute="centerY" secondItem="TGo-11-FLE" secondAttribute="centerY" id="EDp-hw-Ttm"/>
                         <constraint firstItem="TGo-11-FLE" firstAttribute="top" secondItem="h6c-LE-Aqi" secondAttribute="top" constant="56" id="ODc-Zw-XB3"/>
                         <constraint firstAttribute="height" constant="145" id="Wga-Tp-dvq"/>
                         <constraint firstItem="Kkf-hl-XYx" firstAttribute="centerX" secondItem="h6c-LE-Aqi" secondAttribute="centerX" id="n2t-ZR-Me2"/>
+                        <constraint firstItem="sxI-x4-d5O" firstAttribute="centerX" secondItem="h6c-LE-Aqi" secondAttribute="centerX" id="sVW-dE-glJ"/>
                         <constraint firstItem="TGo-11-FLE" firstAttribute="centerX" secondItem="h6c-LE-Aqi" secondAttribute="centerX" constant="19" id="xDB-h9-0Gk"/>
                     </constraints>
                 </view>
@@ -181,7 +200,9 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="9Gg-ye-v9C"/>
             <connections>
+                <outlet property="deliveryBtn" destination="sxI-x4-d5O" id="do6-Ga-TlK"/>
                 <outlet property="goBackBtn" destination="Q6Z-P2-D6M" id="plw-jI-6Vd"/>
+                <outlet property="storeViewHeight" destination="Mcg-Fj-7Dp" id="kU0-OF-ZoK"/>
             </connections>
             <point key="canvasLocation" x="136.95652173913044" y="130.24553571428572"/>
         </collectionReusableView>

@@ -16,6 +16,7 @@
 #import "HomeAllCollectionCell.h"
 #import "CellCalculateModel.h"
 #import "CancelPopView.h"
+#import "DeliveryShowView.h"
 @interface WaitingPayDetailsVC ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic,strong)UICollectionView *detailsCollecView;
 @property (nonatomic,strong)UICollectionViewFlowLayout *flowlayout;
@@ -42,7 +43,11 @@
 - (void)_initCollection {
     
     [self.view addSubview:self.detailsCollecView];
- 
+    if (_isSupplyOrderPush) {
+        self.lineV.hidden=NO;
+        self.phoneBtn.hidden=NO;
+        self.chatBtn.hidden=NO;
+    }
      
     WEAK_SELF
     [self.detailsCollecView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -62,6 +67,8 @@
 #pragma mark ------------------------Private------------------------------
 - (void)setButtonArr:(NSArray *)buttonArr{//后面有时间再去封装
 
+    if (!self.isSupplyOrderPush) {
+        
     // 保存前一个button的宽以及前一个button距离屏幕边缘的距
     CGFloat edge =10;
     //设置button 距离父视图的高
@@ -97,7 +104,7 @@
         edge = button.frame.size.width +button.frame.origin.x+edge;
         
         [self.bottomView addSubview:button];
-        
+       }
         
     }
 
@@ -118,6 +125,14 @@
     
 }
 
+//发货视图
+-(void)showDelivery{
+    DeliveryShowView *showView=[[DeliveryShowView alloc]initWithDeliveryFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+   showView.deliveryBlock = ^(NSString *company, NSString *num) {
+       NSLog(@"%@,%@",company,num);
+   };
+   [self.view addSubview:showView];
+}
 
 
 #pragma mark ------------------------Delegate-----------------------------
@@ -143,10 +158,23 @@
     if (kind == UICollectionElementKindSectionHeader) {
             if (indexPath.section==0) {
                 self.addressHeaderView  = (WaitingPayAddressView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"WaitingPayAddressView" forIndexPath:indexPath];
+                if (self.isSupplyOrderPush) {
+                    self.addressHeaderView.storeViewHeight=0;
+                    self.addressHeaderView.deliveryBtn.hidden=NO;
+                }
+                
                 WEAK_SELF
                 [self.addressHeaderView.goBackBtn addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
                     [weak_self goBack];
                 }];
+                
+                [self.addressHeaderView.deliveryBtn addTapActionWithBlock:^(UIGestureRecognizer *gestureRecoginzer) {
+                    NSLog(@"sss");
+                    [weak_self showDelivery];
+                   
+               }];
+                
+                
                 return self.addressHeaderView;
             }else{
                 self.infoHeaderView  = (WaitingPayInfoView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"WaitingPayInfoView" forIndexPath:indexPath];
@@ -220,7 +248,11 @@
 // 设置header的尺寸
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
     if(section == 0){
-        return CGSizeMake(kScreenWidth,313);
+        if (self.isSupplyOrderPush) {
+            return CGSizeMake(kScreenWidth, 257);
+        }else{
+            return CGSizeMake(kScreenWidth,313);
+        }
     }
     return CGSizeMake(kScreenWidth,313);
 }

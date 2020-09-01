@@ -15,7 +15,7 @@
 #import "SupplyViewController.h"
 #import "AppDelegate.h"
 #import "ShopCartViewController.h"
-#import "GoodsShelvesVC.h"
+
 @interface HomeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
 @property (nonatomic, strong)MyCommonCollectionView *collectionView;
 @property (nonatomic, strong)NSMutableArray *dataSource;
@@ -239,8 +239,7 @@
                 
             case 1://求购大厅
                 {
-                    GoodsShelvesVC *vc = [[GoodsShelvesVC alloc]init];
-                    [self navigatePushViewController:vc animate:YES];
+                  
 
 
                 }

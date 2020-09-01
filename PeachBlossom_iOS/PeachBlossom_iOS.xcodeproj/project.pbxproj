@@ -309,6 +309,12 @@
 		7753A3A924FCD4D400F66734 /* CategoryShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A3A824FCD4D400F66734 /* CategoryShowView.m */; };
 		7753A3B724FCEAC600F66734 /* ShelvesDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A3B324FCEAC600F66734 /* ShelvesDetailsVC.m */; };
 		7753A3B824FCEAC600F66734 /* GoodsShelvesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7753A3B624FCEAC600F66734 /* GoodsShelvesVC.m */; };
+		7773756D24FDD815005A6150 /* SupplyOrderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7773756C24FDD815005A6150 /* SupplyOrderVC.m */; };
+		7773757024FDD828005A6150 /* SupplyOrderDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7773756F24FDD828005A6150 /* SupplyOrderDetailsVC.m */; };
+		7773757824FDF9A8005A6150 /* DeliveryShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7773757724FDF9A8005A6150 /* DeliveryShowView.m */; };
+		7773757B24FE288E005A6150 /* ReturnGoodsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7773757A24FE288E005A6150 /* ReturnGoodsVC.m */; };
+		7773757F24FE2943005A6150 /* ReturnGoodsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7773757D24FE2943005A6150 /* ReturnGoodsHeaderView.m */; };
+		7773758024FE2943005A6150 /* ReturnGoodsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7773757E24FE2943005A6150 /* ReturnGoodsHeaderView.xib */; };
 		77A17BB724EB830700CBF0A6 /* UIView+Design.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A17BB624EB830700CBF0A6 /* UIView+Design.m */; };
 		77A17C5024F4B0CC00CBF0A6 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4424F4B0CC00CBF0A6 /* area.plist */; };
 		77A17C5124F4B0CC00CBF0A6 /* AddressHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77A17C4524F4B0CC00CBF0A6 /* AddressHeaderView.xib */; };
@@ -965,6 +971,17 @@
 		7753A3B424FCEAC600F66734 /* GoodsShelvesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsShelvesVC.h; sourceTree = "<group>"; };
 		7753A3B524FCEAC600F66734 /* ShelvesDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShelvesDetailsVC.h; sourceTree = "<group>"; };
 		7753A3B624FCEAC600F66734 /* GoodsShelvesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsShelvesVC.m; sourceTree = "<group>"; };
+		7773756B24FDD815005A6150 /* SupplyOrderVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupplyOrderVC.h; sourceTree = "<group>"; };
+		7773756C24FDD815005A6150 /* SupplyOrderVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupplyOrderVC.m; sourceTree = "<group>"; };
+		7773756E24FDD828005A6150 /* SupplyOrderDetailsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SupplyOrderDetailsVC.h; sourceTree = "<group>"; };
+		7773756F24FDD828005A6150 /* SupplyOrderDetailsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SupplyOrderDetailsVC.m; sourceTree = "<group>"; };
+		7773757624FDF9A8005A6150 /* DeliveryShowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryShowView.h; sourceTree = "<group>"; };
+		7773757724FDF9A8005A6150 /* DeliveryShowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryShowView.m; sourceTree = "<group>"; };
+		7773757924FE288E005A6150 /* ReturnGoodsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReturnGoodsVC.h; sourceTree = "<group>"; };
+		7773757A24FE288E005A6150 /* ReturnGoodsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReturnGoodsVC.m; sourceTree = "<group>"; };
+		7773757C24FE2943005A6150 /* ReturnGoodsHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReturnGoodsHeaderView.h; sourceTree = "<group>"; };
+		7773757D24FE2943005A6150 /* ReturnGoodsHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReturnGoodsHeaderView.m; sourceTree = "<group>"; };
+		7773757E24FE2943005A6150 /* ReturnGoodsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReturnGoodsHeaderView.xib; sourceTree = "<group>"; };
 		77A17BB524EB830700CBF0A6 /* UIView+Design.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Design.h"; sourceTree = "<group>"; };
 		77A17BB624EB830700CBF0A6 /* UIView+Design.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Design.m"; sourceTree = "<group>"; };
 		77A17C4224F4B0CC00CBF0A6 /* AddressShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressShowView.h; sourceTree = "<group>"; };
@@ -2380,12 +2397,37 @@
 		7753A3B224FCEAC600F66734 /* Shelves */ = {
 			isa = PBXGroup;
 			children = (
-				7753A3B324FCEAC600F66734 /* ShelvesDetailsVC.m */,
 				7753A3B524FCEAC600F66734 /* ShelvesDetailsVC.h */,
+				7753A3B324FCEAC600F66734 /* ShelvesDetailsVC.m */,
 				7753A3B424FCEAC600F66734 /* GoodsShelvesVC.h */,
 				7753A3B624FCEAC600F66734 /* GoodsShelvesVC.m */,
 			);
 			path = Shelves;
+			sourceTree = "<group>";
+		};
+		7773756924FDD7DE005A6150 /* SupplyOrder */ = {
+			isa = PBXGroup;
+			children = (
+				7773756B24FDD815005A6150 /* SupplyOrderVC.h */,
+				7773756C24FDD815005A6150 /* SupplyOrderVC.m */,
+				7773756E24FDD828005A6150 /* SupplyOrderDetailsVC.h */,
+				7773756F24FDD828005A6150 /* SupplyOrderDetailsVC.m */,
+				7773757924FE288E005A6150 /* ReturnGoodsVC.h */,
+				7773757A24FE288E005A6150 /* ReturnGoodsVC.m */,
+			);
+			path = SupplyOrder;
+			sourceTree = "<group>";
+		};
+		7773756A24FDD7F1005A6150 /* SupplyOrder */ = {
+			isa = PBXGroup;
+			children = (
+				7773757624FDF9A8005A6150 /* DeliveryShowView.h */,
+				7773757724FDF9A8005A6150 /* DeliveryShowView.m */,
+				7773757C24FE2943005A6150 /* ReturnGoodsHeaderView.h */,
+				7773757D24FE2943005A6150 /* ReturnGoodsHeaderView.m */,
+				7773757E24FE2943005A6150 /* ReturnGoodsHeaderView.xib */,
+			);
+			path = SupplyOrder;
 			sourceTree = "<group>";
 		};
 		77A17C4124F4B0CC00CBF0A6 /* Search */ = {
@@ -2435,9 +2477,10 @@
 		77A17C6724F4F5B400CBF0A6 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				7753A3B224FCEAC600F66734 /* Shelves */,
 				77A17C6924F4F5D000CBF0A6 /* StoreViewController.h */,
 				77A17C6A24F4F5D000CBF0A6 /* StoreViewController.m */,
+				7773756924FDD7DE005A6150 /* SupplyOrder */,
+				7753A3B224FCEAC600F66734 /* Shelves */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -2447,6 +2490,7 @@
 			children = (
 				9779545B24FDD3D500939DE9 /* StoreTopView.h */,
 				9779545C24FDD3D600939DE9 /* StoreTopView.m */,
+				7773756A24FDD7F1005A6150 /* SupplyOrder */,
 				97D9212924FD05340040B26D /* Shelves */,
 			);
 			path = Store;
@@ -2753,6 +2797,7 @@
 				97AD0B7124F9E4CB007083B6 /* GoodsCommentController.xib in Resources */,
 				97D9213224FD05340040B26D /* ShelvesHeaderView.xib in Resources */,
 				7708D7E424E79BD700A4DB25 /* LaunchScreen.storyboard in Resources */,
+				7773758024FE2943005A6150 /* ReturnGoodsHeaderView.xib in Resources */,
 				7708D84724E7A1B200A4DB25 /* GuideViewController.xib in Resources */,
 				977466BF24F79D070078313C /* GoodsInfoViewController.xib in Resources */,
 				7708D99624E7ABA300A4DB25 /* IQKeyboardManager.bundle in Resources */,
@@ -2912,6 +2957,7 @@
 				97D9213324FD05340040B26D /* ShelvesHeaderView.m in Sources */,
 				7708D84324E7A1B200A4DB25 /* MainTabBarController.m in Sources */,
 				7708D97524E7ABA200A4DB25 /* AFImageDownloader.m in Sources */,
+				7773757024FDD828005A6150 /* SupplyOrderDetailsVC.m in Sources */,
 				7708DC1424E7DF5C00A4DB25 /* SDWebImageDownloader.m in Sources */,
 				7708DA2D24E7B6FA00A4DB25 /* WSImageModel.m in Sources */,
 				7746F59824F7B4B7000DC145 /* CancelPopView.m in Sources */,
@@ -2927,9 +2973,11 @@
 				7753A39C24FC898E00F66734 /* ShopCartHeaderView.m in Sources */,
 				7708DC7824E7EC7C00A4DB25 /* MASConstraintMaker.m in Sources */,
 				7708DAE024E7DCD900A4DB25 /* TAAbstractDotView.m in Sources */,
+				7773757B24FE288E005A6150 /* ReturnGoodsVC.m in Sources */,
 				7753A39824FC895900F66734 /* ShopCartViewController.m in Sources */,
 				7708DC4624E7E87D00A4DB25 /* UserModel.m in Sources */,
 				7708D9BF24E7ABA300A4DB25 /* NSObject+MJKeyValue.m in Sources */,
+				7773757824FDF9A8005A6150 /* DeliveryShowView.m in Sources */,
 				7708D99E24E7ABA300A4DB25 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				7708DC0D24E7DF5C00A4DB25 /* SDImageCoder.m in Sources */,
 				7708DC1E24E7DF5C00A4DB25 /* SDWebImageError.m in Sources */,
@@ -3021,6 +3069,7 @@
 				7708D85024E7A1B200A4DB25 /* CellCalculateModel.m in Sources */,
 				7753A3A024FC89CE00F66734 /* StoreModel.m in Sources */,
 				77A17C5524F4B0CC00CBF0A6 /* AddressCell.m in Sources */,
+				7773757F24FE2943005A6150 /* ReturnGoodsHeaderView.m in Sources */,
 				7708DA4724E7B6FA00A4DB25 /* TMDiskCache.m in Sources */,
 				7746F59E24F7C8CE000DC145 /* UIView+Frame.m in Sources */,
 				7746F55B24F64F23000DC145 /* CollectStoreVC.m in Sources */,
@@ -3034,6 +3083,7 @@
 				7708DC3424E7DF5D00A4DB25 /* SDWebImageCacheKeyFilter.m in Sources */,
 				7708DAA624E7C95E00A4DB25 /* LoginViewController.m in Sources */,
 				7708D96F24E7ABA200A4DB25 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				7773756D24FDD815005A6150 /* SupplyOrderVC.m in Sources */,
 				7708D99224E7ABA300A4DB25 /* IQTitleBarButtonItem.m in Sources */,
 				7708D99324E7ABA300A4DB25 /* IQBarButtonItem.m in Sources */,
 				7708DC1C24E7DF5C00A4DB25 /* SDWebImageCompat.m in Sources */,
