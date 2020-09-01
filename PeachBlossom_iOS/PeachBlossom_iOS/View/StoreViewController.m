@@ -10,8 +10,9 @@
 #import "StoreTopView.h"
 #import "SupplyOrderVC.h"
 #import "GoodsShelvesVC.h"
-@interface StoreViewController ()
 #import "SetPriceViewController.h"
+
+
 
 @interface StoreViewController ()<StoreTopViewDelegate>
 
